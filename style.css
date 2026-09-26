@@ -374,9 +374,62 @@
         {
             font-size: 16px;
         }
+
+
+    /*================*/
+    /* todas as seções*/ 
+    /*================*/
+    section 
+    {
+        padding: 70px 5%;
     }
 
     /*================*/
-    /* todas as seções*/
+    /* sobre          */ 
     /*================*/
 
+    .sobre-conteudo
+    {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /*================*/
+    /* Projetos       */ 
+    /*================*/
+
+    .projetos
+    {
+        flex-direction: column;
+
+    }
+
+    /*================*/
+    /* botoes          */ 
+    /*================*/
+
+    .botoes{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /*================*/
+    /* Contato        */ 
+    /*================*/
+
+    .contato-links
+    {
+        flex-wrap: wrap;
+    }
+
+    /*================*/
+    /* rodape          */ 
+    /*================*/
+
+    .footer 
+    {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
