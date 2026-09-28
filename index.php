@@ -116,7 +116,7 @@ else{
                         <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="cadastro.html">Ver Projeto</a>
+                    <a href="idade.php">Ver Projeto</a>
                 </div>
                 <!-- PROJETO 2 -->
                 <div class="card">
@@ -173,10 +173,6 @@ else{
         </p>
     </footer>
 
-    <form>
-        <label for="idade">
-        <input type="number"> <?=  $resultado?>
-        </label>
-    </form>
+
 </body>
 </html>
