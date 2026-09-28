@@ -17,16 +17,19 @@
     <title>idade</title>
 </head>
 <body>
+
 <header>
-            
     <div class="logo">
         <h2>Eduardo <span>Augusto</span></h2>
     </div>
     <nav>
-    <a href=" index.php">inicio</a>
-    <a href="cadastro.php">cadastro</a>
+        <a href=" index.php">inicio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+        
     </nav>
-</header>
+    </header>
 </body>
 
 <main>
