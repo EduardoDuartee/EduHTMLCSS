@@ -1,12 +1,21 @@
+<?php
+$nome = "Eduardo Augusto";
+$idade = 24;
+$Altura = 1.74;
+$matricula_ativa = true;
+$resultado ="";
+
+if($idade >= 18)
+{
+    $resultado = "É de Maior";
+}
+else{
+    $$resultado = "è de Menor";
+}
 
 
 
-
-
-
-
-
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,14 +23,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Eduardo</title>
-    <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 
     <!--COMENTARIO-->
     <header>
     <div class="logo">
-        <h2>Eduardo <span>Augusto</span></h2>
+        <h2><?= $resultado?></h2>
+        <!--<h2>Eduardo <span>Augusto</span></h2>-->
     </div>
     <nav>
         <a href="#inicio">Inicio</a>
