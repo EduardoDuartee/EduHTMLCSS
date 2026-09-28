@@ -19,3 +19,17 @@
      text-decoration: none;   
      color: inherit; /*inherit copia el color */
     }
+
+    nav
+    {
+        height: 80px;
+        padding: 0 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #15151d;
+        border-bottom: 1px solid #292936;
+        position: sticky;
+        top: 0; /* pesquisar*/
+        z-index: 10; /*pesquisar */
+    }
