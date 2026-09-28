@@ -18,18 +18,21 @@
 </head>
 <body>
 <header>
-<header>
+        <nav>
+            <a href=" index.php">inicio</a>
+            <a href="cadastro.php">cadastro</a>
+        </nav> 
+        <header>
+            
     <div class="logo">
         <h2>Eduardo <span>Augusto</span></h2>
     </div>
     <nav>
-        <a href="#index.php">Inicio</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
+    <a href=" index.php">inicio</a>
+    <a href="cadastro.php">cadastro</a>
         
     </nav>
     </header>
-    
 </header>
 </body>
 
