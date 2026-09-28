@@ -1,9 +1,16 @@
 <?php
 $nome = "Eduardo Augusto";
-$idade = 24;
+$idade = 18;
 $Altura = 1.74;
 $matricula_ativa = true;
 $resultado ="";
+
+
+
+if ($idade >= 18)
+{
+    $resultado ="18";
+}
 
 if($idade >= 18)
 {
@@ -166,5 +173,10 @@ else{
         </p>
     </footer>
 
+    <form>
+        <label for="idade">
+        <input type="number"> <?=  $resultado?>
+        </label>
+    </form>
 </body>
 </html>
