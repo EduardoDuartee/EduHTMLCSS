@@ -29,8 +29,7 @@ else{
     <!--COMENTARIO-->
     <header>
     <div class="logo">
-        <h2><?= $resultado?></h2>
-        <!--<h2>Eduardo <span>Augusto</span></h2>-->
+        <h2>Eduardo <span>Augusto</span></h2>
     </div>
     <nav>
         <a href="#inicio">Inicio</a>
@@ -47,7 +46,8 @@ else{
          <section id="inicio" class="inicio">
             <div class="inicio-conteudo">
                 <p class="apresentacao"> Olá, eu sou </p>
-                <h1> Eduardo Augusto </h1>
+                <!--<h1> Eduardo Augusto </h1>-->
+                <h1><?= $resultado?></h1>
                 <h2> DESENVOLVEDOR DE SOFTWARE </h2>
                 <p class="descricao">
                     DESENVOLVEDOR FULL STACK, FOCADO EM RESOLUÇÔES CIBERNETICAS
