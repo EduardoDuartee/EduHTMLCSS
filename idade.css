@@ -33,3 +33,7 @@
         top: 0; /* pesquisar*/
         z-index: 10; /*pesquisar */
     }
+
+    nav a:hover{ /*hover es una pseudoclase*/
+        color:rgb(0, 4, 255);
+        }
