@@ -46,8 +46,7 @@ else{
          <section id="inicio" class="inicio">
             <div class="inicio-conteudo">
                 <p class="apresentacao"> Olá, eu sou </p>
-                <!--<h1> Eduardo Augusto </h1>-->
-                <h1><?= $nome?></h1>
+                <h1> Eduardo Augusto </h1>
                 <h2> DESENVOLVEDOR DE SOFTWARE </h2>
                 <p class="descricao">
                     DESENVOLVEDOR FULL STACK, FOCADO EM RESOLUÇÔES CIBERNETICAS
