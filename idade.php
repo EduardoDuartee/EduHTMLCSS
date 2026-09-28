@@ -18,11 +18,6 @@
 </head>
 <body>
 <header>
-        <nav>
-            <a href=" index.php">inicio</a>
-            <a href="cadastro.php">cadastro</a>
-        </nav> 
-        <header>
             
     <div class="logo">
         <h2>Eduardo <span>Augusto</span></h2>
@@ -30,9 +25,7 @@
     <nav>
     <a href=" index.php">inicio</a>
     <a href="cadastro.php">cadastro</a>
-        
     </nav>
-    </header>
 </header>
 </body>
 
