@@ -53,6 +53,7 @@ header
     justify-content: space-between;
     align-items: center;
     margin-left: 700px;
+    text-align: center;
 }
 
 .area-usuario button:hover
