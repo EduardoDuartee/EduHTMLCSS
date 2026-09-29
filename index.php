@@ -125,7 +125,7 @@ else{
                     </div>
                     <h3>Atividade</h3>
                     <p>
-                        Descriçao do sistema de Cadastro
+                       Atividade de css
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
