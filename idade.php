@@ -41,8 +41,8 @@
     </h1>cadastro</h1>
     <form method="POST">
         <label> name :</label>
-        <input type="text" class="nome" id="nome" name="nome">
-        <label> idade</label><br>
+        <input type="text" class="nome" id="nome" name="nome"><br>
+        <label> idade</label>
         <input type="number" class="idade" id="idade" name="idade">
         <button type="submit"> cadastro</button>  
     </form>
