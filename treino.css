@@ -7,7 +7,7 @@ header
     z-index: 10;
 }
 
-.container-cabecalho-container
+.container-cabecalho-container, a
 {
     justify-items: center;
     align-items: center;
