@@ -49,7 +49,7 @@ header
     border-bottom: none;
     border-radius: 7px;
     border: none;
-    display: flex;
+    justify-content: center;
     align-items: center;
     margin-left: 700px;
     text-align: center;
