@@ -25,6 +25,7 @@ header
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    margin-top: -20px;
 }
 .container-cabecalho-container span
 {
