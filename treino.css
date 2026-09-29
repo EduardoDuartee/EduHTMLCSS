@@ -12,6 +12,10 @@ header
 {
     justify-items: center;
     align-items: center;
-    margin-right: 15px;
+}
+.container-cabecalho-container .logo
+{
     color: rgb(0, 4, 255);
+    font-size: 32px;
+    font-weight: bold;
 }
