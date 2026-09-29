@@ -49,6 +49,8 @@ header
     border-radius: 7px;
     border: none;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .area-usuario button:hover
@@ -56,6 +58,7 @@ header
     color: rgb(0, 4, 255);
     transform: translateZ(-2px );
     background-color: white;
+    
 }
 
 .menu-principal
