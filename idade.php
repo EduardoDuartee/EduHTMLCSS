@@ -40,9 +40,9 @@
     <section class="cadastro">
     <h1>cadastro</h1>
     <form method="POST">
-        <label> name :</label>
+        <label> NOME :</label>
         <input type="text" class="nome" id="nome" name="nome"><br>
-        <label> idade :</label>
+        <label> IDADE :</label>
         <input type="number" class="idade" id="idade" name="idade"><br>
         <button type="submit"> cadastro</button>  
     </form>
