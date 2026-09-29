@@ -99,3 +99,10 @@
         border-radius: 7px;
         border: none;
     }
+
+    .cadastro button
+    {
+        border: none;
+        width: 200px;
+        color:rgb(0, 4, 255);
+    }
