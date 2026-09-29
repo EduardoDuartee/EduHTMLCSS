@@ -5,7 +5,7 @@
 
     if ($idade >= 18)
     {
-        $resultado = 18;
+        $resultado = "Acesso Permitido";
     }
     else{
         $resultado ="Acesso Não Permitido";
