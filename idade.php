@@ -43,7 +43,7 @@
         <label> name :</label>
         <input type="text" class="nome" id="nome" name="nome"><br>
         <label> idade</label>
-        <input type="number" class="idade" id="idade" name="idade">
+        <input type="number" class="idade" id="idade" name="idade"><br>
         <button type="submit"> cadastro</button>  
     </form>
     <p><?= $resultado?></p>
