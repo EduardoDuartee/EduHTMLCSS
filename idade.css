@@ -82,7 +82,7 @@
 
     .cadastro label
     {
-        margin-top: 50px;
+        padding: 10px auto;
         align-items: center;
         font-size: 20px;
         font-weight: bold;
