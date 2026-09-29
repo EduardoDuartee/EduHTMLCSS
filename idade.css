@@ -84,5 +84,6 @@
     {
         align-items: center;
         justify-content: space-around;
+        font-size: 35px;
         color:rgb(0, 4, 255);
     }
