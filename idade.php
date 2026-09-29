@@ -42,7 +42,7 @@
     <form method="POST">
         <label> name :</label>
         <input type="text" class="nome" id="nome" name="nome"><br>
-        <label> idade</label>
+        <label> idade :</label>
         <input type="number" class="idade" id="idade" name="idade"><br>
         <button type="submit"> cadastro</button>  
     </form>
