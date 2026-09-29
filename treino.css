@@ -10,11 +10,7 @@ header
     justify-content: space-between;
 }
 
-.container-cabecalho-container
-{
-    justify-items: center;
-    align-items: center;
-}
+
 .container-cabecalho-container .logo
 {
     margin-left: -50px;
