@@ -44,10 +44,8 @@
         <input type="text" class="nome" id="nome" name="nome">
         <label> idade</label>
         <input type="number" class="idade" id="idade" name="idade">
-        <p><?= $resultado?></p>
-        
-
         <button type="submit"> cadastro</button> 
+        <p><?= $resultado?></p>
     </form>
 </section>
 </main>
