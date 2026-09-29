@@ -123,7 +123,7 @@ else{
                     <div class="numero-projeto">
                         02
                     </div>
-                    <h3>Sistema de Cadastro</h3>
+                    <h3>Atividade</h3>
                     <p>
                         Descriçao do sistema de Cadastro
                     </p>
@@ -132,7 +132,7 @@ else{
                         <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="cadastro.html">Ver Projeto</a>
+                    <a href="meusite.html">Ver Projeto</a>
                 </div>
                 <!-- PROJETO 3 -->
                 <div class="card">
