@@ -85,6 +85,7 @@
     .cadastro label
     {
         margin-top: 10px;
+        height: auto;
         padding: 10px auto;
         align-items: center;
         font-size: 20px;
@@ -96,6 +97,7 @@
     .cadastro input
     {
         width: 200px;
+        height: auto;
         border-radius: 7px;
         border: none;
     }
