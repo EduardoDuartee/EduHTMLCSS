@@ -9,5 +9,7 @@ header
 
 .container-cabecalho-container
 {
-    color: rgb(0, 4, 255);
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
 }
