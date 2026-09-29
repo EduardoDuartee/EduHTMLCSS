@@ -104,5 +104,12 @@
     {
         border: none;
         width: 200px;
+        height: auto;
         color:rgb(0, 4, 255);
+        border-radius:7px ;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        
+
     }
