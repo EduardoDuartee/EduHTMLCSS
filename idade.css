@@ -160,10 +160,8 @@
             height: 300px;
             padding: 10px auto;
             background-color: #292936;
-            border-radius: 7px;
-           
+            border-radius: 7px; 
             text-align: center;
-            margin-left: 50px;
             margin-top: 50px;
             padding: 20px auto;
         }
