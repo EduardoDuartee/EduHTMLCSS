@@ -23,6 +23,11 @@ header
     align-items: center;
     gap: 30px;
 }
+.container-cabecalho-container span
+{
+    color: white;
+}
+
 .container-cabecalho-container p{
     color: white;
 
