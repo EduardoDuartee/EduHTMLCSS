@@ -35,7 +35,7 @@
 <main>
     <section class="cadastro">
     </h1>cadastro</h1>
-    <form method="">
+    <form method="POST">
         <label> name :</label>
         <input type="text">
         <label> idade</label>
