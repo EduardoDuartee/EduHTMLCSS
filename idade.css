@@ -101,7 +101,7 @@
         font-size: 20px;
         border: none;
     }
-    
+
     .cadastro input[type="number"] {
         -moz-appearance: textfield;
         appearance: textfield;
@@ -112,6 +112,7 @@
         -webkit-appearance: none;
         margin: 0;
     }
+    
     .cadastro button
     {
         margin-top: 20px;
