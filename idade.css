@@ -115,7 +115,7 @@
         font-weight: bold;
     }
 
-    .cadastro .botao :hover
+    .cadastro button:hover
     {
         transform: translateY(-8px);
         background-color:rgb(0, 4, 255);
