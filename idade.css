@@ -136,3 +136,21 @@
     .cadastro p{
         margin-top: 30px;
     }
+
+    @media (max-width:800px)
+    {
+        header
+        {
+            height:auto;
+            padding: 20px 5%;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav
+        {
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
