@@ -38,7 +38,7 @@
 
 <main>
     <section class="cadastro">
-    </h1>cadastro</h1>
+    <h1>cadastro</h1>
     <form method="POST">
         <label> name :</label>
         <input type="text" class="nome" id="nome" name="nome"><br>
