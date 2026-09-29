@@ -42,7 +42,7 @@ header
     border-bottom: none;
     border-radius: 7px;
     border: none;
-    justify-content: last baseline;
+    justify-content: left;
     align-items: center;
     
     text-align: center;
