@@ -2,8 +2,12 @@ header
 {
     width: 100%;
     height: 50px;
-    color: white;
     background-color: #15151d;
     display: flex;
     gap: 30px;
+}
+
+.container-cabecalho-container
+{
+    color: rgb(0, 4, 255);
 }
