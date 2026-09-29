@@ -51,7 +51,7 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 10px;
+    margin-left: 500px;
 }
 
 .area-usuario button:hover
