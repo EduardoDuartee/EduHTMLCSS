@@ -5,4 +5,5 @@ header
     color: white;
     background-color: #15151d;
     display: flex;
+    gap: 30px;
 }
