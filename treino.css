@@ -42,9 +42,9 @@ header
     border-bottom: none;
     border-radius: 7px;
     border: none;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    margin-left: 700px;
+    
     text-align: center;
 }
 
