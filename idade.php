@@ -35,11 +35,12 @@
 <main>
     <section class="cadastro">
     </h1>cadastro</h1>
-    <form>
+    <form method="">
         <label> name :</label>
         <input type="text">
         <label> idade</label>
         <input type="number">
+        
 
         <button type="submit"> cadastro</button> 
     </form>
