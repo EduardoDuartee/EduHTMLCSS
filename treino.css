@@ -68,5 +68,7 @@ header
     display: flex;
     text-decoration: none;
     color: #dedede;
+    font-size: 20px;
+    font-weight: bold;
 }
 
