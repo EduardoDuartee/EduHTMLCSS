@@ -104,4 +104,6 @@ header
     display: flex;
     gap: 30px;
     background-color: #15151d;
+    width: 600px;
+    height: 700px;
 }
