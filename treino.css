@@ -112,6 +112,7 @@ header
 .secao-destaque
 {
     display: flex;
+    gap: 20 px;
 }
 
 .titulo-secao h2
@@ -128,9 +129,8 @@ header
 }
 
 
-.card-imagem
+.card-imagem img
 {
-    display: flex;
     border-radius: 7px;
 }
 
