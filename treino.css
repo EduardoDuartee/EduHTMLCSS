@@ -101,8 +101,10 @@ header
 
 .conteudo-principal .container-layout-principal
 {
+    
     width: 500px;
     height: 500px;
+    justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #15151d;
