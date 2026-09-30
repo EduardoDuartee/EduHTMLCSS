@@ -121,3 +121,8 @@ header
     font-size: 20px;
     color: white;
 }
+
+.card-card-destaque
+{
+    display: flex;
+}
