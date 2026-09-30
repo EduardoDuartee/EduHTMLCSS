@@ -2,7 +2,6 @@ body
 {
     background: linear-gradient(left, #3c3c57), #070735;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 header
