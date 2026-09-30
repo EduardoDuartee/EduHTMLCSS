@@ -129,14 +129,6 @@ header
 }
 
 
-.card-imagem img
-{
-    border-radius: 7px;
-}
-
-.card-conteudo
-{
-    margin-top: 300px;
-    color: white;
-    font-size: 20px;
+.conteudo-principal{
+    display: flex;
 }
