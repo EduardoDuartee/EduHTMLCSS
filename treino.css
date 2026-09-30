@@ -129,7 +129,7 @@ header
 }
 
 
-.conteudo-principal{
+.container-layout-principal{
     display: flex;
     align-items: center;
     text-align: center;
