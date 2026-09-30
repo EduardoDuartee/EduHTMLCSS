@@ -145,6 +145,7 @@ header
     font-size: 32px;
     font-weight: bold;
     padding: 10px 5%;
+    gap: 30px;
 }
 
 .titulo-secao p 
