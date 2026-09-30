@@ -73,6 +73,12 @@ header
     margin-top: -90px;
 }
 
+.menu-principal a:hover
+{
+    transform: translateZ(-2px);
+    color: rgb(0, 4, 255);
+}
+
 .menu-lista
 {
     text-decoration: none;
