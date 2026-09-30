@@ -39,7 +39,7 @@
 <main>
     <section class="cadastro">
     <h1>cadastro</h1>
-    <form method="POST">
+    <form method="GET">
         <label> NOME :</label>
         <input type="text" class="nome" id="nome" name="nome"><br>
         <label> IDADE :</label>
