@@ -131,4 +131,7 @@ header
 
 .conteudo-principal{
     display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
