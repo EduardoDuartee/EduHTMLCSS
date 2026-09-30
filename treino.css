@@ -107,6 +107,7 @@ header
     background-color: #25252e;
     border-radius: 7px;
     padding: 10px 5%;
+    display: flex;
 }
 
 .secao-destaque
