@@ -63,6 +63,7 @@ header
     text-decoration: none;
     list-style: none;
     display: flex;
+    gap: 20px;
 }
 
 .menu-principal a{
@@ -76,7 +77,6 @@ header
 
 .menu-principal .menu-item
 {
-    display: flex;
-    gap: 20px;
+    
 }
 
