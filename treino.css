@@ -132,3 +132,7 @@ header
 {
     display: flex;
 }
+
+.card-conteudo{
+    display: flex;
+}
