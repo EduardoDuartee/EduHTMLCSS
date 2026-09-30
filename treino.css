@@ -109,6 +109,11 @@ header
     padding: 10px 5%;
 }
 
+.secao-destaque
+{
+    display: flex;
+}
+
 .titulo-secao h2
 {
     color: white;
