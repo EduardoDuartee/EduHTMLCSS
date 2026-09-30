@@ -101,6 +101,7 @@ header
 
 .container-layout-principal
 {  
+    margin-top: 100px;
     width: 100%;
     height: 500px;
     align-items: center;
