@@ -130,6 +130,7 @@ header
 
 .card-imagem
 {
+    display: flex;
     border-radius: 7px;
 }
 
