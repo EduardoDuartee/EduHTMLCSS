@@ -108,3 +108,10 @@ header
     border-radius: 7px;
     padding: 10px 5%;
 }
+
+.container-layout-principal h2
+{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
