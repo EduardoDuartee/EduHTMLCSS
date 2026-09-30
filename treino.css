@@ -129,7 +129,7 @@ header
 }
 
 
-.container-layout-principal{
-    text-align: center;
-    color: white;
+.conteudo
+{
+    display: flex;
 }
