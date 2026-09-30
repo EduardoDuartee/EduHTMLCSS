@@ -103,4 +103,7 @@ header
     width: 500px;
     height: 500px;
     align-items: center;
+    text-align: center;
+    background-color: #15151d;
+    border-radius: 7px;
 }
