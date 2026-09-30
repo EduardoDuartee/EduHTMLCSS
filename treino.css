@@ -152,3 +152,8 @@ header
     color: white;
     font-size: 20px;
 }
+
+.card-conteudo span
+{
+    margin-top: 100px;
+}
