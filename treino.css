@@ -109,9 +109,15 @@ header
     padding: 10px 5%;
 }
 
-.container-layout-principal h2
+.titulo-secao h2
 {
     color: white;
     font-size: 25px;
     font-weight: bold;
+}
+
+.titulo-secao p
+{
+    font-size: 15px;
+    color: white;
 }
