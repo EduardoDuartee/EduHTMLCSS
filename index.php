@@ -139,16 +139,16 @@ else{
                     <div class="numero-projeto">
                         03
                     </div>
-                    <h3>Sistema de Cadastro</h3>
+                    <h3>verificador de Idade</h3>
                     <p>
-                        Descriçao do sistema de Cadastro
+                        Verificação de idade
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="cadastro.html">Ver Projeto</a>
+                    <a href="idade-get.php">Ver Projeto</a>
                 </div>
             </div>
         </section>
