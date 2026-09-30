@@ -125,4 +125,5 @@ header
 .card-card-destaque
 {
     display: flex;
+    gap: 20px;
 }
