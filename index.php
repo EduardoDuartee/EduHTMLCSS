@@ -107,16 +107,16 @@ else{
                     <div class="numero-projeto">
                         01
                     </div>
-                    <h3>Idade</h3>
+                    <h3>Persistencia de Dados</h3>
                     <p>
-                        Descriçao do sistema de Cadastro
+                       Aula de persistencia de dados
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="idade.php">Ver Projeto</a>
+                    <a href="dados-json.php">Ver Projeto</a>
                 </div>
                 <!-- PROJETO 2 -->
                 <div class="card">
