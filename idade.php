@@ -1,6 +1,6 @@
 <?php 
-    $nome =  $_POST ["nome"];
-    $idade = $_POST ["idade"];
+    $nome =  $_GET ["nome"];
+    $idade = $_GET ["idade"];
     $resultado = "";
 
     if ($idade >= 18)
