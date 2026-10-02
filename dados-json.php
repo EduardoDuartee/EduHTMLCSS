@@ -17,12 +17,31 @@
         $historia_prova1 =  $_POST["historia_prova1"];
         $historia_prova2 =  $_POST["historia_prova2"];
         $historia_prova3 =  $_POST["historia_prova3"];
+        //==========================================================
+        //organizar dados em uma array
+        //==========================================================
+        $novoAluno = [
+            "nome"=> $nome,
+            "idade"=>$idade,
 
-
-
-
-
-
+            "notas" => [
+                "portugues" =>[
+                    "prova1"=> $portugues_prova1,
+                    "prova1"=> $portugues_prova2,
+                    "prova1"=> $portugues_prova3,
+                ],
+                "matematica" =>[
+                    "prova1"=> $matematica_prova1,
+                    "prova1"=> $matematica_prova2,
+                    "prova1"=> $matematica_prova3,
+                ],
+                "historia" =>[
+                    "prova1"=> $historia_prova1,
+                    "prova1"=> $historia_prova2,
+                    "prova1"=> $historia_prova3,
+                ],
+            ]
+        ];
 
 
         echo"<h2>Dados recebidos</h2>";
