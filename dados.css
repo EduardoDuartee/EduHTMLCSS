@@ -96,6 +96,8 @@
 
     .cadastro input
     {
+        align-items: center;
+        justify-content: center;
         width: 250px;
         height: auto;
         border-radius: 7px;
