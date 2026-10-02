@@ -63,7 +63,7 @@
     .dados
     {
         width: 600px;
-        height: 300px;
+        height: auto;
         padding: 10px auto;
         background-color: #292936;
         border-radius: 7px;
