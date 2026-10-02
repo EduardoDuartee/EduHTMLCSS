@@ -71,6 +71,7 @@
     </header>
 
 <body>
+    <section class="dados">
     <h1>Cadstro de Notas</h1>
     <form method="POST">
         <label for="Nome">Nome:</label>
@@ -114,5 +115,6 @@
         <br><br>
             <button type="submit" class="botao"> cadastro</button>  
     </form>
+    </section>
 </body>
 </html>
