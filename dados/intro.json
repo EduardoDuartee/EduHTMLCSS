@@ -1,0 +1,23 @@
+[{
+    "nome": "lucas",
+    "idade": 24,
+    "altura": 1.74,
+    "notas": 
+    {
+        "1Bimestre":{
+            "1": 10
+        },
+        "2Bimestre":{
+            "2": 7
+        },
+        "3trismestre":{
+            "3":8
+        }
+        
+    }
+},
+
+{
+
+}
+]
