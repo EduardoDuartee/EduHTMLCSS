@@ -56,6 +56,20 @@
     <link rel="stylesheet" href="style.css">
     <title>json</title>
 </head>
+
+<header>
+    <div class="logo">
+        <h2>Eduardo <span>Augusto</span></h2>
+    </div>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+        
+    </nav>
+    </header>
+    
 <body>
     <h1>Cadstro de Notas</h1>
     <form method="POST">
