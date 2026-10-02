@@ -73,13 +73,13 @@
 <body>
     <h1>Cadstro de Notas</h1>
     <form method="POST">
-        <label for="Nome"></label>
+        <label for="Nome">Nome:</label>
         <input type="text" name="nome" required>
         <br><br>
 
-        <label for="idade"></label>
+        <label for="idade">Idade</label>
         <input type="number" name="idade" required>
-
+<!--==========================================================================================-->
         <h2>Portugues</h2>
         <label>Prova 01:</label>
         <input type="number" name="Portugues_Prova1" min="0" max="10" step="0.1" required>
@@ -90,7 +90,7 @@
         <label>Prova 03:</label>
         <input type="number" name="portugues_Prova3" min="0" max="10" step="0.1" required>
         <br><br>
-
+<!--==========================================================================================-->
         <h2>Matematica</h2>
         <label>Prova 01:</label>
         <input type="number" name="matematica_Prova1" min="0" max="10" step="0.1" required>
@@ -101,7 +101,7 @@
         <label>Prova 03:</label>
         <input type="number" name="matematica_Prova3" min="0" max="10" step="0.1" required>
         <br><br>
-
+<!--==========================================================================================-->
         <h2>Historia</h2>
         <label>Prova 01:</label>
         <input type="number" name="historia_Prova1" min="0" max="10" step="0.1" required>
