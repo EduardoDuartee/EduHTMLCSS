@@ -149,27 +149,27 @@
     <h1>ALUNOS CADASTRADOS</h1>
         <?php foreach ($alunos as $aluno) { ?>
             <h2> <?= $aluno["nome"] ?> </h2>
-            <p>idade: <?$aluno["idade"]?></p>
+            <p>idade: <?$aluno["idade"] ?></p>
 
         <!-- portugues-->
          <h2>Portugues</h2>
-         <p>PROVA01: <? $aluno ["notas"]["portugues"]["prova1"]?></p>
-         <p>PROVA02: <? $aluno ["notas"]["portugues"]["prova2"]?></p>
-         <p>PROVA03: <? $aluno ["notas"]["portugues"]["prova3"]?></p>
+         <p>PROVA01: <? $aluno ["notas"]["portugues"]["prova1"] ?></p>
+         <p>PROVA02: <? $aluno ["notas"]["portugues"]["prova2"] ?></p>
+         <p>PROVA03: <? $aluno ["notas"]["portugues"]["prova3"] ?></p>
 
 
          <!-- matematica-->
          <h2>Matematica</h2>
-         <p>PROVA01: <? $aluno ["notas"]["matematica"]["prova1"]?></p>
-         <p>PROVA02: <? $aluno ["notas"]["matematica"]["prova2"]?></p>
-         <p>PROVA03: <? $aluno ["notas"]["matematica"]["prova3"]?></p>
+         <p>PROVA01: <? $aluno ["notas"]["matematica"]["prova1"] ?></p>
+         <p>PROVA02: <? $aluno ["notas"]["matematica"]["prova2"] ?></p>
+         <p>PROVA03: <? $aluno ["notas"]["matematica"]["prova3"] ?></p>
 
 
          <!-- Historia-->
          <h2>Historia</h2>
-         <p>PROVA01: <? $aluno ["notas"]["historia"]["prova1"]?></p>
-         <p>PROVA02: <? $aluno ["notas"]["historia"]["prova2"]?></p>
-         <p>PROVA03: <? $aluno ["notas"]["historia"]["prova3"]?></p>
+         <p>PROVA01: <? $aluno ["notas"]["historia"]["prova1"] ?></p>
+         <p>PROVA02: <? $aluno ["notas"]["historia"]["prova2"] ?></p>
+         <p>PROVA03: <? $aluno ["notas"]["historia"]["prova3"] ?></p>
 
 
 
