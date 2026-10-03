@@ -149,7 +149,7 @@
     <h1>ALUNOS CADASTRADOS</h1>
         <?php foreach ($alunos as $aluno) { ?>
             <h2> <?= $aluno["nome"] ?> </h2>
-            <p>idade: <?$alunos["idade"]?></p>
+            <p>idade: <?$aluno["idade"]?></p>
 
         <!-- portugues-->
          <h2>Portugues</h2>
