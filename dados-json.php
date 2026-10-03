@@ -45,8 +45,26 @@
 
         //serve para ler/abrir arqui json
 
-        $conteudoJson =file_get_contents("dados/intro.json");
-        
+        $conteudoJson =file_get_contents(__DIR__ . "dados/intro.json");
+
+        //serve para converte json para array php
+        // o true serve para converter o json em array associativo para o php ler
+
+        $alunos = json_decode($conteudoJson, true);
+
+        //adicionar o novo aluno no armazenamento
+
+        $alunos[""] = $novoAluno;
+
+        //converter o array php para json
+
+        $jsonAtualizado = json_encode(
+            $alunos,
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+            //formata a ambientação  | 
+
+        );
+
 
 
         echo"<h2>Dados recebidos</h2>";
