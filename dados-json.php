@@ -43,6 +43,11 @@
             ]
         ];
 
+        //serve para ler/abrir arqui json
+
+        $conteudoJson =file_get_contents("dados/intro.json");
+        
+
 
         echo"<h2>Dados recebidos</h2>";
         echo"Nome:" .$nome. "<br>";
