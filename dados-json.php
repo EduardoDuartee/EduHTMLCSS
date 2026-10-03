@@ -112,10 +112,10 @@
 <!--==========================================================================================-->
         <h2>Portugues</h2>
         <label>Prova 01:</label>
-        <input type="number" name="Portugues_Prova1" min="0" max="10" step="0.1" required>
+        <input type="number" name="portugues_Prova1" min="0" max="10" step="0.1" required>
         <br><br>
         <label>Prova 02:</label>
-        <input type="number" name="Portugues_Prova2" min="0" max="10" step="0.1" required>
+        <input type="number" name="portugues_Prova2" min="0" max="10" step="0.1" required>
         <br><br>
         <label>Prova 03:</label>
         <input type="number" name="portugues_Prova3" min="0" max="10" step="0.1" required>
