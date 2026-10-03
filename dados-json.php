@@ -45,7 +45,7 @@
 
         //serve para ler/abrir arqui json
 
-        $conteudoJson =file_get_contents(__DIR__ . "dados/intro.json");
+        $conteudoJson =file_get_contents(__DIR__ . "/dados/intro.json");
 
         //serve para converte json para array php
         // o true serve para converter o json em array associativo para o php ler
@@ -62,33 +62,20 @@
             $alunos,
             JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
             //formata a ambientação  | 
-
         );
 
+        //salvar no arquivo json
 
-
-        echo"<h2>Dados recebidos</h2>";
-        echo"Nome:" .$nome. "<br>";
-        echo"Idade:".$idade. "<br><br>";
-
-        echo "<stong>Portugues:</stong><br>";
-        echo "Prova1:" . $portugues_prova1 . "<br>";
-        echo "Prova2:" . $portugues_prova2 . "<br>";
-        echo "Prova3:" . $portugues_prova3 .
-        "<br><br>";
-
-        echo "<stong>Matematica:</stong><br>";
-        echo "Prova1:" . $matematica_prova1 . "<br>";
-        echo "Prova2:" . $matematica_prova2 . "<br>";
-        echo "Prova3:" . $matematica_prova3 .
-        "<br><br>";
-
-        echo "<stong>Historia:</stong><br>";
-        echo "Prova1:" . $historia_prova1 . "<br>";
-        echo "Prova2:" . $historia_prova2 . "<br>";
-        echo "Prova3:" . $historia_prova3 .
-        "<br><br>";
+        file_put_contents(__DIR__ . "/dados/intro.json", $jsonAtualizado);
     }
+
+    //leitura dos dados para exibição
+    $conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
+
+    //converte json para array php
+
+    $alunos = json_decode($conteudoJson, true);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -114,7 +101,7 @@
 
 <body>
     <section class="dados">
-    <h1>Cadstro de Notas</h1>
+    <h1>Cadastro de Notas</h1>
     <form method="POST">
         <label for="Nome">Nome:</label>
         <input type="text" name="nome" required>
@@ -158,5 +145,42 @@
             <button type="submit" class="botao"> cadastro</button>  
     </form>
     </section>
+
+    <h1>ALUNOS CADASTRADOS</h1>
+        <?php foreach ($alunos as $aluno) { ?>
+            <h2> <?= $aluno["nome"] ?> </h2>
+            <p>idade: <?$alunos["idade"]?></p>
+
+        <!-- portugues-->
+         <h2>Portugues</h2>
+         <p>PROVA01: <? $aluno ["notas"]["portugues"]["prova1"]?></p>
+         <p>PROVA01: <? $aluno ["notas"]["portugues"]["prova2"]?></p>
+         <p>PROVA01: <? $aluno ["notas"]["portugues"]["prova3"]?></p>
+
+
+         <!-- matematica-->
+         <h2>Matematica</h2>
+         <p>PROVA01: <? $aluno ["notas"]["matematica"]["prova1"]?></p>
+         <p>PROVA01: <? $aluno ["notas"]["matematica"]["prova2"]?></p>
+         <p>PROVA01: <? $aluno ["notas"]["matematica"]["prova3"]?></p>
+
+
+         <!-- Historia-->
+         <h2>Historia</h2>
+         <p>PROVA01: <? $aluno ["notas"]["historia"]["prova1"]?></p>
+         <p>PROVA01: <? $aluno ["notas"]["historia"]["prova2"]?></p>
+         <p>PROVA01: <? $aluno ["notas"]["historia"]["prova3"]?></p>
+
+
+
+
+
+
+
+
+
+        <?php } ?>
+    
+    ?>
 </body>
 </html>
