@@ -1,5 +1,5 @@
 <?php
-    if($_SERVER["REQUEST_METHOD"] =="POST"){ //verifica se o formulario foi enviado usando metodo post
+    if($_SERVER["REQUEST_METHOD"] == "POST"){ //verifica se o formulario foi enviado usando metodo post
         $nome = $_POST["nome"];
         $idade = $_POST["idade"];
      
