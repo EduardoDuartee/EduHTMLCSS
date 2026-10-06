@@ -21,8 +21,8 @@
         //organizar dados em uma array
         //==========================================================
         $novoAluno = [
-            "nome"=> $nome,
-            "idade"=>$idade,
+            "nome" => $nome,
+            "idade" =>$idade,
 
             "notas" => [
                 "portugues" =>[
