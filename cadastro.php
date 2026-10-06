@@ -100,16 +100,16 @@
                 <?php foreach ($produtos as $produto) {  ?>
                     <div class="card-produto">
                         <h2>PRODUTO:</h2>
-                        <h2> <?= $produto["nome"] ?> </h2>
-                        <p> <?= $produto["categoria"] ?> </p>
-                        <p> <?= $produto["marca"] ?> </p>
-                        <p> <?= $produto["preco"] ?> </p>
-                        <p> <?= $produto["quantidade"] ?> </p>
+                        <h2>Nome: <?= $produto["nome"] ?> </h2>
+                        <p>CAtegoria: <?= $produto["categoria"] ?> </p>
+                        <p>Marca: <?= $produto["marca"] ?> </p>
+                        <p>Preço: <?= $produto["preco"] ?> </p>
+                        <p>Quantidade; <?= $produto["quantidade"] ?> </p>
                         <h3>FABRICANTE:</h3>
-                        <p> <?= $produto["fabricante"]["fabricanteNome"] ?> </p>
-                        <p> <?= $produto["fabricante"]["pais"] ?> </p>
+                        <p>Fabricante: <?= $produto["fabricante"]["fabricanteNome"] ?> </p>
+                        <p>Pais: <?= $produto["fabricante"]["pais"] ?> </p>
                         <h3> VALOR NO ESTOQUE: </h3>
-                        <p> <?= (float)$produto["preco"] * (int)$produto["quantidade"] ?> </p>
+                        <p>Valor:<?= (float)$produto["preco"] * (int)$produto["quantidade"] ?> </p>
                     </div>
             </div>
         <?php } ?>
