@@ -155,7 +155,7 @@ else{
                     <div class="numero-projeto">
                         01
                     </div>
-                    <h3>Persistencia de Dados</h3>
+                    <h3>Cadastros de Produtos</h3>
                     <p>
                        Aula de persistencia de dados
                     </p>
