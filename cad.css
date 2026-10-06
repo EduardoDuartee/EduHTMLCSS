@@ -73,11 +73,13 @@
     {
         width: 100%;
         height: auto;
+        background-color: #15151d;
     }
     .intro
     {
         width: 500px;
         height: auto;
+        display: flex;
     }
     
     .intro h2
