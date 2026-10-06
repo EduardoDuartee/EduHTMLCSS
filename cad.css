@@ -74,6 +74,11 @@
         width: 100%;
         height: auto;
     }
+    .intro
+    {
+        width: 500px;
+        height: auto;
+    }
     
     .intro h2
     {
