@@ -148,7 +148,7 @@
 
     <h1>ALUNOS CADASTRADOS</h1>
         <?php foreach ($alunos as $aluno) { ?>
-            <h2> <?=  $aluno["nome"] ?> </h2>
+            <h2> Nome:<?=  $aluno["nome"] ?> </h2>
             <p>idade: <?=  $aluno["idade"] ?></p>
 
         <!-- portugues-->
@@ -170,13 +170,6 @@
          <p>PROVA01: <?=  $aluno ["notas"]["historia"]["prova1"] ?></p>
          <p>PROVA02: <?=  $aluno ["notas"]["historia"]["prova2"] ?></p>
          <p>PROVA03: <?=  $aluno ["notas"]["historia"]["prova3"] ?></p>
-
-
-
-
-
-
-
 
 
         <?php } ?>
