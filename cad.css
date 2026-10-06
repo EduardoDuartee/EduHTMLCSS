@@ -125,5 +125,6 @@
 
     .card-container input
     {
+        height: 12px;
         border-radius: 7px;
     }
