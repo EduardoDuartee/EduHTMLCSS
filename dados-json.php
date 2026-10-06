@@ -27,18 +27,18 @@
             "notas" => [
                 "portugues" =>[
                     "prova1"=> $portugues_prova1,
-                    "prova1"=> $portugues_prova2,
-                    "prova1"=> $portugues_prova3,
+                    "prova2"=> $portugues_prova2,
+                    "prova3"=> $portugues_prova3
                 ],
                 "matematica" =>[
                     "prova1"=> $matematica_prova1,
-                    "prova1"=> $matematica_prova2,
-                    "prova1"=> $matematica_prova3,
+                    "prova2"=> $matematica_prova2,
+                    "prova3"=> $matematica_prova3
                 ],
                 "historia" =>[
                     "prova1"=> $historia_prova1,
-                    "prova1"=> $historia_prova2,
-                    "prova1"=> $historia_prova3,
+                    "prova2"=> $historia_prova2,
+                    "prova3"=> $historia_prova3
                 ],
             ]
         ];
