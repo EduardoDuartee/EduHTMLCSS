@@ -122,3 +122,8 @@
         display: flex;
         gap: 25px;
     }
+
+    .card-container input
+    {
+        border-radius: 7px;
+    }
