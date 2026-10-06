@@ -82,17 +82,17 @@
                             <input type="text" name="nome" class="boxes">
                             <label>CATEGORIA:</label>
                             <input type="text" name="categoria" class="boxes">
-                            <label>MARCA</label>
+                            <label>MARCA:</label>
                             <input type="text" name="marca" class="boxes">
                         </div>
                         <div class="form-card">
-                            <label>PREÇO</label>
+                            <label>PREÇO:</label>
                             <input type="number" name="preco" step="0.1" class="boxes">
-                            <label>QUANTIDADE</label>
+                            <label>QUANTIDADE:</label>
                             <input type="number" name="quantidade" class="boxes">
-                            <label>NOME DO FABRICANTE</label>
+                            <label>NOME DO FABRICANTE:</label>
                             <input type="text" name="fabricanteNome" class="boxes">
-                            <label>PAIS</label>
+                            <label>PAIS:</label>
                             <input type="text" name="pais" class="boxes">
                         </div>
                     </div>
