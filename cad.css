@@ -73,6 +73,7 @@
     {
         width: 100%;
         height: auto;
+        text-align: center;
         background-color: #15151d;
     }
     .intro
@@ -84,7 +85,6 @@
     
     .intro h2
     {
-        text-align: center;
         color: rgb(0, 4, 255);
         font-size: 32px;
         font-weight: bold;
