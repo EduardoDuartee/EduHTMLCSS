@@ -92,9 +92,10 @@
 
     .formulario
     {
-     display: flex;
-     gap: 20px;
-     padding: 10px auto;
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        padding: 10px auto;
     }
 
     .formulario button
