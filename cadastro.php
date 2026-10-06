@@ -63,8 +63,7 @@
             <a href="index.php">Inicio</a>
             <a href="#sobre">Sobre</a>
             <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
-            
+            <a href="#contato">Contato</a> 
         </nav>
     </header>
     <main>
