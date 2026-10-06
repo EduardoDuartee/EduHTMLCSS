@@ -337,9 +337,12 @@
         height: auto;
     }
     
-    .intro h1
+    .intro h2
     {
         color: rgb(0, 4, 255);
+        font-size: 32px;
+        font-weight: bold;
+
     }
     
     /*================*/
