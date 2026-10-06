@@ -87,7 +87,7 @@
         color: rgb(0, 4, 255);
         font-size: 32px;
         font-weight: bold;
-        margin-left: 500px;
+        margin-left: 550px;
     }
 
     .formulario
@@ -100,7 +100,7 @@
 
     .formulario button
     {
-        margin-left: 500px;
+        margin-left: 550px;
         width: 200px;
         align-items: center;
         justify-content: center;
