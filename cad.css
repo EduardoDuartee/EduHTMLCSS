@@ -99,9 +99,11 @@
 
     .formulario button
     {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         padding: 10px auto;
         border-radius: 7px;
-        border: none;
         background-color: #15151d;
         color:#F5F5F5 ;
     }
