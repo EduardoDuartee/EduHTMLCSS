@@ -325,6 +325,17 @@
         justify-content: space-between;
         font-size: 13px;
     }
+
+
+    /*=================*/
+    /*parte do cadastro*/
+    /*=================*/
+
+    .intro-form
+    {
+        width: 100%;
+        display: flex;
+    }
     
     
     /*================*/
