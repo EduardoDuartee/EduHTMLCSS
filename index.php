@@ -117,7 +117,7 @@ else{
                         <!--span>PHP</span-->
                     </div>
                     <a href="dados-json.php">Ver Projeto</a>
-                </div>
+                </div><!--fim-->
                 <!-- PROJETO 2 -->
                 <div class="card">
                     <div class="numero-projeto">
@@ -133,7 +133,7 @@ else{
                         <!--span>PHP</span-->
                     </div>
                     <a href="meusite.html">Ver Projeto</a>
-                </div>
+                </div><!--fim-->
                 <!-- PROJETO 3 -->
                 <div class="card">
                     <div class="numero-projeto">
@@ -149,7 +149,23 @@ else{
                         <!--span>PHP</span-->
                     </div>
                     <a href="idade-get.php">Ver Projeto</a>
-                </div>
+                </div><!--fim-->
+                <!--Projetp 4-->
+                <div class="card">
+                    <div class="numero-projeto">
+                        01
+                    </div>
+                    <h3>Persistencia de Dados</h3>
+                    <p>
+                       Aula de persistencia de dados
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <!--span>PHP</span-->
+                    </div>
+                    <a href="cadastro.php">Ver Projeto</a>
+                </div><!--fim-->
             </div>
         </section>
         <section id="contatos" class="contatos">
