@@ -143,3 +143,9 @@
         font-weight: bold;
         margin-left: 700px;
     }
+
+    .cards
+    {
+        align-items: center;
+        text-align: center;
+    }
