@@ -27,7 +27,7 @@
         <h2>Eduardo <span>Augusto</span></h2>
     </div>
     <nav>
-        <a href=" ../index.php">inicio</a>
+        <a href="../index.php">inicio</a>
         <a href="../index.php">Sobre</a>
         <a href="../index.php">Projetos</a>
         <a href="../index.php">Contato</a>
