@@ -113,7 +113,7 @@
                     <div class="card-produto">
                         <h2>PRODUTO:</h2>
                         <h2>Nome: <?= $produto["nome"] ?> </h2>
-                        <p>CAtegoria: <?= $produto["categoria"] ?> </p>
+                        <p>Categoria: <?= $produto["categoria"] ?> </p>
                         <p>Marca: <?= $produto["marca"] ?> </p>
                         <p>Preço: <?= $produto["preco"] ?> </p>
                         <p>Quantidade; <?= $produto["quantidade"] ?> </p>

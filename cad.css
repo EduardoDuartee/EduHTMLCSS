@@ -134,6 +134,8 @@
         width: 100%;
         height: auto;
         background-color: #15151d;
+        align-items: center;
+        text-align: center;
     }
 
     .intro-cadastrados h1
@@ -146,6 +148,5 @@
 
     .cards
     {
-        align-items: center;
-        text-align: center;
+        
     }
