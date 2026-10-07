@@ -128,3 +128,10 @@
         height: 22px;
         border-radius: 7px;
     }
+
+    .cadastrados
+    {
+        width: 100%;
+        height: auto;
+        background-color:  #292936;
+    }
