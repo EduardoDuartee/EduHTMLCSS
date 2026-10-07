@@ -112,35 +112,35 @@
 <!--==========================================================================================-->
         <h2>Portugues</h2>
         <label>Prova 01:</label>
-        <input type="number" name="portugues_Prova1" min="0" max="10" step="0.1" required>
+        <input type="number" name="portugues_prova1" min="0" max="10" step="0.1" required>
         <br><br>
         <label>Prova 02:</label>
-        <input type="number" name="portugues_Prova2" min="0" max="10" step="0.1" required>
+        <input type="number" name="portugues_prova2" min="0" max="10" step="0.1" required>
         <br><br>
         <label>Prova 03:</label>
-        <input type="number" name="portugues_Prova3" min="0" max="10" step="0.1" required>
+        <input type="number" name="portugues_prova3" min="0" max="10" step="0.1" required>
         <br><br>
 <!--==========================================================================================-->
         <h2>Matematica</h2>
         <label>Prova 01:</label>
-        <input type="number" name="matematica_Prova1" min="0" max="10" step="0.1" required>
+        <input type="number" name="matematica_prova1" min="0" max="10" step="0.1" required>
         <br><br>
         <label>Prova 02:</label>
-        <input type="number" name="matematica_Prova2" min="0" max="10" step="0.1" required>
+        <input type="number" name="matematica_prova2" min="0" max="10" step="0.1" required>
         <br><br>
         <label>Prova 03:</label>
-        <input type="number" name="matematica_Prova3" min="0" max="10" step="0.1" required>
+        <input type="number" name="matematica_prova3" min="0" max="10" step="0.1" required>
         <br><br>
 <!--==========================================================================================-->
         <h2>Historia</h2>
         <label>Prova 01:</label>
-        <input type="number" name="historia_Prova1" min="0" max="10" step="0.1" required>
+        <input type="number" name="historia_prova1" min="0" max="10" step="0.1" required>
         <br><br>
         <label>Prova 02:</label>
-        <input type="number" name="historia_Prova2" min="0" max="10" step="0.1" required>
+        <input type="number" name="historia_prova2" min="0" max="10" step="0.1" required>
         <br><br>
         <label>Prova 03:</label>
-        <input type="number" name="historia_Prova3" min="0" max="10" step="0.1" required>
+        <input type="number" name="historia_prova3" min="0" max="10" step="0.1" required>
         <br><br>
             <button type="submit" class="botao"> cadastro</button>  
     </form>
