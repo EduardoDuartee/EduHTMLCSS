@@ -10,7 +10,12 @@ require_once "08-funcoes.php"
     <title>Document</title>
 </head>
 <body>
-    <h1><?= $nomeEcola ?></h1>
-    <h2><?=  ?></h2>
+    <h1><?= $nomeEscola ?></h1>
+    <h2><?= sadaucao()  ?></h2>
+    <p><?= comprimentar("Eduardo") ?>?></p>
+    <p>
+        resultado da soma:
+        <?= somar(10, 5) ?>
+    </p>
 </body>
 </html>
