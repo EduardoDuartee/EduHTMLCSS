@@ -153,23 +153,23 @@
 
         <!-- portugues-->
          <h2>Portugues</h2>
-         <p>Prova 1: <?= $aluno["notas"]["portugues"]["prova1"] ?></p>
-         <p>Prova 2: <?= $aluno["notas"]["portugues"]["prova2"] ?></p>
-         <p>Prova 3: <?= $aluno["notas"]["portugues"]["prova3"] ?></p>
+         <p>Prova 1: <?= $aluno["notas"]["portugues"]["prova1"] ?> </p>
+         <p>Prova 2: <?= $aluno["notas"]["portugues"]["prova2"] ?> </p>
+         <p>Prova 3: <?= $aluno["notas"]["portugues"]["prova3"] ?> </p>
 
 
          <!-- matematica-->
          <h2>Matematica</h2>
-         <p>Prova 1: <?= $aluno["notas"]["matematica"]["prova1"] ?></p>
-         <p>prova 2: <?= $aluno["notas"]["matematica"]["prova2"] ?></p>
-         <p>Prova 3: <?= $aluno["notas"]["matematica"]["prova3"] ?></p>
+         <p>Prova 1: <?= $aluno["notas"]["matematica"]["prova1"] ?> </p>
+         <p>prova 2: <?= $aluno["notas"]["matematica"]["prova2"] ?> </p>
+         <p>Prova 3: <?= $aluno["notas"]["matematica"]["prova3"] ?> </p>
 
 
          <!-- Historia-->
          <h2>Historia</h2>
-         <p>Prova 1: <?= $aluno["notas"]["historia"]["prova1"] ?></p>
-         <p>Prova 2: <?= $aluno["notas"]["historia"]["prova2"] ?></p>
-         <p>Prova 3: <?= $aluno["notas"]["historia"]["prova3"] ?></p>
+         <p>Prova 1: <?= $aluno["notas"]["historia"]["prova1"] ?> </p>
+         <p>Prova 2: <?= $aluno["notas"]["historia"]["prova2"] ?> </p>
+         <p>Prova 3: <?= $aluno["notas"]["historia"]["prova3"] ?> </p>
 
         <?php } ?>
     
