@@ -1,6 +1,6 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $nome = $_POST["Nome"];
+        $nome = $_POST["nome"];
         $categoria = $_POST["categoria"];
         $marca = $_POST["marca"];
         $preco = $_POST["preco"];
