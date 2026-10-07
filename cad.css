@@ -150,3 +150,9 @@
         display: flex;
         gap: 20px;
     }
+
+    .h2, h3, p
+    {
+        font-size: 30px;
+        color: rgb(0, 4, 255);
+    }
