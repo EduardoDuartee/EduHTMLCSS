@@ -89,10 +89,7 @@ else{
                         <h3>CSS</h3>
                         <p>Estilizaçao e criaçao de interface.</p>
                     </div>
-                    <!--div class="habilidade">
-                        <h3>PHP</h3>
-                        <p>Desenvolvimento de aplicaçoes web.</p>
-                    </div-->
+    
                 </div>
             </div>
           </section>
@@ -116,7 +113,7 @@ else{
                         <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="dados-json.php">Ver Projeto</a>
+                    <a href="/atividades/dados-json.php">Ver Projeto</a>
                 </div><!--fim-->
                 <!-- PROJETO 2 -->
                 <div class="card">
@@ -148,7 +145,7 @@ else{
                         <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="idade-get.php">Ver Projeto</a>
+                    <a href="/atividades/idade-get.php">Ver Projeto</a>
                 </div><!--fim-->
                 <!--Projetp 4-->
                 <div class="card">
@@ -164,7 +161,7 @@ else{
                         <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="cadastro.php">Ver Projeto</a>
+                    <a href="/atividades/cadastro.php">Ver Projeto</a>
                 </div><!--fim-->
             </div>
         </section>

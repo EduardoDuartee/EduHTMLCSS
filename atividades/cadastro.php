@@ -21,7 +21,7 @@
 
             ];
             //abrir ler arquivo
-            $conteudoJson = file_get_contents(__DIR__ . "/dados/cadastro-de-produtos.json");
+            $conteudoJson = file_get_contents(__DIR__ . "../dados/cadastro-de-produtos.json");
 
             $produtos = json_decode($conteudoJson, true);
             //adiconar cadastro
@@ -35,14 +35,14 @@
             );
 
             //Salvando em json
-            file_put_contents(__DIR__ . "/dados/cadastro-de-produtos.json", $jsonAtualizado);
+            file_put_contents(__DIR__ . "../dados/cadastro-de-produtos.json", $jsonAtualizado);
 
             //ler  os arquivos json
-            $conteudoJson = file_get_contents(__DIR__ . "/dados/cadastro-de-produtos.json");
+            $conteudoJson = file_get_contents(__DIR__ . "../dados/cadastro-de-produtos.json");
             $produtos = json_decode($conteudoJson, true);
 
     }
-            $conteudoJson = file_get_contents(__DIR__ . "/dados/cadastro-de-produtos.json");
+            $conteudoJson = file_get_contents(__DIR__ . "../dados/cadastro-de-produtos.json");
             $produtos = json_decode($conteudoJson, true);
 ?>
 
@@ -51,7 +51,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css.past/cad.css">
+    <link rel="stylesheet" href="../css.past/cad.css">
     <title>Cadastro produtos</title>
 </head>
 <body>
@@ -60,7 +60,7 @@
             <h2>Eduardo <span>Augusto</span></h2>
         </div>
         <nav>
-            <a href="index.php">Inicio</a>
+            <a href="../index.php">Inicio</a>
             <a href="#sobre">Sobre</a>
             <a href="#projetos">Projetos</a>
             <a href="#contato">Contato</a> 

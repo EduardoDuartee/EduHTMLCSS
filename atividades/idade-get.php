@@ -17,7 +17,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css.past/idade.css">
+    <link rel="stylesheet" href="../css.past/idade.css">
     <title>idade</title>
 </head>
 <body>
@@ -27,10 +27,10 @@
         <h2>Eduardo <span>Augusto</span></h2>
     </div>
     <nav>
-        <a href=" index.php">inicio</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
+        <a href=" ../index.php">inicio</a>
+        <a href="../index.php">Sobre</a>
+        <a href="../index.php">Projetos</a>
+        <a href="../index.php">Contato</a>
         
     </nav>
     </header>

@@ -66,11 +66,11 @@
 
         //salvar no arquivo json
 
-        file_put_contents(__DIR__ . "/dados/intro.json", $jsonAtualizado);
+        file_put_contents(__DIR__ . "../dados/intro.json", $jsonAtualizado);
     }
 
     //leitura dos dados para exibição
-    $conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
+    $conteudoJson = file_get_contents(__DIR__ . "../dados/intro.json");
 
     //converte json para array php
 
@@ -82,7 +82,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css.past/dados.css">
+    <link rel="stylesheet" href="../css.past/dados.css">
     <title>json</title>
 </head>
 
@@ -91,10 +91,10 @@
         <h2>Eduardo <span>Augusto</span></h2>
     </div>
     <nav>
-        <a href=" index.php">inicio</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
+        <a href="../index.php">inicio</a>
+        <a href="../index.php">Sobre</a>
+        <a href="../index.php">Projetos</a>
+        <a href="../index.php">Contato</a>
         
     </nav>
     </header>
