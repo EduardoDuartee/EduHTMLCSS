@@ -22,11 +22,6 @@
     //7. Salvar no arquivo
 
     file_put_contents($arquivo, $json);
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
