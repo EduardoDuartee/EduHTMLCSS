@@ -163,6 +163,22 @@ else{
                     </div>
                     <a href="/atividades/cadastro.php">Ver Projeto</a>
                 </div><!--fim-->
+                <!--Projetp 5-->
+                 <div class="card">
+                    <div class="numero-projeto">
+                        02
+                    </div>
+                    <h3>funcoes</h3>
+                    <p>
+                       funcoes php
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <!--span>PHP</span-->
+                    </div>
+                    <a href="/atividades/funcoes2.php">Ver Projeto</a>
+                </div><!--fim-->
             </div>
         </section>
         <section id="contatos" class="contatos">
