@@ -45,7 +45,7 @@
 
         //serve para ler/abrir arqui json
 
-        $conteudoJson =file_get_contents(__DIR__ . "/dados/intro.json");
+        $conteudoJson =file_get_contents(__DIR__ . "../dados/intro.json");
 
         //serve para converte json para array php
         // o true serve para converter o json em array associativo para o php ler
@@ -82,7 +82,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.past/dados.css">
+    <link rel="stylesheet" href="..css.past/dados.css">
     <title>json</title>
 </head>
 
