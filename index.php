@@ -184,13 +184,14 @@ else{
                     <div class="numero-projeto">
                         01
                     </div>
-                    <h3>Persistencia de Dados</h3>
+                    <h3>PHP FUNÇÕES</h3>
                     <p>
-                       Aula de persistencia de dados
+                       Funçôes PHP
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
+                        <span>PHP</span>
                         <!--span>PHP</span-->
                     </div>
                     <a href="/atividades/funcoes.php">Ver Projeto</a>
