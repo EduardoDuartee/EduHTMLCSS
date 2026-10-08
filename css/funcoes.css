@@ -68,6 +68,12 @@
         width: 100%;
         background-color:#15151d;
         height: auto;
+        align-items: center;
+    }
+
+    .formulario h1{
+        color: rgb(0, 4, 255);
+        text-align: center;
     }
 
     .card{
