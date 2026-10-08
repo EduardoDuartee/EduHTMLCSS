@@ -1,5 +1,5 @@
 <?php
-require_once "08-funcoes.php"
+require_once "funcoes.php"
 ?>
 
 <!DOCTYPE html>
@@ -16,13 +16,14 @@ require_once "08-funcoes.php"
         <h2>Eduardo <span>Augusto</span></h2>
     </div>
     <nav>
-        <a href="..index.php">Inicio</a>
-        <a href="..index.php">Sobre</a>
-        <a href="..index.php">Projetos</a>
-        <a href="..index.php">Contato</a>
+        <a href="../index.php">Inicio</a>
+        <a href="../index.php">Sobre</a>
+        <a href="../index.php">Projetos</a>
+        <a href="../index.php">Contato</a>
         
     </nav>
     </header>
+
     <h1><?= $nomeEscola ?></h1>
     <h2><?= sadaucao()  ?></h2>
     <p><?= comprimentar("Eduardo") ?>?></p>
