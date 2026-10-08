@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         <input type="number" name="nota1" min="0" max="10" step="0.1" required>
         <label for="numero">Nota 2:</label>
         <input type="number" name="nota2" min="0" max="10" step="0.1" required>
-        <p><?= verificarStatus($media) ?></p>
+        <p><?= verificarStatus($situacao) ?></p>
         <button>Calcular Media</button>
     </form>
 </body>
