@@ -63,3 +63,17 @@
     nav a:hover{ /*hover es una pseudoclase*/
     color:rgb(0, 4, 255);
     }
+
+    .formulario{
+        width: 100%;
+        background-color: #292936;
+        height: auto;
+    }
+
+    .card{
+        width: 500px;
+        height: 500px;
+        align-items: center;
+        text-align: center;
+        gap: 2010px;
+    }
