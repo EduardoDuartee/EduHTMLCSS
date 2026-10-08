@@ -29,9 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
     <nav>
         <a href="../index.php">Inicio</a>
-        <a href="../index.php">Sobre</a>
-        <a href="../index.php">Projetos</a>
-        <a href="../index.php">Contato</a>
+        <a href="../index.php#sobre">Sobre</a>
+        <a href="../index.php#projetos">Projetos</a>
+        <a href="../index.php#contatos">Contato</a>
         
     </nav>
     </header>
