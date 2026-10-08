@@ -41,14 +41,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <p><?= comprimentar("Eduardo") ?></p>
 
 
-    <form method="POST">
-        <label for="numero">Nota 1:</label>
-        <input type="number" name="nota1" min="0" max="10" step="0.1" required>
-        <label for="numero">Nota 2:</label>
-        <input type="number" name="nota2" min="0" max="10" step="0.1" required>
-        <p>Sua Media é: <?=  $media ?></p>
-        <p>Voce Esta!: <?= $situacao ?></p>
-        <button>Calcular Media</button>
-    </form>
+    <div class="formulario">
+        <h1>CADASTRO PHP</h1>
+        <div class="card">
+            <form method="POST">
+                <label for="numero">Nota 1:</label>
+                <input type="number" name="nota1" min="0" max="10" step="0.1" required>
+                <label for="numero">Nota 2:</label>
+                <input type="number" name="nota2" min="0" max="10" step="0.1" required>
+                <p>Sua Media é: <?=  $media ?></p>
+                <p>Voce Esta!: <?= $situacao ?></p>
+                <button>Calcular Media</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
