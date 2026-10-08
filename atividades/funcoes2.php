@@ -39,10 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <h1><?= $nomeEscola ?></h1>
     <h2><?= sadaucao()  ?></h2>
     <p><?= comprimentar("Eduardo") ?></p>
-    <p>
-        resultado da soma:
-        <?= somar(10, 5) ?>
-    </p>
+
 
     <form method="POST">
         <label for="numero">Nota 1:</label>
