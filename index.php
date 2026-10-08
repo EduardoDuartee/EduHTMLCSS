@@ -194,7 +194,7 @@ else{
                         <span>PHP</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="/atividades/funcoes.php">Ver Projeto</a>
+                    <a href="/atividades/funcoes2.php">Ver Projeto</a>
                 </div><!--fim-->
 
 <!--========================================================================-->
