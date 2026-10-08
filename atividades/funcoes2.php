@@ -35,11 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         
     </nav>
     </header>
-
+<!--
     <h1><?= $nomeEscola ?></h1>
     <h2><?= sadaucao()  ?></h2>
     <p><?= comprimentar("Eduardo") ?></p>
-
+-->
 
     <div class="formulario">
         <h1>CADASTRO PHP</h1>
