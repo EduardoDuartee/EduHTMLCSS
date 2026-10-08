@@ -79,8 +79,8 @@
     .card{
         width: 500px;
         height: 500px;
+        background-color: #0f0f14;
         align-items: center;
         text-align: center;
-        gap: 2010px;
         display: flex;
     }
