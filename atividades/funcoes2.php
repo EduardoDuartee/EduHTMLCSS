@@ -1,5 +1,17 @@
 <?php
-require_once "funcoes.php"
+require_once "funcoes.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    $nota1 = $_POST["nota1"];
+    $nota2 = $_POST["nota2"];
+
+    $media = calcularMedia($nota1, $nota2);
+
+    $situacao = verificarStatus($media);
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -31,5 +43,12 @@ require_once "funcoes.php"
         resultado da soma:
         <?= somar(10, 5) ?>
     </p>
+
+    <form method="POST">
+        <label for="numero">Nota 1:</label>
+        <input type="number" name="nota1" min="0" max="10" step="0.1" required>
+        <label for="numero">Nota 2:</label>
+        <input type="number" name="nota2" min="0" max="10" step="0.1" required>
+    </form>
 </body>
 </html>
