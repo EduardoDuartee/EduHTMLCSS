@@ -26,7 +26,7 @@ require_once "funcoes.php"
 
     <h1><?= $nomeEscola ?></h1>
     <h2><?= sadaucao()  ?></h2>
-    <p><?= comprimentar("Eduardo") ?>?></p>
+    <p><?= comprimentar("Eduardo") ?></p>
     <p>
         resultado da soma:
         <?= somar(10, 5) ?>
