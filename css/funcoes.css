@@ -82,4 +82,5 @@
         align-items: center;
         text-align: center;
         gap: 2010px;
+        display: flex;
     }
