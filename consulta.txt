@@ -14,3 +14,8 @@ DELETE
 PHP
 file_put_contents - CREATE
 file_get_contents - READ
+
+cd .. dentro do www
+rm -rf wwwgit clome https do meu repositorio www
+cd www
+git pull

@@ -7,7 +7,7 @@ require_once "08-funcoes.php"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="funcoes.css">
+    <link rel="stylesheet" href="../css/funcoes.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,10 +16,10 @@ require_once "08-funcoes.php"
         <h2>Eduardo <span>Augusto</span></h2>
     </div>
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
+        <a href="..index.php">Inicio</a>
+        <a href="..index.php">Sobre</a>
+        <a href="..index.php">Projetos</a>
+        <a href="..index.php">Contato</a>
         
     </nav>
     </header>

@@ -99,6 +99,9 @@ else{
                 <p>Alguns trabalhos</p>
                 <h2>Meus Projetos</h2>
             </div>
+
+<!--========================================================================-->
+
             <div class="projetos">
                 <div class="card">
                     <div class="numero-projeto">
@@ -115,6 +118,9 @@ else{
                     </div>
                     <a href="/atividades/dados-json.php">Ver Projeto</a>
                 </div><!--fim-->
+
+<!--========================================================================-->
+
                 <!-- PROJETO 2 -->
                 <div class="card">
                     <div class="numero-projeto">
@@ -131,6 +137,9 @@ else{
                     </div>
                     <a href="meusite.html">Ver Projeto</a>
                 </div><!--fim-->
+
+<!--========================================================================-->
+
                 <!-- PROJETO 3 -->
                 <div class="card">
                     <div class="numero-projeto">
@@ -147,6 +156,9 @@ else{
                     </div>
                     <a href="/atividades/idade-get.php">Ver Projeto</a>
                 </div><!--fim-->
+
+<!--========================================================================-->
+
                 <!--Projetp 4-->
                 <div class="card">
                     <div class="numero-projeto">
@@ -163,22 +175,29 @@ else{
                     </div>
                     <a href="/atividades/cadastro.php">Ver Projeto</a>
                 </div><!--fim-->
+
+<!--========================================================================-->
+                
                 <!--Projetp 5-->
-                 <div class="card">
+            <div class="projetos">
+                <div class="card">
                     <div class="numero-projeto">
-                        02
+                        01
                     </div>
-                    <h3>funcoes</h3>
+                    <h3>Persistencia de Dados</h3>
                     <p>
-                       funcoes php
+                       Aula de persistencia de dados
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="/atividades/funcoes2.php">Ver Projeto</a>
+                    <a href="/atividades/funcoes.php">Ver Projeto</a>
                 </div><!--fim-->
+
+<!--========================================================================-->
+
             </div>
         </section>
         <section id="contatos" class="contatos">
