@@ -199,6 +199,27 @@ else{
 
 <!--========================================================================-->
 
+    <!--Projetp 6-->
+    <div class="projetos">
+                <div class="card">
+                    <div class="numero-projeto">
+                        01
+                    </div>
+                    <h3>HELP DESK</h3>
+                    <p>
+                       Funçôes PHP
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <!--span>PHP</span-->
+                    </div>
+                    <a href="projetos/index.php">Ver Projeto</a>
+                </div><!--fim-->
+
+<!--========================================================================-->
+
             </div>
         </section>
         <section id="contatos" class="contatos">
