@@ -69,6 +69,7 @@
         background-color:#15151d;
         height: 400px;
         align-items: center;
+        justify-content: center;
     }
 
     .formulario h1{
