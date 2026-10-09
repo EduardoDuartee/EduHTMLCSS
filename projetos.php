@@ -110,9 +110,8 @@
                     </div>
                     <a href="cadastro.php">Ver Projeto</a>
                 </div><!--fim-->
-            </div>
 
-             <!--Projetp 6-->
+                <!--Projetp 6-->
                 <div class="card">
                     <div class="numero-projeto">
                         06
@@ -128,5 +127,8 @@
                     </div>
                     <a href="cadastro.php">Ver Projeto</a>
                 </div><!--fim-->
+            </div>
+
+             
 </body>
 </html>
