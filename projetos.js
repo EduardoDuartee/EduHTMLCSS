@@ -18,7 +18,7 @@ let autoPlayTimer = null;
 function startAutoPlay(){
     stopAutoPlay();
     autoPlayTimer = setInterval(() => {
-    if(courrentIndex + itemsPerPage < totalItens{
+    if(courrentIndex + itemsPerPage < totalItens){
         currentIndex +=itemsPerPage;
     } else{
         currentIndex = 0;
