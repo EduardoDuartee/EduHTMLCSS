@@ -23,3 +23,67 @@
      text-decoration: none;   
      color: inherit; /*inherit copia el color */
     }
+
+    /*============*/
+    /*  PROJETOS  */
+    /*============*/
+    
+    .projetos-secao{
+        background-color: #0f0f14;
+    }
+    
+    .projetos{
+        display: flex;
+        gap: 25px;
+    }
+    
+    .card{
+        flex: 1;
+        background-color: #191922;
+        padding: 30px;
+        border-radius: 12px;
+        border:  1px solid #292936;
+        transition: 0.3s;
+    }
+    
+    .card:hover{
+        transform: translateY(-8px);
+        border-color:rgb(0, 4, 255);
+    }
+    
+    .numero-projeto{
+        color: rgb(0, 4, 255);
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .card h3{
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .card p{
+        color: #9c9cab;
+        margin-bottom: 25px;
+    }
+    
+    .card > a{
+        color:rgb(0, 4, 255);
+        font-weight: bold;
+    }
+    
+    /*tecno*/
+    .tecnologias{
+        display: flex;
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    
+    .tecnologias span{
+        background-color: #292936;
+        color: #bdbdc9;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
