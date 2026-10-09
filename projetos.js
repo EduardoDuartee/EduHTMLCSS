@@ -30,3 +30,15 @@ function startAutoPlay(){
     if (autoPlayTimer) clearInterval(autoPlayTimer);
 }
 
+//eventos de arraste
+track.addEventListener('mousedown', TouchStart);
+track.addEventListener('mousemove', TouchMove);
+track.addEventListener('mouseup', TouchEnd);
+track.addEventListener('mouseleave', TouchEnd);
+
+track.addEventListener('touchstart', TouchStart);
+track.addEventListener('touchmove', TouchMove);
+track.addEventListener('touchend', TouchEnd);
+
+function touch
+
