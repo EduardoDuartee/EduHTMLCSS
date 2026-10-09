@@ -50,14 +50,22 @@ body{
         margin: 0 auto;
         overflow: hidden;
         padding:  20px 0;
+        user-select: none;
     }
     
     .projetos{
         display: flex;
-        gap: 25px;
+        gap: 20px;
+        cursor: grab;
+        will-change: transform;
+    }
+    .projetos:active{
+        cursor: grabbing;
     }
     
     .card{
+        min-width: calc((100% - 40px)/3);
+        box-sizing: border-box;
         flex: 1;
         background-color: #191922;
         padding: 30px;
