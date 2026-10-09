@@ -26,10 +26,6 @@
 
 
      <section id="projetos" class="projetos-secao">
-            <div class="titulo-secao">
-                <p>Alguns trabalhos</p>
-                <h2>Meus Projetos</h2>
-            </div>
             <div class="projetos">
                 <div class="card">
                     <div class="numero-projeto">
@@ -46,6 +42,7 @@
                     </div>
                     <a href="dados-json.php">Ver Projeto</a>
                 </div><!--fim-->
+                
                 <!-- PROJETO 2 -->
                 <div class="card">
                     <div class="numero-projeto">

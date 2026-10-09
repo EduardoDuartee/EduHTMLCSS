@@ -45,6 +45,11 @@ body{
     
     .projetos-secao{
         background-color: #0f0f14;
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding:  20px 0;
     }
     
     .projetos{
