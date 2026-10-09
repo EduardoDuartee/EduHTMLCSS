@@ -163,66 +163,67 @@ else{
                 <!--Projetp 4-->
                 <div class="card">
                     <div class="numero-projeto">
-                        01
+                            01
                     </div>
                     <h3>Cadastros de Produtos</h3>
                     <p>
-                       Aula de persistencia de dados
+                    Aula de persistencia de dados
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
                         <!--span>PHP</span-->
-                    </div>
-                    <a href="/atividades/cadastro.php">Ver Projeto</a>
+                        </div>
+                        <a href="/atividades/cadastro.php">Ver Projeto</a>
                 </div><!--fim-->
 
 <!--========================================================================-->
                 
                 <!--Projetp 5-->
-            <div class="projetos">
-                <div class="card">
-                    <div class="numero-projeto">
-                        01
-                    </div>
-                    <h3>PHP FUNÇÕES</h3>
-                    <p>
-                       Funçôes PHP
-                    </p>
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>PHP</span>
-                        <!--span>PHP</span-->
-                    </div>
-                    <a href="/atividades/funcoes2.php">Ver Projeto</a>
+                <div class="projetos">
+                    <div class="card">
+                        <div class="numero-projeto">
+                            01
+                        </div>
+                        <h3>PHP FUNÇÕES</h3>
+                        <p>
+                        Funçôes PHP
+                        </p>
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <!--span>PHP</span-->
+                        </div>
+                        <a href="/atividades/funcoes2.php">Ver Projeto</a>
                 </div><!--fim-->
 
 <!--========================================================================-->
 
-    <!--Projetp 6-->
-    <div class="projetos">
-                <div class="card">
-                    <div class="numero-projeto">
-                        01
-                    </div>
-                    <h3>HELP DESK</h3>
-                    <p>
-                       Funçôes PHP
-                    </p>
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>PHP</span>
-                        <!--span>PHP</span-->
-                    </div>
-                    <a href="projetos/index.php">Ver Projeto</a>
-                </div><!--fim-->
-
-<!--========================================================================-->
-
-            </div>
+                <!--Projetp 6-->
+                <div class="projetos">
+                    <div class="card">
+                        <div class="numero-projeto">
+                            01
+                        </div>
+                        <h3>HELP DESK</h3>
+                        <p>
+                        Funçôes PHP
+                        </p>
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <!--span>PHP</span-->
+                        </div>
+                        <a href="projetos/index.php">Ver Projeto</a>
+                    </div><!--fim-->
+                </div>
+                <script src="projetos.js"></script>
         </section>
+<!--========================================================================-->
+
+
         <section id="contatos" class="contatos">
             <div class="titulo-secao">
                 <p>Vamos conversar</p>
