@@ -43,6 +43,7 @@ else{
         <a href="#sobre">Sobre</a>
         <a href="#projetos">Projetos</a>
         <a href="#contato">Contato</a>
+        <a href="projetos.php">projetos</a>
         
     </nav>
     </header>
