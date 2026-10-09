@@ -62,6 +62,9 @@ body{
     .projetos:active{
         cursor: grabbing;
     }
+    .card a{
+        -webkit-user-drag: none;
+    }
     
     .card{
         min-width: calc((100% - 40px)/3);
