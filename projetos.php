@@ -128,7 +128,8 @@
                     <a href="cadastro.php">Ver Projeto</a>
                 </div><!--fim-->
             </div>
-            <script src="projetos.js"></script>
-    </section>     
+           
+    </section>    
+     <script src="projetos.js"></script> 
 </body>
 </html>
