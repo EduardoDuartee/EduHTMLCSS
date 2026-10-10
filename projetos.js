@@ -38,31 +38,31 @@ section.addEventListener('mouseleave', () =>{
 });
 
 //eventos de arraste
-track.addEventListener('mousedown', TouchStart);
-track.addEventListener('mousemove', TouchMove);
-track.addEventListener('mouseup', TouchEnd);
-track.addEventListener('mouseleave', TouchEnd);
+track.addEventListener('mousedown', touchStart);
+track.addEventListener('mousemove', touchMove);
+track.addEventListener('mouseup', touchEnd);
+track.addEventListener('mouseleave', touchEnd);
 
-track.addEventListener('touchstart', TouchStart);
-track.addEventListener('touchmove', TouchMove);
-track.addEventListener('touchend', TouchEnd);
+track.addEventListener('touchstart', touchStart);
+track.addEventListener('touchmove', touchMove);
+track.addEventListener('touchend', touchEnd);
 
 function touchStart(event){
     stopAutoPlay();
     isDragging = true;
     startX = getPositionX(event);
-    animationId = resquetAnimationFrame(Animation);
-    track.computedStyleMap.trasition ='none';
+    animationId = requetanimationFrame(animation);
+    track.style.transition ='none';
 }
 
-function touchmove(event){
-    if (isDragging) return;
+function touchMove(event){
+    if (!isDragging) return;
     const currentX = getPositionX(event);
     const diff = currentX - startX;
     currentTranslate = prevTranslate + diff;
 }
 
-function touchend(){
+function touchEnd(){
     if (!isDragging) return;
     isDragging = false;
     cancelAnimationFrame(animationId);
