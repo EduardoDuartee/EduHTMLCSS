@@ -55,3 +55,18 @@ function touchStart(event){
     track.computedStyleMap.trasition ='none';
 }
 
+function touchmove(event){
+    if (isDragging) return;
+    const currentX = getPositionX(event);
+    const diff = currentX - startX;
+    currentTranslate = prevTranslate + diff;
+}
+
+function touchend(){
+    if (!isDragging) return;
+    isDragging = false;
+    cancelAnimationFrame(animationId);
+
+    const moveBy currentTranslate - prevTranslate;
+}
+
