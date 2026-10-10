@@ -40,5 +40,11 @@ track.addEventListener('touchstart', TouchStart);
 track.addEventListener('touchmove', TouchMove);
 track.addEventListener('touchend', TouchEnd);
 
-function touch
+function touchStart(event){
+    stopAutoPlay();
+    isDragging = true;
+    startX = getPositionX(event);
+    animationId = resquetAnimationFrame(Animation);
+    track.computedStyleMap.trasition ='none';
+}
 
