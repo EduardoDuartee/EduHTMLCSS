@@ -5,7 +5,7 @@ const cards = document.querySelectorAll('.card');
 let isDragging = false;
 let startX = 0;
 let currentTranslate = 0;
-let prevtranslate = 0;
+let prevTranslate = 0;
 let animationId = 0;
 let currentIndex = 0;
 
@@ -19,7 +19,7 @@ function startAutoPlay(){
     stopAutoPlay();
     autoPlayTimer = setInterval(() => {
     if(courrentIndex + itemsPerPage < totalItens){
-        currentIndex +=itemsPerPage;
+        currentIndex += itemsPerPage;
     } else{
         currentIndex = 0;
     }
@@ -29,6 +29,13 @@ function startAutoPlay(){
 function startAutoPlay(){
     if (autoPlayTimer) clearInterval(autoPlayTimer);
 }
+
+//pausa quando passar por cima do carrossel
+
+section.addEventListener('mouseenter', stopAutoPlay)
+section.addEventListener('mouseleave', () =>{
+    if(!isDragging) startAutoPlay();
+});
 
 //eventos de arraste
 track.addEventListener('mousedown', TouchStart);

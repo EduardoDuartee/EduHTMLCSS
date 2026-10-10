@@ -25,7 +25,7 @@
         </div>
 
 
-     <section id="projetos" class="projetos-secao">
+    <section id="projetos" class="projetos-secao">
             <div class="projetos">
                 <div class="card">
                     <div class="numero-projeto">
@@ -128,7 +128,7 @@
                     <a href="cadastro.php">Ver Projeto</a>
                 </div><!--fim-->
             </div>
-
-             
+            <script src="projetos.js"></script>
+    </section>     
 </body>
 </html>

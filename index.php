@@ -219,7 +219,7 @@ else{
                         <a href="projetos/index.php">Ver Projeto</a>
                     </div><!--fim-->
                 </div>
-                <script src="projetos.js"></script>
+                
         </section>
 <!--========================================================================-->
 
