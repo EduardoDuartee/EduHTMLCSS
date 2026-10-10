@@ -1,6 +1,6 @@
 const track = document.querySelector('.projetos');
 const section = document.querySelector('.projetos-secao');
-const cards = document.querySelectorAll('.cards');
+const cards = document.querySelectorAll('.card');
 
 let isDragging = false;
 let startX = 0;
@@ -11,7 +11,7 @@ let currentIndex = 0;
 
 const itemsPerPage = 3;
 const totalItens = cards.length;
-const autoPlayDelay = 3500;
+const autoPlayDelay = 1000;
 let autoPlayTimer = null;
 
 //---Auto plat---
