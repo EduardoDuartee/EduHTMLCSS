@@ -67,6 +67,6 @@ function touchend(){
     isDragging = false;
     cancelAnimationFrame(animationId);
 
-    const moveBy currentTranslate - prevTranslate;
+    const moveBy = currentTranslate - prevTranslate;
 }
 
