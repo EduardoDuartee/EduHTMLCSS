@@ -70,3 +70,11 @@ function touchEnd(){
     const moveBy = currentTranslate - prevTranslate;
 }
 
+// se arrastou para esquerda o suficiente avança 3 itens
+    if (moveBy < -100 && currentIndex + itemsPerPage < totalItens) {
+    currentIndex += itemsPerPage;
+}
+// se arrastou para direita o suficiente avança 3 itens
+    else if (moveBy > 100 && currentIndex + itemsPerPage >= 0) {
+        currentIndex -= itemsPerPage;
+    }
