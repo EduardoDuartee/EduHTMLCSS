@@ -219,6 +219,30 @@ else{
                         <a href="projetos/index.php">Ver Projeto</a>
                     </div><!--fim-->
                 </div>
+
+                
+<!--========================================================================-->
+
+                <!--Projetp 7-->
+                <div class="projetos">
+                    <div class="card">
+                        <div class="numero-projeto">
+                            01
+                        </div>
+                        <h3>Projeto</h3>
+                        <p>
+                        teste em frupo
+                        </p>
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <span>Json</span>
+                            <!--span>PHP</span-->
+                        </div>
+                        <a href="projetos/index.php">Ver Projeto</a>
+                    </div><!--fim-->
+                </div>
                 
         </section>
 <!--========================================================================-->
