@@ -240,7 +240,7 @@ else{
                             <span>Json</span>
                             <!--span>PHP</span-->
                         </div>
-                        <a href="projetos/index.php">Ver Projeto</a>
+                        <a href="projetos.php">Ver Projeto</a>
                     </div><!--fim-->
                 </div>
                 
