@@ -1,135 +1,73 @@
-<!--Comit de Eduardo-->
+<?php
+    $jsonFile = 'projetos.json'; $projetos = [];
+
+    if (file_exists($jsonFile)){
+        $conteudo = file_get_contents($jsonFile);
+        $projetos = json_decode($conteudo, true) ?? [];
+    }
+
+    //vagas do carrossel
+    $totalCards =6;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="projetos.css">
+    <link rel="stylesheet" href="../css/projetos.css">
     <title>Projetos</title>
 </head>
 <body>
 
         <div class="Nav-bar">
-            <img src="imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
-            <a href="index.php">INICIO</a>
-            <a href="orcamentos.php">ORÇAMENTOS</a>
-            <a href="#">FINANCEIRO</a>
+            <img src="../imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
+            <a href="../index.php">INICIO</a>
+            <a href="orcamento.php">ORÇAMENTO</a>
+            <a href="financeiro.php">FINANCEIRO</a>
             <a href="juridico.php">JURIDICO</a>
             <a href="projetos.php">PROJETOS</a>
-            <a href="#">DESENVOLVIMENTO</a>
+            <a href="desenvolvimento.php">DESENVOLVIMENTO</a>
         </div><!--Nav-bar-->
-
-        <div class="propaganda">
-            <h1>Conheça nossos Projetos</h1>
-            <h2>Seu projeto pode fazer parte da nossa Histora</h2>
-        </div>
 
 
     <section id="projetos" class="projetos-secao">
-            <div class="projetos">
+        <div class="projetos">
+            <?php for ($i = 0; $i < $totalCards; $i++): 
+                $numeroFormatado = str_pad($i + 1, 2, '0', STR_PAD_LEFT);
+                $temProjeto = isset($projetos[$i]);
+            ?>
                 <div class="card">
-                    <div class="numero-projeto">
-                        01
-                    </div>
-                    <h3>Faça parte Da Nossa Historia</h3>
-                    <p>
-                       Seu projeto exibido aqui!
-                    </p>
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        
-                    </div>
-                    <a href="dados-json.php">Ver Projeto</a>
-                </div><!--fim-->
+                    <div class="numero-projeto"><?= $numeroFormatado; ?></div>
 
-                <!-- PROJETO 2 -->
-                <div class="card">
-                    <div class="numero-projeto">
-                        02
-                    </div>
-                    <h3>Faça parte Da Nossa Historia</h3>
-                    <p>
-                       Seu projeto exibido aqui!
-                    </p>
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                       
-                    </div>
-                    <a href="meusite.html">Ver Projeto</a>
-                </div><!--fim-->
+                    <?php if ($temProjeto): ?>
+                        <h3><?= htmlspecialchars($projetos[$i]['titulo'] ?? ''); ?></h3>
+                        <p><?= htmlspecialchars($projetos[$i]['descricao'] ?? ''); ?></p>
 
-                <!-- PROJETO 3 -->
-                <div class="card">
-                    <div class="numero-projeto">
-                        03
-                    </div>
-                    <h3>Faça parte Da Nossa Historia</h3>
-                    <p>
-                       Seu projeto exibido aqui!
-                    </p>
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        
-                    </div>
-                    <a href="idade-get.php">Ver Projeto</a>
-                </div><!--fim-->
+                        <div class="tecnologias">
+                            <?php if (!empty($projetos[$i]['tecnologias']) && is_array($projetos[$i]['tecnologias'])): ?>
+                                <?php foreach($projetos[$i]['tecnologias'] as $tech): ?>
+                                    <span><?= htmlspecialchars($tech); ?></span> 
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
 
-                <!--Projetp 4-->
-                <div class="card">
-                    <div class="numero-projeto">
-                        04
-                    </div>
-                    <h3>Cadastros de Produtos</h3>
-                    <p>
-                       Aula de persistencia de dados
-                    </p>
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        
-                    </div>
-                    <a href="cadastro.php">Ver Projeto</a>
-                </div><!--fim-->
+                        <a href="<?= htmlspecialchars($projetos[$i]['link'] ?? '#'); ?>">Ver Projeto</a>
 
-                 <!--Projetp 5-->
-                <div class="card">
-                    <div class="numero-projeto">
-                        05
-                    </div>
-                    <h3>Cadastros de Produtos</h3>
-                    <p>
-                       Aula de persistencia de dados
-                    </p>
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        
-                    </div>
-                    <a href="cadastro.php">Ver Projeto</a>
-                </div><!--fim-->
+                    <?php else: ?>
+                        <h3>Faça Parte da Nossa História</h3>
+                        <p>Seu projeto exibido aqui</p>
 
-                <!--Projetp 6-->
-                <div class="card">
-                    <div class="numero-projeto">
-                        06
-                    </div>
-                    <h3>Cadastros de Produtos</h3>
-                    <p>
-                       Aula de persistencia de dados
-                    </p>
-                    <div class="tecnologias">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        
-                    </div>
-                    <a href="cadastro.php">Ver Projeto</a>
-                </div><!--fim-->
-            </div>
-           
-    </section>    
-     <script src="projetos.js"></script> 
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                        <a href="dados-json.php">Ver Projetos</a>
+                    <?php endif; ?>
+                </div><!-- .card -->
+            <?php endfor; ?>
+        </div><!-- .projetos -->       
+    </section>
+     <script src="../projetos.js"></script> 
 </body>
 </html>
