@@ -72,14 +72,12 @@ body{
     margin: 40px auto; 
     padding: 20px; 
     border-radius: 16px;
-
-    user-select: none;
     box-sizing: border-box;
 }
 
 .projetos {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Permite que os cards passem para a linha de baixo */
     gap: 20px;
     width: 100%;
 }
@@ -89,7 +87,7 @@ body{
 }
 
 .card {
-  
+    /* Força exatamente 4 cards por linha, descontando os gaps */
     flex: 0 0 calc((100% - 60px) / 4);
     box-sizing: border-box;
     background-color: #191922;
@@ -98,7 +96,7 @@ body{
     border: 1px solid #292936;
     transition: transform 0.3s, border-color 0.3s;
     
-  
+    /* Alinha o link "Ver Projeto" no final do card */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -135,7 +133,7 @@ body{
     margin-top: auto;
 }
 
-/*tecno*/
+/* Tecnologias */
 .tecnologias {
     display: flex;
     flex-wrap: wrap;
@@ -151,3 +149,15 @@ body{
     font-size: 11px;
 }
 
+/* Responsividade (Ajustes para telas menores) */
+@media (max-width: 1024px) {
+    .card {
+        flex: 0 0 calc((100% - 20px) / 2); /* 2 por linha em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 0 0 100%; /* 1 por linha em celulares */
+    }
+}
