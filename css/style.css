@@ -210,70 +210,96 @@
     color: #9292a0;
     font-size: 14px;
     }
-    
     /*============*/
-    /*  PROJETOS  */
-    /*============*/
+/*  PROJETOS  */
+/*============*/
+
+.projetos-secao {
+    background-color: #0f0f14;
+    position: relative;
+    width: 90%; 
+    max-width: 1300px; 
+    margin: 40px auto; 
+    padding: 20px; 
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.projetos {
+    display: flex;
+    flex-wrap: wrap; /* Faz o 5º card descer automaticamente para a segunda linha */
+    gap: 20px;
+    width: 100%;
+}
+
+.card a {
+    -webkit-user-drag: none;
+}
+
+.card {
+    /* Garante exatamente 4 cards por linha calculando os espaçamentos */
+    flex: 0 0 calc((100% - 60px) / 4);
+    box-sizing: border-box;
+    background-color: #191922;
+    padding: 25px 20px;
+    border-radius: 12px;
+    border: 1px solid #292936;
+    transition: transform 0.3s, border-color 0.3s;
     
-    .projetos-secao{
-        background-color: #0f0f14;
-    }
-    
-    .projetos{
-        display: flex;
-        gap: 25px;
-    }
-    
-    .card{
-        flex: 1;
-        background-color: #191922;
-        padding: 30px;
-        border-radius: 12px;
-        border:  1px solid #292936;
-        transition: 0.3s;
-    }
-    
-    .card:hover{
-        transform: translateY(-8px);
-        border-color:rgb(0, 4, 255);
-    }
-    
-    .numero-projeto{
-        color: rgb(0, 4, 255);
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-    
-    .card h3{
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
-    
-    .card p{
-        color: #9c9cab;
-        margin-bottom: 25px;
-    }
-    
-    .card > a{
-        color:rgb(0, 4, 255);
-        font-weight: bold;
-    }
-    
-    /*tecno*/
-    .tecnologias{
-        display: flex;
-        gap: 8px;
-        margin-bottom: 25px;
-    }
-    
-    .tecnologias span{
-        background-color: #292936;
-        color: #bdbdc9;
-        border-radius: 5px;
-        padding: 5px 10px;
-        font-size: 12px;
-    }
+    /* Alinha o link "Ver Projeto" sempre no final do card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: rgb(0, 4, 255);
+}
+
+.numero-projeto {
+    color: rgb(2, 88, 248);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.card p {
+    color: #9c9cab;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.card > a {
+    color: rgb(0, 4, 255);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+/* Tecnologias */
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.tecnologias span {
+    background-color: #292936;
+    color: #bdbdc9;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 11px;
+}
+
+
     
     /*==============*/
     /*    CONTATO   */
