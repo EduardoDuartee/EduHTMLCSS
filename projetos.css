@@ -5,6 +5,7 @@ body{
     background-color: black;
     overflow-x: hidden;
     width: 100%;
+    margin: 0;
 }
 
 /* nav bar*/ 
