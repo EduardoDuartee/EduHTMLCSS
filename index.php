@@ -44,7 +44,7 @@ else{
         <a href="#projetos">Projetos</a>
         <a href="#contato">Contato</a>
         <a href="projetos.php">projetos</a>
-        <a href="cliente.php">CLIENTES</a>
+        
         
     </nav>
     </header>
@@ -265,7 +265,7 @@ else{
                             <span>Json</span>
                             <!--span>PHP</span-->
                         </div>
-                        <a href="projetos.php">Ver Projeto</a>
+                        <a href="cliente.php">Ver Projeto</a>
                     </div><!--fim-->
                 </div>
                 
