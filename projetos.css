@@ -59,6 +59,7 @@ body{
     color: #a0a0b0;
     font-weight: normal;
 }
+
 /*============*/
 /*  PROJETOS  */
 /*============*/
@@ -66,19 +67,19 @@ body{
 .projetos-secao {
     background-color: #0f0f14;
     position: relative;
-    width: 90%;             
-    max-width: 1300px;      
-    margin: 40px auto;      
-    padding: 20px;          
+    width: 90%; 
+    max-width: 1300px; 
+    margin: 40px auto; 
+    padding: 20px; 
     border-radius: 16px;
-    overflow: hidden;
+
     user-select: none;
     box-sizing: border-box;
 }
 
 .projetos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    display: flex;
+    flex-wrap: wrap; 
     gap: 20px;
     width: 100%;
 }
@@ -88,14 +89,16 @@ body{
 }
 
 .card {
-    width: 100%;
+  
+    flex: 0 0 calc((100% - 60px) / 4);
     box-sizing: border-box;
     background-color: #191922;
-    padding: 30px;
+    padding: 25px 20px;
     border-radius: 12px;
     border: 1px solid #292936;
     transition: transform 0.3s, border-color 0.3s;
-
+    
+  
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -110,18 +113,19 @@ body{
     color: rgb(2, 88, 248);
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .card h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 12px;
     color: #ffffff;
 }
 
 .card p {
     color: #9c9cab;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
 
 .card > a {
@@ -134,16 +138,16 @@ body{
 /*tecno*/
 .tecnologias {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 8px;
-    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
 }
 
 .tecnologias span {
     background-color: #292936;
     color: #bdbdc9;
     border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 12px;
+    padding: 4px 8px;
+    font-size: 11px;
 }
 
