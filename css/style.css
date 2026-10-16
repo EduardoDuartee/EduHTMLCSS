@@ -210,7 +210,8 @@
     color: #9292a0;
     font-size: 14px;
     }
-    /*============*/
+    
+/*============*/
 /*  PROJETOS  */
 /*============*/
 
@@ -226,8 +227,9 @@
 }
 
 .projetos {
-    display: flex;
-    flex-wrap: wrap; /* Faz o 5º card descer automaticamente para a segunda linha */
+    display: grid !important;
+    /* Força EXATAMENTE 4 colunas iguais */
+    grid-template-columns: repeat(4, 1fr) !important; 
     gap: 20px;
     width: 100%;
 }
@@ -237,8 +239,8 @@
 }
 
 .card {
-    /* Garante exatamente 4 cards por linha calculando os espaçamentos */
-    flex: 0 0 calc((100% - 60px) / 4);
+    width: 100% !important;
+    min-width: 0 !important;
     box-sizing: border-box;
     background-color: #191922;
     padding: 25px 20px;
@@ -246,7 +248,6 @@
     border: 1px solid #292936;
     transition: transform 0.3s, border-color 0.3s;
     
-    /* Alinha o link "Ver Projeto" sempre no final do card */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -297,6 +298,19 @@
     border-radius: 5px;
     padding: 4px 8px;
     font-size: 11px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .projetos {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 por linha em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .projetos {
+        grid-template-columns: 1fr !important; /* 1 por linha em celulares */
+    }
 }
 
 
