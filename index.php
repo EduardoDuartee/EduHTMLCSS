@@ -44,8 +44,6 @@ else{
         <a href="#projetos">Projetos</a>
         <a href="#contato">Contato</a>
         <a href="projetos.php">projetos</a>
-        
-        
     </nav>
     </header>
 
