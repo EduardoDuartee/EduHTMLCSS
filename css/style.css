@@ -225,15 +225,15 @@
     box-sizing: border-box;
 }
 
-/* Container Grid Principal */
+
 .projetos-secao .projetos {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important; /* Força exatamente 4 colunas */
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: 20px !important;
     width: 100% !important;
 }
 
-/* Anula qualquer container .projetos interno acidental */
+
 .projetos-secao .projetos .projetos {
     display: contents !important;
 }
@@ -242,7 +242,7 @@
 .projetos-secao .card {
     width: 100% !important;
     max-width: 100% !important;
-    min-width: 0 !important; /* Importante para não comprimir texto no grid */
+    min-width: 0 !important; 
     flex: none !important;
     box-sizing: border-box !important;
     background-color: #191922;
@@ -307,9 +307,6 @@
     padding: 4px 8px;
     font-size: 11px;
 }
-
-
-
 
 
     
