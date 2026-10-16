@@ -95,13 +95,14 @@ else{
             </div>
           </section>
 
+<!--========================================================================-->
+
           <section id="projetos" class="projetos-secao">
             <div class="titulo-secao">
                 <p>Alguns trabalhos</p>
                 <h2>Meus Projetos</h2>
             </div>
 
-<!--========================================================================-->
 
             <div class="projetos">
                 <div class="card">

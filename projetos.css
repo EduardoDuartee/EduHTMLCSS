@@ -59,29 +59,25 @@ body{
     color: #a0a0b0;
     font-weight: normal;
 }
-
 /*============*/
 /*  PROJETOS  */
-
 /*============*/
 
 .projetos-secao {
     background-color: #0f0f14;
     position: relative;
-    width: 90%; 
-    max-width: 1300px; 
-    margin: 40px auto; 
-    padding: 20px; 
+    width: 90%;             
+    max-width: 1300px;      
+    margin: 40px auto;      
+    padding: 20px;          
     border-radius: 16px;
     overflow: hidden;
     user-select: none;
     box-sizing: border-box;
-    flex-wrap: wrap;
 }
 
 .projetos {
     display: grid;
-    
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     width: 100%;
@@ -92,7 +88,6 @@ body{
 }
 
 .card {
-    
     width: 100%;
     box-sizing: border-box;
     background-color: #191922;
@@ -100,6 +95,10 @@ body{
     border-radius: 12px;
     border: 1px solid #292936;
     transition: transform 0.3s, border-color 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card:hover {
@@ -129,6 +128,7 @@ body{
     color: rgb(0, 4, 255);
     font-weight: bold;
     text-decoration: none;
+    margin-top: auto;
 }
 
 /*tecno*/
