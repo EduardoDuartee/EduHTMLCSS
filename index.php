@@ -227,7 +227,7 @@ else{
                 <div class="projetos">
                     <div class="card">
                         <div class="numero-projeto">
-                            01
+                            07
                         </div>
                         <h3>Projeto</h3>
                         <p>
@@ -243,8 +243,32 @@ else{
                         <a href="projetos.php">Ver Projeto</a>
                     </div><!--fim-->
                 </div>
+                               
+<!--========================================================================-->
+
+                <!--Projetp 8-->
+                <div class="projetos">
+                    <div class="card">
+                        <div class="numero-projeto">
+                            08
+                        </div>
+                        <h3>cliente</h3>
+                        <p>
+                        teste em frupo
+                        </p>
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <span>Json</span>
+                            <!--span>PHP</span-->
+                        </div>
+                        <a href="projetos.php">Ver Projeto</a>
+                    </div><!--fim-->
+                </div>
                 
         </section>
+
 <!--========================================================================-->
 
 

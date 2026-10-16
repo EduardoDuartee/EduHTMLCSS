@@ -1,6 +1,6 @@
 http://www.w3schools.com/cssref
 
-https://eduardoa755.devlook.xyz/
+
 
 ssh eduardoa755@193.111.116.99
 
