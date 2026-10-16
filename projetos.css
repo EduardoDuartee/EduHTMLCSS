@@ -149,15 +149,3 @@ body{
     font-size: 11px;
 }
 
-/* Responsividade (Ajustes para telas menores) */
-@media (max-width: 1024px) {
-    .card {
-        flex: 0 0 calc((100% - 20px) / 2); /* 2 por linha em tablets */
-    }
-}
-
-@media (max-width: 600px) {
-    .card {
-        flex: 0 0 100%; /* 1 por linha em celulares */
-    }
-}
