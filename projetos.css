@@ -59,7 +59,6 @@ body{
     color: #a0a0b0;
     font-weight: normal;
 }
-
 /*============*/
 /*  PROJETOS  */
 /*============*/
@@ -77,7 +76,7 @@ body{
 
 .projetos {
     display: flex;
-    flex-wrap: wrap; /* Permite que os cards passem para a linha de baixo */
+    flex-wrap: wrap; 
     gap: 20px;
     width: 100%;
 }
@@ -87,7 +86,7 @@ body{
 }
 
 .card {
-    /* Força exatamente 4 cards por linha, descontando os gaps */
+
     flex: 0 0 calc((100% - 60px) / 4);
     box-sizing: border-box;
     background-color: #191922;
@@ -96,7 +95,7 @@ body{
     border: 1px solid #292936;
     transition: transform 0.3s, border-color 0.3s;
     
-    /* Alinha o link "Ver Projeto" no final do card */
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
