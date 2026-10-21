@@ -1,0 +1,8 @@
+terminal:
+ssh cincodevs@193.111.116.99
+
+senha:
+ 755!@#
+
+site:
+https://cincodevs.devlook.xyz/

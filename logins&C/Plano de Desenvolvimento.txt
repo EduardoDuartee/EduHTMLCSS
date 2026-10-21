@@ -1,0 +1,12 @@
+===================================Aeroporto===================================
+
+ - pistas disponiveis e ocupadas -> portao  -> aviões disponiveis -> situação do aviao
+
+ - Torre de comando /  venda de passsagens
+
+ - destinos -> voos previstos -> sistemas de horario -> sistema de segurança
+
+ ===================================Cadastro===================================
+
+ - sistema checkin: Destino -> cod: passagem -> Nome da pessoa -> N° da cadeira -> 
+   classe do voo - > pesagem de bagagem

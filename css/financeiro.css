@@ -1,0 +1,109 @@
+/*---COMMIT POR DANIEL---*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #2c2c2c;;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* nav bar*/ 
+
+.Nav-bar{
+    background-color: rgb(25, 37, 41);
+    width: 100%;
+    height: 50px;
+    margin-top: 0;
+    color: white;
+    padding: 10px 0 ;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    
+}
+
+.Nav-bar a{
+    color: white;
+    text-decoration: none; 
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.Nav-bar img
+{
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
+    margin-left: -80px;
+}
+/* final do nav*/
+
+.item
+{
+    font-weight: bold;
+    color: #00f7ff
+}
+
+p
+{
+    padding: 3px;
+    color: #ffffff
+}
+
+h1
+{
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+.subtit
+{
+    color: #00f7ff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 3px;
+    margin-top: -1px;
+    margin-bottom: 60px;
+    font-size: 15px;  
+    font-weight: bold;
+}
+
+.orcamento
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cards
+{
+    background-color: #344B53;
+    color: #67E8F9;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 300px;
+    flex-wrap: wrap;
+    height: 200px ;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 24px;
+
+    
+}
