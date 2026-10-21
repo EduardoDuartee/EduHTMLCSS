@@ -269,32 +269,6 @@ else{
                 
         </section>
 
-
-<!--========================================================================-->
-
-                <!--Projetp 9-->
-                <div class="projetos">
-                    <div class="card">
-                        <div class="numero-projeto">
-                            09
-                        </div>
-                        <h3>cliente</h3>
-                        <p>
-                        teste em frupo
-                        </p>
-                        <div class="tecnologias">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>PHP</span>
-                            <span>Json</span>
-                            <!--span>PHP</span-->
-                        </div>
-                        <a href="projetos.php">Ver Projeto</a>
-                    </div><!--fim-->
-                </div>
-                
-        </section>
-
 <!--========================================================================-->
 
 
