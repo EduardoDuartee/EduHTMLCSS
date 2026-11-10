@@ -3,7 +3,7 @@
 // mysql: SGDB
 // PDO: Interface doPHP que permite conversa com banco de dados por meio de drive
 
-// host = 'localhost'
+// host = 'localhost' = 194.61.238.119
 $host = 'localhost';
 $db = 'eduardoa755_db1';
 $user = 'eduardoa755';
