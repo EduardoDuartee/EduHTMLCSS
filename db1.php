@@ -8,7 +8,7 @@
         preco DECIMAL(10,2) NOT NULL,
         quantidade INT NOT NULL
     )";
-
+    echo"erro ao criar se passar n e aqui";
 
     $pdo->exec($sql);
 
@@ -24,6 +24,7 @@
         
         $stmt->execute();
     };
+    echo"erro ao cadastrar se passar n e aqui";
 
     //3. atualizar produto
 
@@ -40,6 +41,7 @@
         $stmt->execute();
     }
 
+    echo"erro ao atualizar se passar n e aqui";
     //4. excluir produto
 
     if(isset($_POST["excluir"])){
@@ -48,6 +50,7 @@
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
     }
+    echo"erro ao excluir se passar n e aqui";
 
     //5. buscar produto para edição
     $produtoEditar = NULL;
@@ -59,11 +62,14 @@
         $stmt->execute();
         $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    echo"erro ao buscar se passar n e aqui";
 
     //6. Listar todos osproduto 
     $sql = "SELECT * FROM produtos ORDER BY id ASC";
     $stmt = $pdo->query($sql);
     $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    echo"erro ao listar se passar n e aqui";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
