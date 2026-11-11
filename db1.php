@@ -1,7 +1,7 @@
 <?php
     require_once "conexao.php";
     // 1. criar tabela
-    echo"erro ao começo se passar n e aqui";
+    echo"erro ao começo se passar n e aqui\n";
     $sql = "CREATE TABLE IF NOT EXISTS produtos(
         id INT  AUTO_INCREMENT PIMARY KEY,
         nome VARCHAR(100) NOT NULL,
@@ -9,7 +9,7 @@
         quantidade INT NOT NULL
     )";
 
-    echo"erro ao criar se passar n e aqui";
+    echo"erro ao criar se passar n e aqui\n";
 
     $pdo->exec($sql);
 
@@ -25,7 +25,7 @@
         
         $stmt->execute();
     };
-    echo"erro ao cadastrar se passar n e aqui";
+    echo"erro ao cadastrar se passar n e aqui\n";
 
     //3. atualizar produto
 
@@ -42,7 +42,7 @@
         $stmt->execute();
     }
 
-    echo"erro ao atualizar se passar n e aqui";
+    echo"erro ao atualizar se passar n e aqui\n";
     //4. excluir produto
 
     if(isset($_POST["excluir"])){
@@ -51,7 +51,7 @@
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
     }
-    echo"erro ao excluir se passar n e aqui";
+    echo"erro ao excluir se passar n e aqui\n";
 
     //5. buscar produto para edição
     $produtoEditar = NULL;
@@ -63,14 +63,14 @@
         $stmt->execute();
         $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
     }
-    echo"erro ao buscar se passar n e aqui";
+    echo"erro ao buscar se passar n e aqui\n";
 
     //6. Listar todos osproduto 
     $sql = "SELECT * FROM produtos ORDER BY id ASC";
     $stmt = $pdo->query($sql);
     $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    echo"erro ao listar se passar n e aqui";
+    echo"erro ao listar se passar n e aqui\n";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
