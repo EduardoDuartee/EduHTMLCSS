@@ -252,18 +252,17 @@ else{
                         <div class="numero-projeto">
                             08
                         </div>
-                        <h3>cliente</h3>
+                        <h3>banco de dados</h3>
                         <p>
-                        teste em frupo
+                        teste de banco
                         </p>
                         <div class="tecnologias">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>PHP</span>
-                            <span>Json</span>
                             <!--span>PHP</span-->
                         </div>
-                        <a href="cliente.php">Ver Projeto</a>
+                        <a href="projetos/db1.php">Ver Projeto</a>
                     </div><!--fim-->
                 </div>
 
