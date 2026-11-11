@@ -9,6 +9,7 @@
         quantidade INT NOT NULL
     )";
 
+
     $pdo->exec($sql);
 
     // 2. Cadastrar produto
@@ -21,11 +22,7 @@
 
         $stmt = $pdo->prepare($sql);
         
-        $stmt->execute([
-            "nome" => $nome,
-            "preco" => $preco,
-            "quantidade" =>$quantidade
-        ]);
+        $stmt->execute();
     };
 
     //3. atualizar produto
@@ -40,12 +37,7 @@
 
         $stmt = $pdo->prepare($sql);
 
-        $stmt->execute([
-            "nome" => $nome,
-            "preco" => $preco,
-            "quantidade" => $quantidade,
-            "id" => $id
-        ]);
+        $stmt->execute();
     }
 
     //4. excluir produto
@@ -54,19 +46,17 @@
         $id = $_POST["id"];
         $sql = "DELETE FROM produtos WHERE id = $id";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([
-            "id" => $id
-        ]);
+        $stmt->execute();
     }
 
     //5. buscar produto para edição
     $produtoEditar = NULL;
-    
+
     if(isset($_GET["editar"])){
         $id = $_GET["editar"];
         $sql = "SELECT * FROM produtos WHERE id = $id";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(["id" => $id]);
+        $stmt->execute();
         $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
