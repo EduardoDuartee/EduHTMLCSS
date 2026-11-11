@@ -36,9 +36,42 @@
         $preco = $_POST["preco"];
         $quantidade = $_POST["quantidade"];
 
-        $sql =- "UPDATE produtos"
+        $sql =- "UPDATE produtos  SET nome = '$nome', preco = $preco, quantidade = '$quantidade' WHERE id = $id";
+
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->execute([
+            "nome" => $nome,
+            "preco" => $preco,
+            "quantidade" => $quantidade,
+            "id" => $id
+        ]);
     }
 
+    //4. excluir produto
+
+    if(isset($_POST["excluir"])){
+        $id = $_POST["id"];
+        $sql = "DELETE FROM produtos WHERE id = $id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            "id" => $id
+        ]);
+    }
+
+    //5. buscar produto para edição
+    if(isset($_GET["editar"])){
+        $id = $_GET["editar"];
+        $sql = "SELECT * FROM produtos WHERE id = $id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(["id" => $id]);
+        $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    //6. Listar todos osproduto 
+    $sql = "SELECT * FROM produtos ORDER BY id ASC";
+    $stmt = $pdo->query($sql);
+    $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
