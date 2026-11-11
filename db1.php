@@ -60,6 +60,8 @@
     }
 
     //5. buscar produto para edição
+    $produtoEditar = NULL;
+    
     if(isset($_GET["editar"])){
         $id = $_GET["editar"];
         $sql = "SELECT * FROM produtos WHERE id = $id";
