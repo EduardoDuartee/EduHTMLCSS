@@ -9,10 +9,13 @@
         quantidade INT NOT NULL
     )";
 
-    echo"erro ao criar se passar n e aqui\n";
+    echo"debug1\n";
 
-    $pdo->exec($sql);
+    $stmt = $pdo->prepare($sql);
+        
+    $stmt->execute();
 
+    echo"debug2\n";
     // 2. Cadastrar produto
     if (isset($_POST["cadastrar"])) {
         $nome = $_POST["nome"];
