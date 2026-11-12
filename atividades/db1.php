@@ -113,7 +113,7 @@ echo"debug1\n";
                 <?php if($produtoEditar){?>
                     <button type="submit" name="atualizar">Atualizar Produto</button>
                     <?php } else { ?>
-                        <button type="submit" name="atualizar">Cadastrar Produto</button>
+                        <button type="submit" name="cadastrar">Cadastrar Produto</button>
                      <?php } ?>
         </form>
             <hr>
@@ -131,7 +131,7 @@ echo"debug1\n";
                     <!--td | table data | cria uma celula de dados na tabela-->
                             <td><?= $produto['id'] ?></td>
                             <td><?= htmlspecialchars($produto["nome"]) ?></td>
-                            <td>R$ <?= number_format($produto["preço"], 2, ",", ",") ?></td>
+                            <td>R$ <?= number_format($produto["preco"], 2, ",", ".") ?></td>
                             <td><?= $produto["quantidade"] ?></td>
                             <td>
                                 <!--Editar-->
