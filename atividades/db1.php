@@ -1,5 +1,5 @@
 <?php
-    require_once "conexao.php";
+    require_once "../conexao.php";
     // 1. criar tabela
     echo"erro ao começo se passar n e aqui\n";
     $sql = "CREATE TABLE IF NOT EXISTS produtos(
