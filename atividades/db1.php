@@ -12,9 +12,7 @@
     
 echo"debug1\n";
 
-    $stmt = $pdo->prepare($sql);
-        
-    $stmt->execute();
+    $pdo->exec($sql);
 
     echo"debug2\n";
 
