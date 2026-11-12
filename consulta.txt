@@ -1,7 +1,7 @@
 http://www.w3schools.com/cssref
 
 link de acesso => https://mysql.devlook.xyz
-
+link de acesso => eduardoa755.devlook.xyz
 ssh eduardoa755@194.61.238.119
 
 755!@#
