@@ -262,7 +262,7 @@ else{
                             <span>PHP</span>
                             <!--span>PHP</span-->
                         </div>
-                        <a href="projetos/db1.php">Ver Projeto</a>
+                        <a href="atividades/db1.php">Ver Projeto</a>
                     </div><!--fim-->
                 </div>
 
