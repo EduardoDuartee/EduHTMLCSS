@@ -44,8 +44,7 @@
     }
 
     .dados-banco form{
-        gap: 20px;
-        margin-left: 20px;
+        padding: 20px auto;
     }
 
     .dados-banco label
