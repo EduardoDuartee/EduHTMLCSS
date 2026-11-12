@@ -43,6 +43,10 @@
         font-size: 30px;
     }
 
+    .dados-banco form{
+        gap: 20px;
+    }
+
     .dados-banco label
     {
         margin-top: 10px;
@@ -62,7 +66,6 @@
         border-radius: 7px;
         font-size: 20px;
         border: none;
-        margin-left: 20px;
     }
 
     .dados-banco input[type="number"] {
