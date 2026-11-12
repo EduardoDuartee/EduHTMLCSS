@@ -9,7 +9,8 @@
         quantidade INT NOT NULL
     )";
 
-    echo"debug1\n";
+    
+echo"debug1\n";
 
     $stmt = $pdo->prepare($sql);
         
