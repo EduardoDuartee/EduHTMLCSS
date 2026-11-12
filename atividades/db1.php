@@ -39,7 +39,7 @@ echo"debug1\n";
         $preco = $_POST["preco"];
         $quantidade = $_POST["quantidade"];
 
-        $sql =- "UPDATE produtos  SET nome = '$nome', preco = $preco, quantidade = '$quantidade' WHERE id = $id";
+        $sql = "UPDATE produtos  SET nome = '$nome', preco = $preco, quantidade = '$quantidade' WHERE id = $id";
 
         $stmt = $pdo->prepare($sql);
 
