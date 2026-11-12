@@ -10,11 +10,11 @@
     )";
 
     
-echo"debug1\n";
+
 
     $pdo->exec($sql);
 
-    echo"debug2\n";
+    
 
     // 2. Cadastrar produto
     if (isset($_POST["cadastrar"])) {
@@ -29,7 +29,7 @@ echo"debug1\n";
         $stmt->execute();
     };
 
-    echo"debug 3\n";
+    
 
     //3. atualizar produto
 
@@ -46,7 +46,7 @@ echo"debug1\n";
         $stmt->execute();
     }
 
-    echo"debug 4\n";
+    
 
     //4. excluir produto
 
@@ -57,7 +57,7 @@ echo"debug1\n";
         $stmt->execute();
     }
     
-    echo"debug 5\n";
+    
 
     //5. buscar produto para edição
     $produtoEditar = NULL;
@@ -70,7 +70,7 @@ echo"debug1\n";
         $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
     }
    
-    echo"debug 6\n";
+    
 
     //6. Listar todos osproduto 
     $sql = "SELECT * FROM produtos ORDER BY id ASC";
@@ -88,6 +88,7 @@ echo"debug1\n";
     <title>Document</title>
 </head>
 <body>
+    <section class="dados-banco">
     <h1>Sistema de Cadastro de Produtos</h1>
     <h2>
         <?php
@@ -147,5 +148,6 @@ echo"debug1\n";
                     <?php } ?> 
             </table>
     
+    </section>
 </body>
 </html>
