@@ -279,15 +279,16 @@ else{
                         </div>
                         <h3>banco de dados</h3>
                         <p>
-                        teste de banco
+                        atividade - 3
                         </p>
                         <div class="tecnologias">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>PHP</span>
+                            <span>myAdmin</span>
                             <!--span>PHP</span-->
                         </div>
-                        <a href="atividade3/db2.php">Ver Projeto</a>
+                        <a href="atividade3/categorias.php">Ver Projeto</a>
                     </div><!--fim-->
                 </div>
 

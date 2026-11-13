@@ -89,7 +89,7 @@ if (isset($_POST["atualizar"])){
             <h2>Eduardo <span>Augusto</span></h2>
         </div>
         <nav>
-            <a href="/atividade3/categoria.php">Produtos</a>
+            <a href="/atividade3/categoria.php">categorias</a>
             <a href="/atividade3/vendas.php">vendas</a>
         </nav>
     </header>
@@ -113,7 +113,7 @@ if (isset($_POST["atualizar"])){
                 <label>Nome dos Produtos</label>
                 <input type="text" name="nome" required maxlength="150" required value="<?= htmlspecialchars($produtoEditar['nome'] ?? '') ?>">
                 <br><br>
-                <input type="number" name="categorias_id" required value="<?= $produtoEditar['categoria_id'] ?? '' ?>">
+                <input type="number" name="categoria_id" required value="<?= $produtoEditar['categoria_id'] ?? '' ?>">
                 <br><br>
                 <label>Preço:</label>
                 <input type="number" name="preco" step="0.01" min="0" required value="<?= $produtoEditar['preco'] ?? '' ?>">
@@ -157,7 +157,7 @@ if (isset($_POST["atualizar"])){
                             Editar
                         </a>
 
-                        <form method="POST" action="db2.php" style="display:inline;">
+                        <form method="POST" action="produtos.php" style="display:inline;">
                             <input type="hidden" name="id" value="<?= $produto['id'] ?>">
 
                             <button type="submit" name="excluir"
