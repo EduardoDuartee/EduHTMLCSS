@@ -45,6 +45,7 @@
 
     .dados-banco table{
         padding: 20px;
+        gap: 20px;
     }    
 
     .dados-banco label
