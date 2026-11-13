@@ -80,6 +80,67 @@ if (isset($_POST["atualizar"])){
             <a href="/atividade3/categorias.php">Categorias</a>
         </nav>
     </header>
+    <section class="dados-banco">
+    <h1>Sistema de Cadastro de Categorias</h1>
+    <h2>
+        <?php
+        if($categoriaEditar){
+            echo"Editar Categoria";
+        } else{
+            echo "Cadastrar categoria";
+        }
+        ?>
+    </h2>
+        <form method="POST">
+            <?php if($categoriaEditar){ ?>
+                <input type="hidden" name="id" value="<?= $categoriaEditar['id'] ?>">
+                <?php }?>
+                <label>Nome da categoria</label>
+                <input type="text" name="nome" required maxlength="100" value="<?= htmlspecialchars($categoriaEditar['nome'] ?? '') ?>"><br><br>
+                <br><br>
+                <label>Nome da categoria</label>
+                <input type="text" name="nome" required maxlength="100" value="<?= htmlspecialchars($categoriaEditar['nome'] ?? '') ?>"><br><br>
+                <br><br>
+                <?php if($categoriaEditar){?>
+                    <button type="submit" name="atualizar">Atualizar Categoria</button>
+                    <?php } else { ?>
+                        <button type="submit" name="cadastrar">Cadastrar Categoria</button>
+                     <?php } ?>
+        </form>
+            <hr>
+            <h2>Categoria Cadastrados</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Valor_Total</th>
+                    <th>data_venda</th>
+                    <th>Ações</th>
+                    </tr>
+                    <?php foreach ($categorias as $categoria) {?>
+                        <tr>
+                    <!--td | table data | cria uma celula de dados na tabela-->
+                    <td><?= $categoria['id'] ?></td>
+                    <td><?= htmlspecialchars($categoria["nome"]) ?></td>
+                    <td>
+                        <a href="categorias.php?editar=<?= $categoria['id'] ?>">
+                            Editar
+                        </a>
+
+                        <form method="POST" action="categorias.php" style="display:inline;">
+                            <input type="hidden" name="id" value="<?= $categoria['id'] ?>">
+
+                            <button type="submit" name="excluir"
+                            onclick="return confirm('Deseja Excluir este Produto?')">
+                                Excluir
+                            </button>
+                        </form>
+                    </td>
+                        </tr>
+                    <?php } ?> 
+            </table>
     
+    </section>
     </body>
     </html>
