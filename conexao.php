@@ -5,7 +5,7 @@
 
 // host = 'localhost' = 194.61.238.119
 $host = 'localhost';
-$db = 'eduardoa755_db1';
+$db = 'eduardoa755_db2';
 $user = 'eduardoa755';
 $pass = '755!@#';
 $charset = 'utf8mb4';

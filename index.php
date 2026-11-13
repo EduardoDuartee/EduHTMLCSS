@@ -267,6 +267,31 @@ else{
                 </div>
 
 <!--========================================================================-->
+
+                               
+<!--========================================================================-->
+
+                <!--Projetp 9-->
+                <div class="projetos">
+                    <div class="card">
+                        <div class="numero-projeto">
+                            09
+                        </div>
+                        <h3>banco de dados</h3>
+                        <p>
+                        teste de banco
+                        </p>
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <!--span>PHP</span-->
+                        </div>
+                        <a href="atividade3/db2.php">Ver Projeto</a>
+                    </div><!--fim-->
+                </div>
+
+<!--========================================================================-->
                 
         </section>
 
