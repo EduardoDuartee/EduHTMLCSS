@@ -8,7 +8,7 @@ $sql = "CREATE TABLE IF NOT EXISTS produtos(
     categoria_id INT,
     preco DECIMAL(10,2) NOT NULL,
     quantidade INT NOT NULL,
-    estoque_minimo INT NOT NULL
+    estoque_minimo INT NOT NULL,
     FOREIGN KEY categorias_id REFERENCES categorias(id)
 )";
 
@@ -22,7 +22,7 @@ if (isset($_POST["cadastrar"])) {
     $quantidade = $_POST["prequantidadeco"];
     $estoque_minimo = $_POST["estoque_minimo"];
 
-    $sql = "INSERT INTO produtos (nome, categoria_id, preco, quantidade, preco) VALUES ('$nome', $categoria_id, $preco, $quantidade, $estoque_minimo)";
+    $sql = "INSERT INTO produtos (nome, categoria_id, preco, quantidade, estoque_minimo) VALUES ('$nome', $categoria_id, $preco, $quantidade, $estoque_minimo)";
 
     $stmt = $pdo->prepare($sql);
     
@@ -32,10 +32,11 @@ if (isset($_POST["cadastrar"])) {
 //3. atualizar produto
 
 if (isset($_POST["atualizar"])){
+    $id = $_POST["id"];
     $nome = $_POST["nome"];
     $categoria_id = $_POST["categorias_id"];
     $preco = $_POST["preco"];
-    $quantidade = $_POST["prequantidadeco"];
+    $quantidade = $_POST["quantidade"];
     $estoque_minimo = $_POST["estoque_minimo"];
 
     $sql = "UPDATE produtos  SET nome = '$nome',categoria_id = $categoria_id, preco = $preco, quantidade = '$quantidade', estoque_minimo = $estoque_minimo WHERE id = $id";
@@ -88,8 +89,9 @@ if (isset($_POST["atualizar"])){
             <h2>Eduardo <span>Augusto</span></h2>
         </div>
         <nav>
-        <a href="/atividade3/categoria.php">Produtos</a>
-        <a href="/atividade3/vendas.php">vendas</a>
+            <a href="/atividade3/categoria.php">Produtos</a>
+            <a href="/atividade3/vendas.php">vendas</a>
+        </nav>
     </header>
 
 
@@ -111,11 +113,17 @@ if (isset($_POST["atualizar"])){
                 <label>Nome dos Produtos</label>
                 <input type="text" name="nome" value="<?= $produtoEditar['nome'] ?? ''?>"> 
                 <br><br>
+                <label>Categoria:</label>
+                <input type="number" name="categorias_id">
+                <br><br>
                 <label>Preço:</label>
                 <input type="number" name="preco" step="0.01" min="0" required value="<?= $produtoEditar['preco'] ?? '' ?>">
                 <br><br>
                 <label>Quantidade:</label>
                 <input type="number" name="quantidade" min="0" required value="<?= $produtoEditar['quantidade'] ?? '' ?>">
+                <br><br>
+                <label>Estoque mínimo:</label>
+                <input type="number" name="estoque_minimo" min="0" required>
                 <br><br>
                 <?php if($produtoEditar){?>
                     <button type="submit" name="atualizar">Atualizar Produto</button>
@@ -137,11 +145,12 @@ if (isset($_POST["atualizar"])){
                     <?php foreach ($produtos as $produto) {?>
                         <tr>
                     <!--td | table data | cria uma celula de dados na tabela-->
-                            <td><?= $produto['id'] ?></td>
-                            <td><?= htmlspecialchars($produto["nome"]) ?></td>
-                            <td>R$ <?= number_format($produto["preco"], 2, ",", ".") ?></td>
-                            <td><?= $produto["quantidade"] ?></td>
-                            <td>
+                    <td><?= $produto['id'] ?></td>
+                    <td><?= htmlspecialchars($produto["nome"]) ?></td>
+                    <td><?= $produto["categoria_id"] ?></td>
+                    <td>R$ <?= number_format($produto["preco"], 2, ",", ".") ?></td>
+                    <td><?= $produto["quantidade"] ?></td>
+                    <td><?= $produto["estoque_minimo"] ?></td>
                                 <!--Editar-->
                                 <a href="db1.php?editar=<?= $produto['id'] ?>">Editar</a>
                                 <!--Excluir-->
