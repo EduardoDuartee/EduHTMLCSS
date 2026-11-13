@@ -14,6 +14,52 @@
 
 $pdo->exec($sql);
 
+// 2. Cadastrar produto
+if (isset($_POST["cadastrar"])) {
+    $nome = $_POST["nome"];
+
+    $sql = "INSERT INTO vendas (nome) VALUES ('$nome')";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+};
+
+//3. atualizar produto
+
+if (isset($_POST["atualizar"])){
+    $id = $_POST["id"];
+    $nome = $_POST["nome"];
+
+    $sql = "UPDATE vendas  SET nome = '$nome' WHERE id = $id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+}
+
+    //4. excluir produto
+
+    if(isset($_POST["excluir"])){
+        $id = $_POST["id"];
+        $sql = "DELETE FROM vendas WHERE id = $id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+    }
+
+    //5. buscar produto para edição
+    $VendaEditar = NULL;
+
+    if(isset($_GET["editar"])){
+        $id = $_GET["editar"];
+        $sql = "SELECT * FROM vendas WHERE id = $id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $VendaEditar = $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    //6. Listar todos osproduto 
+    $sql = "SELECT * FROM vendas ORDER BY id ASC";
+    $stmt = $pdo->query($sql);
+    $Vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +68,7 @@ $pdo->exec($sql);
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="atv3.css">
-        <title>categorias</title>
+        <title>Vendas</title>
     </head>
     <body>
     <header>
@@ -34,3 +80,6 @@ $pdo->exec($sql);
             <a href="/atividade3/categorias.php">Categorias</a>
         </nav>
     </header>
+    
+    </body>
+    </html>
