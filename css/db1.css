@@ -73,6 +73,7 @@
         border-radius: 7px;
         font-size: 20px;
         border: none;
+        gap: 20px;
     }
 
     .dados-banco input[type="number"] {
