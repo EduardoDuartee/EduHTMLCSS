@@ -154,7 +154,7 @@ if (isset($_POST["atualizar"])){
                     <td><?= $produto["estoque_minimo"] ?></td>
 
                     <td>
-                        <a href="db2.php?editar=<?= $produto['id'] ?>">
+                        <a href="produtos.php?editar=<?= $produto['id'] ?>">
                             Editar
                         </a>
 
