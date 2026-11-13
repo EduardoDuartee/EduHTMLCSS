@@ -3,23 +3,15 @@
 
 
  
- $sql = "CREATE TABLE IF NOT EXISTS produtos(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(150) NOT NULL,
-    categoria_id INT, FOREIGN KEY,
-    preco DECIMAL(10,2) NOT NULL,
+ $sql = "CREATE TABLE IF NOT EXISTS vendas(
+    id: INT, PRIMARY KEY AUTO_INCREMENT,
+    produto_id INT,
     quantidade INT NOT NULL,
-    estoque_minimo INT NOT NULL
+    valor_total DECIMAL(10,2) NOT NULL,
+    data_venda DATETIME NOT NULL,
+    FOREIGN KEY (produtos_id) REFERENCE produtos(id)
 )";
 
 $pdo->exec($sql);
-
-$sql = "CREATE TABLE IF NOT EXISTS vendas(
-    id: INT, PRIMARY KEY AUTO_INCREMENT,
-    produto_id INT FOREIGN KEY,
-    quantidade INT NOT NULL,
-    valor_total DECIMAL(10,2) NOT NULL,
-    data_venda DATETIME NOT NULL
-)";
 
 ?>
