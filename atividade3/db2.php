@@ -111,7 +111,7 @@ if (isset($_POST["atualizar"])){
                 <input type="hidden" name="id" value="<?= $produtoEditar['id'] ?>">
                 <?php }?>
                 <label>Nome dos Produtos</label>
-                <input type="text" name="nome" value="<?= $produtoEditar['nome'] ?? ''?>"> 
+                <input type="text" name="nome" required maxlength="150" required value="<?= htmlspecialchars($produtoEditar['nome'] ?? '') ?>">
                 <br><br>
                 <input type="number" name="categorias_id" required value="<?= $produtoEditar['categoria_id'] ?? '' ?>">
                 <br><br>
