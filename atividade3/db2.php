@@ -9,7 +9,7 @@ $sql = "CREATE TABLE IF NOT EXISTS produtos(
     preco DECIMAL(10,2) NOT NULL,
     quantidade INT NOT NULL,
     estoque_minimo INT NOT NULL,
-    FOREIGN KEY categorias_id REFERENCES categorias(id)
+    FOREIGN KEY (categoria_id) REFERENCES categorias(id)
 )";
 
 $pdo->exec($sql);
