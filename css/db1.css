@@ -43,9 +43,9 @@
         font-size: 30px;
     }
 
-    .dados-banco form{
-        padding: 20px auto;
-    }
+    .dados-banco table{
+        padding: 20px;
+    }    
 
     .dados-banco label
     {
