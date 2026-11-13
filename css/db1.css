@@ -50,6 +50,10 @@
         justify-content: center;
     }    
 
+    .dados-banco th{
+        gap: 20px;
+    }
+
     .dados-banco label
     {
         margin-top: 10px;
