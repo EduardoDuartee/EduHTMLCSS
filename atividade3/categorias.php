@@ -3,7 +3,7 @@ require_once "../conexao.php";
 
 
 $sql = "CREATE TABLE IF NOT EXISTS categorias(
-    id INT, PRIMARY KEY AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nome: VARCHAR(100) NOT NULL
  )";
 
@@ -44,20 +44,20 @@ if (isset($_POST["atualizar"])){
     }
 
     //5. buscar produto para edição
-    $produtoEditar = NULL;
+    $categoriaEditar = NULL;
 
     if(isset($_GET["editar"])){
         $id = $_GET["editar"];
         $sql = "SELECT * FROM categorias WHERE id = $id";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
-        $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
+        $categoriaEditar = $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     //6. Listar todos osproduto 
     $sql = "SELECT * FROM categorias ORDER BY id ASC";
     $stmt = $pdo->query($sql);
-    $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $categoria = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
@@ -74,24 +74,24 @@ if (isset($_POST["atualizar"])){
 
 
     <section class="dados-banco">
-    <h1>Sistema de Cadastro de Produtos</h1>
+    <h1>Sistema de Cadastro de Categorias</h1>
     <h2>
         <?php
-        if($produtoEditar){
-            echo"Editar produto";
+        if($categoriaEditar){
+            echo"Editar Categoria";
         } else{
-            echo "Cadastrar Produto";
+            echo "Cadastrar categoria";
         }
         ?>
     </h2>
         <form method="POST">
-            <?php if($produtoEditar){ ?>
+            <?php if($categoriaEditar){ ?>
                 <input type="hidden" name="id" value="<?= $produtoEditar['id'] ?>">
                 <?php }?>
                 <label>Nome dos Produtos</label>
                 <input type="text" name="nome" required maxlength="150" required value="<?= htmlspecialchars($produtoEditar['nome'] ?? '') ?>">
                 <br><br>
-                <?php if($produtoEditar){?>
+                <?php if($categoriaEditar){?>
                     <button type="submit" name="atualizar">Atualizar Produto</button>
                     <?php } else { ?>
                         <button type="submit" name="cadastrar">Cadastrar Produto</button>
@@ -105,18 +105,18 @@ if (isset($_POST["atualizar"])){
                     <th>Nome</th>
                     <th>Ações</th>
                     </tr>
-                    <?php foreach ($produtos as $produto) {?>
+                    <?php foreach ($categorias as $categoria) {?>
                         <tr>
                     <!--td | table data | cria uma celula de dados na tabela-->
                     <td><?= $produto['id'] ?></td>
-                    <td><?= htmlspecialchars($produto["nome"]) ?></td>
+                    <td><?= htmlspecialchars($categoria["nome"]) ?></td>
                     <td>
-                        <a href="categorias.php?editar=<?= $produto['id'] ?>">
+                        <a href="categorias.php?editar=<?= $categoria['id'] ?>">
                             Editar
                         </a>
 
                         <form method="POST" action="categorias.php" style="display:inline;">
-                            <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                            <input type="hidden" name="id" value="<?= $categoria['id'] ?>">
 
                             <button type="submit" name="excluir"
                             onclick="return confirm('Deseja Excluir este Produto?')">
