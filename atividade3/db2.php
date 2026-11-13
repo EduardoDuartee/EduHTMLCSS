@@ -113,8 +113,7 @@ if (isset($_POST["atualizar"])){
                 <label>Nome dos Produtos</label>
                 <input type="text" name="nome" value="<?= $produtoEditar['nome'] ?? ''?>"> 
                 <br><br>
-                <label>Categoria:</label>
-                <input type="number" name="categorias_id">
+                <input type="number" name="categorias_id" required value="<?= $produtoEditar['categoria_id'] ?? '' ?>">
                 <br><br>
                 <label>Preço:</label>
                 <input type="number" name="preco" step="0.01" min="0" required value="<?= $produtoEditar['preco'] ?? '' ?>">
@@ -123,7 +122,7 @@ if (isset($_POST["atualizar"])){
                 <input type="number" name="quantidade" min="0" required value="<?= $produtoEditar['quantidade'] ?? '' ?>">
                 <br><br>
                 <label>Estoque mínimo:</label>
-                <input type="number" name="estoque_minimo" min="0" required>
+                <input type="number" name="estoque_minimo" min="0" required value="<?= $produtoEditar['estoque_minimo'] ?? '' ?>">
                 <br><br>
                 <?php if($produtoEditar){?>
                     <button type="submit" name="atualizar">Atualizar Produto</button>
@@ -141,6 +140,7 @@ if (isset($_POST["atualizar"])){
                     <th>Preço</th>
                     <th>Quantidade</th>
                     <th>Estoque_minimo</th>
+                    <th>Ações</th>
                     </tr>
                     <?php foreach ($produtos as $produto) {?>
                         <tr>
@@ -151,14 +151,21 @@ if (isset($_POST["atualizar"])){
                     <td>R$ <?= number_format($produto["preco"], 2, ",", ".") ?></td>
                     <td><?= $produto["quantidade"] ?></td>
                     <td><?= $produto["estoque_minimo"] ?></td>
-                                <!--Editar-->
-                                <a href="db1.php?editar=<?= $produto['id'] ?>">Editar</a>
-                                <!--Excluir-->
-                                <form method="POST" action="db2.php" style="display:inline;">
-                                    <input type="hidden" name="id" value="<?= $produto['id'] ?>">
-                                    <button type="submit" name="excluir" onclick="return confirm('Deseja Excluir este Produto?')">Excluir</button>
-                                </form>
-                            </td>
+
+                    <td>
+                        <a href="db2.php?editar=<?= $produto['id'] ?>">
+                            Editar
+                        </a>
+
+                        <form method="POST" action="db2.php" style="display:inline;">
+                            <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+
+                            <button type="submit" name="excluir"
+                            onclick="return confirm('Deseja Excluir este Produto?')">
+                                Excluir
+                            </button>
+                        </form>
+                    </td>
                         </tr>
                     <?php } ?> 
             </table>
