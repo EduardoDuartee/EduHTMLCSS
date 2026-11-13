@@ -4,7 +4,7 @@ require_once "../conexao.php";
 
 $sql = "CREATE TABLE IF NOT EXISTS categorias(
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nome: VARCHAR(100) NOT NULL
+    nome VARCHAR(100) NOT NULL
  )";
 
 
@@ -57,7 +57,7 @@ if (isset($_POST["atualizar"])){
     //6. Listar todos osproduto 
     $sql = "SELECT * FROM categorias ORDER BY id ASC";
     $stmt = $pdo->query($sql);
-    $categoria = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $categorias = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
@@ -86,11 +86,10 @@ if (isset($_POST["atualizar"])){
     </h2>
         <form method="POST">
             <?php if($categoriaEditar){ ?>
-                <input type="hidden" name="id" value="<?= $produtoEditar['id'] ?>">
+                <input type="hidden" name="id" value="<?= $categoriaEditar['id'] ?>">
                 <?php }?>
                 <label>Nome dos Produtos</label>
-                <input type="text" name="nome" required maxlength="150" required value="<?= htmlspecialchars($produtoEditar['nome'] ?? '') ?>">
-                <br><br>
+                <input type="text" name="nome" required maxlength="100" value="<?= htmlspecialchars($categoriaEditar['nome'] ?? '') ?>"><br><br>
                 <?php if($categoriaEditar){?>
                     <button type="submit" name="atualizar">Atualizar Produto</button>
                     <?php } else { ?>
@@ -108,7 +107,7 @@ if (isset($_POST["atualizar"])){
                     <?php foreach ($categorias as $categoria) {?>
                         <tr>
                     <!--td | table data | cria uma celula de dados na tabela-->
-                    <td><?= $produto['id'] ?></td>
+                    <td><?= $categoria['id'] ?></td>
                     <td><?= htmlspecialchars($categoria["nome"]) ?></td>
                     <td>
                         <a href="categorias.php?editar=<?= $categoria['id'] ?>">
