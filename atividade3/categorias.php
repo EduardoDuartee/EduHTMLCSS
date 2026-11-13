@@ -1,13 +1,10 @@
 <?php
 require_once "../conexao.php";
 
-
 $sql = "CREATE TABLE IF NOT EXISTS categorias(
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL
- )";
-
-
+)";
 $pdo->exec($sql);
 
 // 2. Cadastrar produto
@@ -15,9 +12,7 @@ if (isset($_POST["cadastrar"])) {
     $nome = $_POST["nome"];
 
     $sql = "INSERT INTO categorias (nome) VALUES ('$nome')";
-
     $stmt = $pdo->prepare($sql);
-    
     $stmt->execute();
 };
 
@@ -28,9 +23,7 @@ if (isset($_POST["atualizar"])){
     $nome = $_POST["nome"];
 
     $sql = "UPDATE categorias  SET nome = '$nome' WHERE id = $id";
-
     $stmt = $pdo->prepare($sql);
-
     $stmt->execute();
 }
 

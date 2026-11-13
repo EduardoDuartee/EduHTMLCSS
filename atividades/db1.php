@@ -8,10 +8,6 @@
         preco DECIMAL(10,2) NOT NULL,
         quantidade INT NOT NULL
     )";
-
-    
-
-
     $pdo->exec($sql);
 
     
@@ -23,9 +19,7 @@
         $quantidade = $_POST["quantidade"];
 
         $sql = "INSERT INTO produtos (nome, preco, quantidade) VALUES ('$nome', $preco, $quantidade)";
-
         $stmt = $pdo->prepare($sql);
-        
         $stmt->execute();
     };
 
@@ -40,9 +34,7 @@
         $quantidade = $_POST["quantidade"];
 
         $sql = "UPDATE produtos  SET nome = '$nome', preco = $preco, quantidade = '$quantidade' WHERE id = $id";
-
         $stmt = $pdo->prepare($sql);
-
         $stmt->execute();
     }
 
