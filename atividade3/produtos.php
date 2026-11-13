@@ -113,6 +113,7 @@ if (isset($_POST["atualizar"])){
                 <label>Nome dos Produtos</label>
                 <input type="text" name="nome" required maxlength="150" required value="<?= htmlspecialchars($produtoEditar['nome'] ?? '') ?>">
                 <br><br>
+                <label>categoria dos Produtos</label>
                 <input type="number" name="categoria_id" required value="<?= $produtoEditar['categoria_id'] ?? '' ?>">
                 <br><br>
                 <label>Preço:</label>
