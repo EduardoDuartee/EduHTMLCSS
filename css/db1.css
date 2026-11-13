@@ -47,7 +47,7 @@
         padding: 20px  ;
         gap: 20px;
         align-items: center;
-        text-align: center;
+        justify-content: center;
     }    
 
     .dados-banco label
