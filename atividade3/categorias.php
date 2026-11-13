@@ -90,7 +90,7 @@ if (isset($_POST["atualizar"])){
             <?php if($categoriaEditar){ ?>
                 <input type="hidden" name="id" value="<?= $categoriaEditar['id'] ?>">
                 <?php }?>
-                <label>Nome dos Produtos</label>
+                <label>Nome da categoria</label>
                 <input type="text" name="nome" required maxlength="100" value="<?= htmlspecialchars($categoriaEditar['nome'] ?? '') ?>"><br><br>
                 <?php if($categoriaEditar){?>
                     <button type="submit" name="atualizar">Atualizar Produto</button>
