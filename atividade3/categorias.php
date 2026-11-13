@@ -93,13 +93,13 @@ if (isset($_POST["atualizar"])){
                 <label>Nome da categoria</label>
                 <input type="text" name="nome" required maxlength="100" value="<?= htmlspecialchars($categoriaEditar['nome'] ?? '') ?>"><br><br>
                 <?php if($categoriaEditar){?>
-                    <button type="submit" name="atualizar">Atualizar Produto</button>
+                    <button type="submit" name="atualizar">Atualizar Categoria</button>
                     <?php } else { ?>
-                        <button type="submit" name="cadastrar">Cadastrar Produto</button>
+                        <button type="submit" name="cadastrar">Cadastrar Categoria</button>
                      <?php } ?>
         </form>
             <hr>
-            <h2>Produtos Cadastrados</h2>
+            <h2>Categoria Cadastrados</h2>
             <table>
                 <tr>
                     <th>ID</th>
