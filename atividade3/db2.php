@@ -19,7 +19,7 @@ if (isset($_POST["cadastrar"])) {
     $nome = $_POST["nome"];
     $categoria_id = $_POST["categorias_id"];
     $preco = $_POST["preco"];
-    $quantidade = $_POST["prequantidadeco"];
+    $quantidade = $_POST["quantidade"];
     $estoque_minimo = $_POST["estoque_minimo"];
 
     $sql = "INSERT INTO produtos (nome, categoria_id, preco, quantidade, estoque_minimo) VALUES ('$nome', $categoria_id, $preco, $quantidade, $estoque_minimo)";
