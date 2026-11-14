@@ -89,8 +89,8 @@ if (isset($_POST["atualizar"])){
             <h2>Eduardo <span>Augusto</span></h2>
         </div>
         <nav>
-            <a href="/atividade3/categoria.php">categorias</a>
-            <a href="/atividade3/vendas.php">vendas</a>
+            <a href="categoria.php">categorias</a>
+            <a href="vendas.php">vendas</a>
         </nav>
     </header>
 
