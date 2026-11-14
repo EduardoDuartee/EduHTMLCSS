@@ -17,7 +17,7 @@ $pdo->exec($sql);
 // 2. Cadastrar produto
 if (isset($_POST["cadastrar"])) {
     $nome = $_POST["nome"];
-    $categoria_id = $_POST["categorias_id"];
+    $categoria_id = $_POST["categoria_id"];
     $preco = $_POST["preco"];
     $quantidade = $_POST["quantidade"];
     $estoque_minimo = $_POST["estoque_minimo"];
