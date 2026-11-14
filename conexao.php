@@ -22,7 +22,6 @@ $pdo->setAttribute(
 
 );
 
-    echo "BANCO DE DADOS CONECTADO COM SUCESSO";
 
 }catch (PDOException $e) {
     echo "ERROR AO CONECTAR AO BANCO DE DADOS.:\n";
