@@ -109,7 +109,7 @@ if (isset($_POST["atualizar"])) {
         }
         ?>
     </h2>
-    
+
     <form method="POST">
 
         <?php if($VendaEditar){ ?>
@@ -166,7 +166,7 @@ if (isset($_POST["atualizar"])) {
                     </tr>
                     <?php foreach ($Vendas as $venda) { ?>
                         <tr>
-                            <td><?= $venda['id'] ?></td>
+                            <td><?= htmlspecialchars($venda['nome']) ?></td>
                             <td><?= $venda['produto_id'] ?></td>
                             <td><?= $venda['quantidade'] ?></td>
                             <td><?= $venda['valor_total'] ?></td>
