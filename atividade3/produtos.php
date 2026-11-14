@@ -34,7 +34,7 @@ if (isset($_POST["cadastrar"])) {
 if (isset($_POST["atualizar"])){
     $id = $_POST["id"];
     $nome = $_POST["nome"];
-    $categoria_id = $_POST["categorias_id"];
+    $categoria_id = $_POST["categoria_id"];
     $preco = $_POST["preco"];
     $quantidade = $_POST["quantidade"];
     $estoque_minimo = $_POST["estoque_minimo"];
