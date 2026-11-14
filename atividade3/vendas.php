@@ -68,7 +68,7 @@ if (isset($_POST["atualizar"])) {
     $stmt = $pdo->query($sql);
     $vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
+    
 ?>
 
 <!DOCTYPE html>

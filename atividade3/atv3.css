@@ -60,60 +60,88 @@
     color:rgb(0, 4, 255);
     }
 
-    .dados-banco
-    {
-        width: 800px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #111827;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f9fafb;
+    }
+    
+    /* CONTAINER PRINCIPAL */
+    .dados-banco {
+        width: 90%;
+        max-width: 1000px;
         height: auto;
-        padding: 10px auto;
-        background-color: #292936;
-        border-radius: 7px;
-        align-items: center;
+        margin: 70px auto;
+        padding: 30px;
+        background-color: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 12px;
         text-align: center;
-        margin-left: 650px;
-        margin-top: 100px;
-        padding: 20px auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
-
-    .dados-banco h1 
-    {
-        color:rgb(255, 255, 255);
-        font-weight: bold;
-        font-family:Arial, Helvetica, sans-serif ;
+    
+    /* TÍTULOS */
+    .dados-banco h1 {
+        color: #f9fafb;
         font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 15px;
     }
-
-    .dados-banco table{
-        padding: 20px  ;
-        gap: 20px;
+    
+    .dados-banco h2 {
+        color: #60a5fa;
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    /* FORMULÁRIO */
+    .dados-banco form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-    }    
-
-    .dados-banco th{
-        gap: 20px;
+        gap: 18px;
     }
-
-    .dados-banco label
-    {
-        margin-top: 10px;
-        padding: 10px auto;
-        align-items: center;
-        justify-content: center;
-        font-size: 25px;
-        font-weight: bold;
-        color:rgb(0, 4, 255);
-        border: none;
-    }
-
-    .dados-banco input
-    {
+    
+    /* LABELS */
+    .dados-banco label {
+        display: inline-block;
         width: 250px;
-        height: auto;
-        border-radius: 7px;
-        font-size: 20px;
-        border: none;
+        text-align: right;
+        font-size: 16px;
+        font-weight: 600;
+        color: #d1d5db;
+        margin-right: 10px;
     }
-
+    
+    /* CAMPOS */
+    .dados-banco input,
+    .dados-banco select {
+        width: 280px;
+        height: 42px;
+        padding: 0 12px;
+        background-color: #111827;
+        border: 1px solid #4b5563;
+        border-radius: 7px;
+        color: #f9fafb;
+        font-size: 15px;
+        outline: none;
+        transition: 0.3s;
+    }
+    
+    .dados-banco input:focus,
+    .dados-banco select:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+    
+    /* REMOVE SETAS DO NUMBER */
     .dados-banco input[type="number"] {
         -moz-appearance: textfield;
         appearance: textfield;
@@ -125,27 +153,65 @@
         margin: 0;
     }
     
-    .dados-banco button
-    {
-        margin-left: 10px;
-        border: none;
-        width: 200px;
-        height: auto;
-        color:rgb(0, 4, 255);
-        border-radius:7px ;
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
-        padding: 20px auto;
-    }
-
-    .dados-banco button:hover
-    {
-        transform: translateY(3px);
-        background-color:rgb(0, 4, 255);
+    /* BOTÕES */
+    .dados-banco button {
+        min-width: 200px;
+        padding: 12px 20px;
+        margin-top: 5px;
+        background-color: #2563eb;
         color: white;
+        border: none;
+        border-radius: 7px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
     }
-
-    .dados-banco p{
-        margin-top: 30px;
+    
+    .dados-banco button:hover {
+        background-color: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
     }
+    
+    /* SEÇÃO DE PRODUTOS */
+    .dados-banco hr {
+        border: none;
+        border-top: 1px solid #374151;
+        margin: 20px 0;
+    }
+    
+    .dados-banco p {
+        margin-top: 20px;
+        color: #d1d5db;
+    }
+    
+    /* TABELA */
+    .dados-banco table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .dados-banco th {
+        background-color: #374151;
+        color: #f9fafb;
+        padding: 14px 10px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    
+    .dados-banco td {
+        padding: 13px 10px;
+        border-bottom: 1px solid #374151;
+        color: #d1d5db;
+        font-size: 14px;
+    }
+    
+    .dados-banco tr:hover td {
+        background-color: #293548;
+    }
+    
+    
