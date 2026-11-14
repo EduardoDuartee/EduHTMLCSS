@@ -158,33 +158,31 @@ if (isset($_POST["atualizar"])) {
             <table>
                 <tr>
                     <th>ID</th>
-                    <th>Produto ID</th>
                     <th>Quantidade</th>
                     <th>Valor_Total</th>
                     <th>data_venda</th>
                     <th>Ações</th>
                     </tr>
                     <?php foreach ($Vendas as $venda) { ?>
-                        <tr>
-                            <td><?= htmlspecialchars($venda['nome']) ?></td>
-                            <td><?= $venda['produto_id'] ?></td>
-                            <td><?= $venda['quantidade'] ?></td>
-                            <td><?= $venda['valor_total'] ?></td>
-                            <td><?= $venda['data_venda'] ?></td>
-                            <td>
-                                <a href="vendas.php?editar=<?= $venda['id'] ?>">Editar</a>
+                    <tr>
+                        <td><?= htmlspecialchars($venda['nome']) ?></td>
+                        <td><?= $venda['quantidade'] ?></td>
+                        <td><?= $venda['valor_total'] ?></td>
+                        <td><?= $venda['data_venda'] ?></td>
+                        <td>
+                            <a href="vendas.php?editar=<?= $venda['id'] ?>">Editar</a>
 
-                                <form method="POST" action="vendas.php" style="display:inline;">
-                                    <input type="hidden" name="id" value="<?= $venda['id'] ?>">
+                            <form method="POST" action="vendas.php" style="display:inline;">
+                                <input type="hidden" name="id" value="<?= $venda['id'] ?>">
 
-                                    <button type="submit" name="excluir"
+                                <button type="submit" name="excluir"
                                     onclick="return confirm('Deseja excluir esta venda?')">
-                                        Excluir
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                    <?php } ?>
+                                    Excluir
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                <?php } ?>
             </table>
     
     </section>
