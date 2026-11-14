@@ -3,33 +3,47 @@
 
 
  
- $sql = "CREATE TABLE IF NOT EXISTS vendas(
-    id: INT, PRIMARY KEY AUTO_INCREMENT,
-    produto_id INT,
-    quantidade INT NOT NULL,
-    valor_total DECIMAL(10,2) NOT NULL,
-    data_venda DATETIME NOT NULL,
-    FOREIGN KEY (produtos_id) REFERENCE produtos(id)
-)";
+    $sql = "CREATE TABLE IF NOT EXISTS vendas(
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        produto_id INT NOT NULL,
+        quantidade INT NOT NULL,
+        valor_total DECIMAL(10,2) NOT NULL,
+        data_venda DATETIME NOT NULL,
+        FOREIGN KEY (produto_id) REFERENCES produtos(id)
+    )";
 
 $pdo->exec($sql);
 
 // 2. Cadastrar produto
 if (isset($_POST["cadastrar"])) {
-    $nome = $_POST["nome"];
+    $produto_id = $_POST["produto"];
+    $quantidade = $_POST["quantidade"];
+    $valor_total = $_POST["valor_total"];
+    $data_venda = $_POST["data_venda"];
 
-    $sql = "INSERT INTO vendas (nome) VALUES ('$nome')";
+    $sql = "INSERT INTO vendas (produto_id, quantidade, valor_total, data_venda)
+    VALUES ($produto_id, $quantidade, $valor_total, '$data_venda')";
+
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
-};
+}
 
 //3. atualizar produto
 
-if (isset($_POST["atualizar"])){
+if (isset($_POST["atualizar"])) {
     $id = $_POST["id"];
-    $nome = $_POST["nome"];
+    $produto_id = $_POST["produto"];
+    $quantidade = $_POST["quantidade"];
+    $valor_total = $_POST["valor_total"];
+    $data_venda = $_POST["data_venda"];
 
-    $sql = "UPDATE vendas  SET nome = '$nome' WHERE id = $id";
+    $sql = "UPDATE vendas SET
+    produto_id = $produto_id,
+    quantidade = $quantidade,
+    valor_total = $valor_total,
+    data_venda = '$data_venda'
+    WHERE id = $id";
+
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 }
@@ -81,64 +95,73 @@ if (isset($_POST["atualizar"])){
         </nav>
     </header>
     <section class="dados-banco">
-    <h1>Sistema de Cadastro de Categorias</h1>
+    <h1>Sistema de Vendas</h1>
     <h2>
         <?php
-        if($categoriaEditar){
-            echo"Editar Categoria";
+        if($vendaEditar){
+            echo"Editar Venda";
         } else{
-            echo "Cadastrar categoria";
+            echo "Cadastrar Venda";
         }
         ?>
     </h2>
         <form method="POST">
-            <?php if($categoriaEditar){ ?>
-                <input type="hidden" name="id" value="<?= $categoriaEditar['id'] ?>">
+            <?php if($vendaEditar){ ?>
+                <input type="hidden" name="id" value="<?= $vendaEditar['id'] ?>">
                 <?php }?>
-                <label>Nome da categoria</label>
-                <input type="text" name="nome" required maxlength="100" value="<?= htmlspecialchars($categoriaEditar['nome'] ?? '') ?>"><br><br>
-                <br><br>
-                <label>Nome da categoria</label>
-                <input type="text" name="nome" required maxlength="100" value="<?= htmlspecialchars($categoriaEditar['nome'] ?? '') ?>"><br><br>
-                <br><br>
-                <?php if($categoriaEditar){?>
-                    <button type="submit" name="atualizar">Atualizar Categoria</button>
-                    <?php } else { ?>
-                        <button type="submit" name="cadastrar">Cadastrar Categoria</button>
-                     <?php } ?>
+                <label>Produto ID</label>
+                <input type="number" name="produto" required
+                value="<?= $VendaEditar['produto_id'] ?? '' ?>">
+
+                <label>Quantidade</label>
+                <input type="number" name="quantidade" required
+                value="<?= $VendaEditar['quantidade'] ?? '' ?>">
+
+                <label>Valor Total</label>
+                <input type="number" step="0.01" name="valor_total" required
+                value="<?= $VendaEditar['valor_total'] ?? '' ?>">
+
+                <label>Data da Venda</label>
+                <input type="datetime-local" name="data_venda" required
+                value="<?= isset($VendaEditar['data_venda']) ? date('Y-m-d\TH:i', strtotime($VendaEditar['data_venda'])) : '' ?>">
+                <?php if($vendaEditar){?>
+                <button type="submit" name="atualizar">Atualizar Categoria</button>
+                <?php } else { ?>
+                <button type="submit" name="cadastrar">Cadastrar Categoria</button>
+                <?php } ?>
         </form>
             <hr>
             <h2>Categoria Cadastrados</h2>
             <table>
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>
+                    <th>Produto ID</th>
                     <th>Quantidade</th>
                     <th>Valor_Total</th>
                     <th>data_venda</th>
                     <th>Ações</th>
                     </tr>
-                    <?php foreach ($categorias as $categoria) {?>
+                    <?php foreach ($Vendas as $venda) { ?>
                         <tr>
-                    <!--td | table data | cria uma celula de dados na tabela-->
-                    <td><?= $categoria['id'] ?></td>
-                    <td><?= htmlspecialchars($categoria["nome"]) ?></td>
-                    <td>
-                        <a href="categorias.php?editar=<?= $categoria['id'] ?>">
-                            Editar
-                        </a>
+                            <td><?= $venda['id'] ?></td>
+                            <td><?= $venda['produto_id'] ?></td>
+                            <td><?= $venda['quantidade'] ?></td>
+                            <td><?= $venda['valor_total'] ?></td>
+                            <td><?= $venda['data_venda'] ?></td>
+                            <td>
+                                <a href="vendas.php?editar=<?= $venda['id'] ?>">Editar</a>
 
-                        <form method="POST" action="categorias.php" style="display:inline;">
-                            <input type="hidden" name="id" value="<?= $categoria['id'] ?>">
+                                <form method="POST" action="vendas.php" style="display:inline;">
+                                    <input type="hidden" name="id" value="<?= $venda['id'] ?>">
 
-                            <button type="submit" name="excluir"
-                            onclick="return confirm('Deseja Excluir este Produto?')">
-                                Excluir
-                            </button>
-                        </form>
-                    </td>
+                                    <button type="submit" name="excluir"
+                                    onclick="return confirm('Deseja excluir esta venda?')">
+                                        Excluir
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
-                    <?php } ?> 
+                    <?php } ?>
             </table>
     
     </section>
