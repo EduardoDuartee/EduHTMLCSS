@@ -73,8 +73,12 @@ if (isset($_POST["atualizar"])) {
     $stmt = $pdo->query($sql);
     $Vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    $sql = "SELECT * FROM produtos ORDER BY nome ASC";
+    $stmt = $pdo->query($sql);
+    $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
+
 
 <!DOCTYPE html>
     <html lang="pt-br">
@@ -105,31 +109,50 @@ if (isset($_POST["atualizar"])) {
         }
         ?>
     </h2>
-        <form method="POST">
-            <?php if($vendaEditar){ ?>
-                <input type="hidden" name="id" value="<?= $vendaEditar['id'] ?>">
-                <?php }?>
-                <label>Produto ID</label>
-                <input type="number" name="produto" required
-                value="<?= $VendaEditar['produto_id'] ?? '' ?>">
+    
+    <form method="POST">
 
-                <label>Quantidade</label>
-                <input type="number" name="quantidade" required
-                value="<?= $VendaEditar['quantidade'] ?? '' ?>">
+        <?php if($VendaEditar){ ?>
+            <input type="hidden" name="id" value="<?= $VendaEditar['id'] ?>">
+        <?php } ?>
 
-                <label>Valor Total</label>
-                <input type="number" step="0.01" name="valor_total" required
-                value="<?= $VendaEditar['valor_total'] ?? '' ?>">
+        <label>Produto</label>
+        <select name="produto" required>
+            <option value="">Selecione um produto</option>
 
-                <label>Data da Venda</label>
-                <input type="datetime-local" name="data_venda" required
-                value="<?= isset($VendaEditar['data_venda']) ? date('Y-m-d\TH:i', strtotime($VendaEditar['data_venda'])) : '' ?>">
-                <?php if($vendaEditar){?>
-                <button type="submit" name="atualizar">Atualizar Categoria</button>
-                <?php } else { ?>
-                <button type="submit" name="cadastrar">Cadastrar Categoria</button>
-                <?php } ?>
-        </form>
+            <?php foreach ($produtos as $produto) { ?>
+                <option value="<?= $produto['id'] ?>"
+                    <?= (isset($VendaEditar['produto_id']) && $VendaEditar['produto_id'] == $produto['id']) ? 'selected' : '' ?>>
+                    <?= htmlspecialchars($produto['nome']) ?>
+                </option>
+            <?php } ?>
+        </select>
+
+        <br><br>
+
+        <label>Quantidade</label>
+        <input type="number" name="quantidade" required
+        value="<?= $VendaEditar['quantidade'] ?? '' ?>">
+
+        <br><br>
+
+        <label>Valor Total</label>
+        <input type="number" step="0.01" name="valor_total" required
+        value="<?= $VendaEditar['valor_total'] ?? '' ?>">
+
+        <br><br>
+
+        <label>Data da Venda</label>
+        <input type="datetime-local" name="data_venda" required
+        value="<?= isset($VendaEditar['data_venda']) ? date('Y-m-d\TH:i', strtotime($VendaEditar['data_venda'])) : '' ?>">
+
+        <br><br>
+
+        <button type="submit" name="<?= $VendaEditar ? 'atualizar' : 'cadastrar' ?>">
+            <?= $VendaEditar ? 'Atualizar Venda' : 'Cadastrar Venda' ?>
+        </button>
+
+    </form>
             <hr>
             <h2>Categoria Cadastrados</h2>
             <table>
