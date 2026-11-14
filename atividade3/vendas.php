@@ -163,7 +163,19 @@ if (isset($_POST["atualizar"])) {
                     <th>data_venda</th>
                     <th>Ações</th>
                     </tr>
-                    <?php foreach ($Vendas as $venda) { ?>
+                    
+<h2>Vendas Cadastradas</h2>
+
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor Total</th>
+                    <th>Data da Venda</th>
+                    <th>Ações</th>
+                </tr>
+
+                <?php foreach ($Vendas as $venda) { ?>
                     <tr>
                         <td><?= htmlspecialchars($venda['nome']) ?></td>
                         <td><?= $venda['quantidade'] ?></td>
