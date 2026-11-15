@@ -3,52 +3,65 @@ require_once "../conexao.php";
 
 $mensagem = "";
 
-// Quando clicar em Registrar Venda
+// 1. Registrar venda (Parte 7)
 if (isset($_POST["vender"])) {
     $produto_id = (int) $_POST["produto_id"];
     $quantidade = (int) $_POST["quantidade"];
 
-    // 1. Impedir vendas com quantidade zero ou negativa
+    // Impedir vendas com quantidade zero ou negativa
     if ($quantidade <= 0) {
         $mensagem = "Erro: A quantidade vendida deve ser maior que zero.";
     } else {
-        // 2. Consultar o produto selecionado no banco de dados
+        // Consultar o produto selecionado no banco de dados
         $sql = "SELECT * FROM produtos WHERE id = $produto_id";
         $stmt = $pdo->query($sql);
         $produto = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // 3. Verificar preço atual e quantidade disponível no estoque
+        // Verificar preço atual e quantidade disponível no estoque
         $preco = $produto["preco"];
         $estoque_atual = $produto["quantidade"];
 
-        // 4. Impedir a venda caso a quantidade seja maior que o estoque disponível
+        // Impedir a venda caso a quantidade seja maior que o estoque disponível
         if ($quantidade > $estoque_atual) {
             $mensagem = "Erro: Estoque insuficiente! Disponível: $estoque_atual unidades.";
         } else {
-            // 5. Calcular automaticamente o valor total da venda
+            // Calcular automaticamente o valor total da venda
             $valor_total = $preco * $quantidade;
 
-            // 6. Registrar a venda na tabela vendas
+            // Registrar a venda na tabela vendas
             $sqlVenda = "INSERT INTO vendas (produto_id, quantidade, valor_total, data_venda) 
                          VALUES ($produto_id, $quantidade, $valor_total, NOW())";
             $pdo->exec($sqlVenda);
 
-            // 7. Atualizar a quantidade disponível na tabela produtos
+            // Atualizar a quantidade disponível na tabela produtos
             $novo_estoque = $estoque_atual - $quantidade;
             $sqlEstoque = "UPDATE produtos SET quantidade = $novo_estoque WHERE id = $produto_id";
             $pdo->exec($sqlEstoque);
 
-            // 8. Apresentar mensagem informando que a venda foi realizada e o valor total
+            // Mensagem informando que a venda foi realizada e o valor total
             $valor_formatado = number_format($valor_total, 2, ",", ".");
             $mensagem = "Venda realizada com sucesso! Valor total: R$ $valor_formatado";
         }
     }
 }
 
-// Buscar produtos cadastrados para mostrar no formulário
+// 2. Buscar produtos cadastrados para o formulário
 $sqlProdutos = "SELECT * FROM produtos ORDER BY nome ASC";
 $stmtProdutos = $pdo->query($sqlProdutos);
 $produtos = $stmtProdutos->fetchAll(PDO::FETCH_ASSOC);
+
+// 3. Buscar todas as vendas registradas para mostrar na tabela
+$sqlVendas = "SELECT 
+              vendas.id,
+              produtos.nome,
+              vendas.quantidade,
+              vendas.valor_total,
+              vendas.data_venda
+              FROM vendas
+              INNER JOIN produtos ON vendas.produto_id = produtos.id
+              ORDER BY vendas.id DESC";
+$stmtVendas = $pdo->query($sqlVendas);
+$vendas = $stmtVendas->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +70,7 @@ $produtos = $stmtProdutos->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="atv3.css">
-    <title>Registrar Venda</title>
+    <title>Vendas</title>
 </head>
 <body>
 
@@ -75,11 +88,13 @@ $produtos = $stmtProdutos->fetchAll(PDO::FETCH_ASSOC);
     </header>
 
     <section class="dados-banco">
-        <h1>Registrar Venda</h1>
+        <h1>Sistema de Vendas</h1>
 
         <?php if ($mensagem != "") { ?>
             <p><?= $mensagem ?></p>
         <?php } ?>
+
+        <h2>Registrar Venda</h2>
 
         <form method="POST">
             <label>Produto:</label>
@@ -99,6 +114,29 @@ $produtos = $stmtProdutos->fetchAll(PDO::FETCH_ASSOC);
 
             <button type="submit" name="vender">Finalizar Venda</button>
         </form>
+
+        <hr>
+
+        <h2>Vendas Registradas</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Valor Total</th>
+                <th>Data da Venda</th>
+            </tr>
+
+            <?php foreach ($vendas as $venda) { ?>
+                <tr>
+                    <td><?= $venda['id'] ?></td>
+                    <td><?= $venda['nome'] ?></td>
+                    <td><?= $venda['quantidade'] ?></td>
+                    <td>R$ <?= number_format($venda['valor_total'], 2, ",", ".") ?></td>
+                    <td><?= date('d/m/Y H:i', strtotime($venda['data_venda'])) ?></td>
+                </tr>
+            <?php } ?>
+        </table>
     </section>
 
 </body>
