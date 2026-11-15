@@ -66,7 +66,42 @@ if (isset($_POST["atualizar"])){
         $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-  
+  // 6. Listar todos os produtos com filtros e pesquisa
+        $sql = "SELECT 
+        produtos.id,
+        produtos.nome,
+        produtos.preco,
+        produtos.quantidade,
+        produtos.estoque_minimo,
+        categorias.nome AS nome_categoria
+        FROM produtos
+        INNER JOIN categorias ON produtos.categoria_id = categorias.id
+        WHERE 1=1";
+
+        if (isset($_GET["busca"]) && $_GET["busca"] != "") {
+            $busca = $pdo->quote("%" . $_GET["busca"] . "%");
+            $sql .= " AND produtos.nome LIKE $busca";
+        }
+
+        if (isset($_GET["categoria"]) && $_GET["categoria"] != "") {
+            $catFiltro = (int) $_GET["categoria"];
+            $sql .= " AND produtos.categoria_id = $catFiltro";
+        }
+
+        if (isset($_GET["estoque_baixo"])) {
+            $sql .= " AND produtos.quantidade <= produtos.estoque_minimo";
+        }
+
+        if (isset($_GET["ordem"]) && $_GET["ordem"] == "menor") {
+            $sql .= " ORDER BY produtos.preco ASC";
+        } elseif (isset($_GET["ordem"]) && $_GET["ordem"] == "maior") {
+            $sql .= " ORDER BY produtos.preco DESC";
+        } else {
+            $sql .= " ORDER BY produtos.id ASC";
+        }
+
+        $stmt = $pdo->query($sql);
+        $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
