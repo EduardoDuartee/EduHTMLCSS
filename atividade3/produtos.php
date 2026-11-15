@@ -39,7 +39,7 @@ if (isset($_POST["atualizar"])){
     $quantidade = $_POST["quantidade"];
     $estoque_minimo = $_POST["estoque_minimo"];
 
-    $sql = "UPDATE produtos  SET nome = '$nome',categoria_id = $categoria_id, preco = $preco, quantidade = '$quantidade', estoque_minimo = $estoque_minimo WHERE id = $id";
+    $sql = "UPDATE produtos  SET nome = '$nome', categoria_id = $categoria_id, preco = $preco, quantidade = '$quantidade', estoque_minimo = $estoque_minimo WHERE id = $id";
 
     $stmt = $pdo->prepare($sql);
 
