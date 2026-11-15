@@ -1,9 +1,20 @@
 <?php
 require_once "../conexao.php";
 
+// 1. Criar tabela vendas
+$sql = "CREATE TABLE IF NOT EXISTS vendas(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    produto_id INT NOT NULL,
+    quantidade INT NOT NULL,
+    valor_total DECIMAL(10,2) NOT NULL,
+    data_venda DATETIME NOT NULL,
+    FOREIGN KEY (produto_id) REFERENCES produtos(id)
+)";
+$pdo->exec($sql);
+
 $mensagem = "";
 
-// 1. Registrar venda (Parte 7)
+// 2. Registrar venda (Parte 7)
 if (isset($_POST["vender"])) {
     $produto_id = (int) $_POST["produto_id"];
     $quantidade = (int) $_POST["quantidade"];
@@ -45,12 +56,12 @@ if (isset($_POST["vender"])) {
     }
 }
 
-// 2. Buscar produtos cadastrados para o formulário
+// 3. Buscar produtos cadastrados para o formulário
 $sqlProdutos = "SELECT * FROM produtos ORDER BY nome ASC";
 $stmtProdutos = $pdo->query($sqlProdutos);
 $produtos = $stmtProdutos->fetchAll(PDO::FETCH_ASSOC);
 
-// 3. Buscar todas as vendas registradas para mostrar na tabela
+// 4. Buscar todas as vendas registradas para mostrar na tabela
 $sqlVendas = "SELECT 
               vendas.id,
               produtos.nome,
