@@ -66,20 +66,7 @@ if (isset($_POST["atualizar"])){
         $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    //6. Listar todos osproduto 
-   $sqlProdutos = "SELECT 
-    produtos.id,
-    produtos.nome,
-    produtos.preco,
-    produtos.quantidade,
-    produtos.estoque_minimo,
-    categorias.nome AS categoria_nome
-    FROM produtos
-    INNER JOIN categorias ON produtos.categoria_id = categorias.id
-    $where
-    $orderBy";
-    $stmt = $pdo->query($sql);
-    $Vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  
 
 
 ?>
