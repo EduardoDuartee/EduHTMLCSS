@@ -67,16 +67,17 @@ if (isset($_POST["atualizar"])){
     }
 
     //6. Listar todos osproduto 
-    $sql = "SELECT 
-    vendas.id,
+   $sqlProdutos = "SELECT 
+    produtos.id,
     produtos.nome,
-    vendas.quantidade,
-    vendas.valor_total,
-    vendas.data_venda
-    FROM vendas
-    INNER JOIN produtos ON vendas.produto_id = produtos.id
-    ORDER BY vendas.id ASC";
-
+    produtos.preco,
+    produtos.quantidade,
+    produtos.estoque_minimo,
+    categorias.nome AS categoria_nome
+    FROM produtos
+    INNER JOIN categorias ON produtos.categoria_id = categorias.id
+    $where
+    $orderBy";
     $stmt = $pdo->query($sql);
     $Vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
