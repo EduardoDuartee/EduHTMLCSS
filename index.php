@@ -271,7 +271,7 @@ else{
                                
 <!--========================================================================-->
 
-                <!--Projetp 9-->
+                <!--Projeto 9-->
                 <div class="projetos">
                     <div class="card">
                         <div class="numero-projeto">
