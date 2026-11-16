@@ -64,12 +64,12 @@ if (isset($_POST["atualizar"])){
         <title>categorias</title>
     </head>
     <body>
-     <header>
+     <<header>
         <div class="logo">
             <h2>Eduardo <span>Augusto</span></h2>
         </div>
         <nav>
-            <a href="index.php">Início</a>
+            <a href="../index.php">Início</a>
             <a href="produtos.php">Produtos</a>
             <a href="categoria.php">Categorias</a>
             <a href="vendas.php">Vendas</a>
