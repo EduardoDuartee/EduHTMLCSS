@@ -1,29 +1,31 @@
 <?php
 require_once "../conexao.php";
 
+// 1. Total de produtos diferentes cadastrados
 $stmt = $pdo->query("SELECT COUNT(*) AS total FROM produtos");
 $totalProdutos = $stmt->fetch(PDO::FETCH_ASSOC)["total"] ?? 0;
 
-
+// 2. Total de unidades em estoque
 $stmt = $pdo->query("SELECT SUM(quantidade) AS total FROM produtos");
 $totalUnidades = $stmt->fetch(PDO::FETCH_ASSOC)["total"] ?? 0;
 
-
+// 3. Valor financeiro total do estoque
 $stmt = $pdo->query("SELECT SUM(preco * quantidade) AS total FROM produtos");
-$valorEstoque = $stmt->fetch(PDO::FETCH_ASSOC)["total"] ?? 0;
+$valorEstoque = (float) ($stmt->fetch(PDO::FETCH_ASSOC)["total"] ?? 0);
 
-
+// 4. Produtos com estoque baixo
 $stmt = $pdo->query("SELECT COUNT(*) AS total FROM produtos WHERE quantidade <= estoque_minimo");
 $estoqueBaixo = $stmt->fetch(PDO::FETCH_ASSOC)["total"] ?? 0;
 
-
+// 5. Total de vendas realizadas
 $stmt = $pdo->query("SELECT COUNT(*) AS total FROM vendas");
 $totalVendas = $stmt->fetch(PDO::FETCH_ASSOC)["total"] ?? 0;
 
+// 6. Valor total faturado
 $stmt = $pdo->query("SELECT SUM(valor_total) AS total FROM vendas");
-$faturamentoTotal = $stmt->fetch(PDO::FETCH_ASSOC)["total"] ?? 0;
+$faturamentoTotal = (float) ($stmt->fetch(PDO::FETCH_ASSOC)["total"] ?? 0);
 
-
+// 7. Top 5 produtos mais vendidos (Desafio 1)
 $sqlRanking = "SELECT 
                produtos.nome,
                SUM(vendas.quantidade) AS total_vendido
@@ -53,7 +55,7 @@ $maisVendidos = $stmtRanking->fetchAll(PDO::FETCH_ASSOC);
         <nav>
             <a href="../index.php">Início</a>
             <a href="produtos.php">Produtos</a>
-            <a href="categoria.php">Categorias</a>
+            <a href="categorias.php">Categorias</a>
             <a href="vendas.php">Vendas</a>
             <a href="relatorios.php">Relatórios</a>
         </nav>
@@ -109,7 +111,7 @@ $maisVendidos = $stmtRanking->fetchAll(PDO::FETCH_ASSOC);
             ?>
                 <tr>
                     <td><?= $posicao ?>º</td>
-                    <td><?= $item['nome'] ?></td>
+                    <td><?= htmlspecialchars($item['nome']) ?></td>
                     <td><?= $item['total_vendido'] ?></td>
                 </tr>
             <?php
