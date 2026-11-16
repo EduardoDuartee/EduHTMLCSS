@@ -85,7 +85,7 @@ $vendas = $stmtVendas->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
 
-    <header>
+     <header>
         <div class="logo">
             <h2>Eduardo <span>Augusto</span></h2>
         </div>
