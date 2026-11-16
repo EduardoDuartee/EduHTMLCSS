@@ -25,7 +25,7 @@ $totalVendas = $stmt->fetch(PDO::FETCH_ASSOC)["total"] ?? 0;
 $stmt = $pdo->query("SELECT SUM(valor_total) AS total FROM vendas");
 $faturamentoTotal = (float) ($stmt->fetch(PDO::FETCH_ASSOC)["total"] ?? 0);
 
-// 7. Top 5 produtos mais vendidos (Desafio 1)
+// produtos mais vendidos
 $sqlRanking = "SELECT 
                produtos.nome,
                SUM(vendas.quantidade) AS total_vendido
