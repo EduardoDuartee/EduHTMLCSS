@@ -116,16 +116,18 @@ if (isset($_POST["atualizar"])){
 </head>
 <body>
 
-    <header>
+     <header>
         <div class="logo">
             <h2>Eduardo <span>Augusto</span></h2>
         </div>
         <nav>
-            <a href="categoria.php">categorias</a>
-            <a href="vendas.php">vendas</a>
+            <a href="index.php">Início</a>
+            <a href="produtos.php">Produtos</a>
+            <a href="categoria.php">Categorias</a>
+            <a href="vendas.php">Vendas</a>
+            <a href="relatorios.php">Relatórios</a>
         </nav>
     </header>
-
 
     <section class="dados-banco">
     <h1>Sistema de Cadastro de Produtos</h1>
