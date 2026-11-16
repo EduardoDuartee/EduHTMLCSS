@@ -155,7 +155,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <h2>Eduardo <span>Augusto</span></h2>
         </div>
         <nav>
-            <a href="index.php">Início</a>
+            <a href="../index.php">Início</a>
             <a href="produtos.php">Produtos</a>
             <a href="categorias.php">Categorias</a>
             <a href="vendas.php">Vendas</a>
