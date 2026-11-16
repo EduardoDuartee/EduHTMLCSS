@@ -288,7 +288,7 @@ else{
                             <span>myAdmin</span>
                             <!--span>PHP</span-->
                         </div>
-                        <a href="atividade3/banco.php">Ver Projeto</a>
+                        <<a href="atividade3/banco.php"></a>
                     </div><!--fim-->
                 </div>
 
