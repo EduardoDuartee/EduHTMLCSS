@@ -286,7 +286,7 @@ else{
                             <span>MyAdmin</span>
                             <!--span>PHP</span-->
                         </div>
-                        <a href="atividade3\relatorios.php">Ver Projeto</a>
+                        <a href="atividade3\categorias.php">Ver Projeto</a>
                     </div><!--fim-->
                 </div>
 
