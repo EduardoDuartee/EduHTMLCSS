@@ -277,19 +277,18 @@ else{
                         <div class="numero-projeto">
                             09
                         </div>
-                        <h3>banco de dados</h3>
+                        <h3>Banco de Dados</h3>
                         <p>
-                        atividade - 3
+                        Atividade 3
                         </p>
                         <div class="tecnologias">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>PHP</span>
-                            <span>myAdmin</span>
+                            <span>MyAdmin</span>
                             <!--span>PHP</span-->
                         </div>
-                        
-                        <a href="atividade3/banco.php"></a>
+                        <a href="atividade3/banco.php">Ver Projeto</a>
                     </div><!--fim-->
                 </div>
 
