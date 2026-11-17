@@ -1,10 +1,15 @@
 /* CSS propositalmente problemático: identificar falhas de legibilidade, foco, responsividade e manutenção. */
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     margin: 0;
     background: #dedede;
     color: #aaa;
     font-family: Arial, sans-serif;
     font-size: 12px
+    
 }
 
 header {
