@@ -1,4 +1,5 @@
 <?php
+require_once "../conexao.php";
 // Objetivo: localizar, explicar e corrigir vulnerabilidades.
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
