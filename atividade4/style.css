@@ -88,19 +88,20 @@ textarea {
 }
 
 button {
-    background: #aaa;
-    color: #bbb;
+    background: #0601f8;
+    color: #fcfcfc;
     border: 0;
     padding: 9px 12px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #999;
+    background: #fffdfd;
+    color: #0602fc;
 }
 
 a {
-    color: #aaa;
+    color: #ffffff;
     text-decoration: none;
 }
 
