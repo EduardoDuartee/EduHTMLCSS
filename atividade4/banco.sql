@@ -1,26 +1,18 @@
-
-    
-    require_once "../conexao.php";
-
-
-    "CREATE TABLE IF NOT EXISTS usuarios (
+    CREATE TABLE IF NOT EXISTS usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY, 
-    nome VARCHAR (120), 
-    email VARCHAR(150), 
-    senha VARCHAR(150), 
-    perfil VARCHAR(30))";
+    nome VARCHAR (120) NOT NULL, 
+    email VARCHAR(150) NOT NULL, 
+    senha VARCHAR(150) NOT NULL, 
+    perfil VARCHAR(30))NOT NULL;
 
-"CREATE TABLE IF NOT EXISTS produtos (
+CREATE TABLE IF NOT EXISTS produtos (
     id INT, AUTO_INCREMENT PRIMARY KEY, 
-    nome VARCHAR(150),
-    descricao TEXT, 
-    preco DECIMAL(10,2), estoque INT, 
-    categoria VARCHAR(80), 
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+    nome VARCHAR(150)NOT NULL,
+    descricao TEXTNOT NOT NULL, 
+    preco DECIMAL(10,2)NOT NULL, 
+    estoque INTNOT NULL, 
+    categoria VARCHAR(80)NOT NULL, 
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP) NOT NULL;
 
-"INSERT INTO usuarios(nome,email,senha,perfil) 
-VALUES ('Administrador','admin@exemplo.local','admin123','admin'),
-    ('Operador','operador@exemplo.local','123456','operador');
-INSERT INTO produtos(nome,descricao,preco,estoque,categoria) 
-VALUES ('Mouse USB','Mouse para escritório',35.90,12,'Periféricos'),
-('Teclado','Teclado básico',59.90,7,'Periféricos'),('Monitor','Monitor de laboratório',699.00,3,'Monitores')";
+INSERT INTO usuarios(nome,email,senha,perfil) VALUES ('Administrador','admin@exemplo.local','admin123','admin'),('Operador','operador@exemplo.local','123456','operador');
+INSERT INTO produtos(nome,descricao,preco,estoque,categoria) VALUES ('Mouse USB','Mouse para escritório',35.90,12,'Periféricos'),('Teclado','Teclado básico',59.90,7,'Periféricos'),('Monitor','Monitor de laboratório',699.00,3,'Monitores')";
