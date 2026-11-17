@@ -290,6 +290,31 @@ else{
                     </div><!--fim-->
                 </div>
 
+<!--========================================================================-->  
+
+<!--========================================================================-->
+
+                <!--Projeto 10-->
+                <div class="projetos">
+                    <div class="card">
+                        <div class="numero-projeto">
+                            10
+                        </div>
+                        <h3>Banco de Dados</h3>
+                        <p>
+                        Atividade 4
+                        </p>
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <span>MyAdmin</span>
+                            <!--span>PHP</span-->
+                        </div>
+                        <a href="atividade4\vulnerabilidades.php">Ver Projeto</a>
+                    </div><!--fim-->
+                </div>
+
 <!--========================================================================-->
                 
         </section>
