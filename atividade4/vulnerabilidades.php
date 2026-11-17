@@ -43,7 +43,7 @@ if ($acao === 'cadastrar') {
     $preco = $_POST['preco'] ?? '';
     $estoque = $_POST['estoque'] ?? '';
     $categoria = $_POST['categoria'] ?? '';
-    $sql = "INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES ('$nome', '$descricao', '$preco', '$estoque', '$categoria')";
+    $sql = "INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES ($nome, $descricao, $preco, $estoque, $categoria)";
     $pdo->exec($sql);
     $mensagem = "Produto $nome cadastrado!";
 }
@@ -54,13 +54,13 @@ if ($acao === 'atualizar') {
     $preco = $_POST['preco'] ?? '';
     $estoque = $_POST['estoque'] ?? '';
     $categoria = $_POST['categoria'] ?? '';
-    $sql = "UPDATE produtos SET nome='$nome', descricao='$descricao', preco='$preco', estoque='$estoque', categoria='$categoria' WHERE id=$id";
+    $sql = "UPDATE produtos SET nome = $nome, descricao = $descricao, preco = $preco, estoque = $estoque, categoria = $categoria WHERE id = $id";
     $pdo->exec($sql);
     $mensagem = 'Produto atualizado.';
 }
 if ($acao === 'excluir') {
     $id = $_GET['id'] ?? '';
-    $pdo->exec("DELETE FROM produtos WHERE id=$id");
+    $pdo->exec("DELETE FROM produtos WHERE id = $id");
     $mensagem = 'Produto excluído.';
 }
 $busca = $_GET['busca'] ?? '';
@@ -98,6 +98,7 @@ $total = $pdo->query('SELECT COUNT(*) FROM produtos')->fetchColumn();
     <main>
         <div class="aviso">LABORATÓRIO INSEGURO — SOMENTE LOCALHOST</div>
         <?php if ($mensagem !== ''): ?><div class="mensagem"><?= $mensagem ?></div><?php endif; ?>
+
         <section class="painel">
             <h2>Acesso ao sistema</h2>
             <?php if (isset($_SESSION['usuario'])): ?>
@@ -111,6 +112,7 @@ $total = $pdo->query('SELECT COUNT(*) FROM produtos')->fetchColumn();
                 </form>
             <?php endif; ?>
         </section>
+
         <section class="painel">
             <h2><?= $editar ? 'Editar produto' : 'Cadastrar produto' ?></h2>
             <form method="post" class="grade">
@@ -124,6 +126,7 @@ $total = $pdo->query('SELECT COUNT(*) FROM produtos')->fetchColumn();
                 <div><button><?= $editar ? 'Salvar alterações' : 'Cadastrar' ?></button> <a href="index.php">Limpar</a></div>
             </form>
         </section>
+
         <section class="painel">
             <h2>Produtos cadastrados (<?= $total ?>)</h2>
             <form method="get" class="filtros">
@@ -154,9 +157,9 @@ $total = $pdo->query('SELECT COUNT(*) FROM produtos')->fetchColumn();
                         <?php foreach ($produtos as $produto): ?>
                             <tr>
                                 <td><?= $produto['id'] ?></td>
-                                <td><?= $produto['nome'] ?></td>
-                                <td><?= $produto['descricao'] ?></td>
-                                <td><?= $produto['categoria'] ?></td>
+                                <td><?= htmlspecialchars ($produto['nome']) ?></td>
+                                <td><?= htmlspecialchars ($produto['descricao'])?></td>
+                                <td><?= htmlspecialchars ($produto['categoria']) ?></td>
                                 <td>R$ <?= $produto['preco'] ?></td>
                                 <td><?= $produto['estoque'] ?></td>
                                 <td><a href="?editar=<?= $produto['id'] ?>">Editar</a> <a href="?acao=excluir&id=<?= $produto['id'] ?>">Excluir</a></td>
@@ -166,6 +169,7 @@ $total = $pdo->query('SELECT COUNT(*) FROM produtos')->fetchColumn();
                 </table>
             </div>
         </section>
+        
         <section class="painel">
             <h2>Observações da loja</h2>
             <p>Esta página foi criada para a turma identificar problemas reais de desenvolvimento web.</p>
