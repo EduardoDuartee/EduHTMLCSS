@@ -1,6 +1,37 @@
 <?php
 require_once "../conexao.php";
+
+
+"CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    nome VARCHAR (120), 
+    email VARCHAR(150), 
+    senha VARCHAR(150), 
+    perfil VARCHAR(30))";
+    $pdo->exec($sql);
+
+"CREATE TABLE IF NOT EXISTS produtos (
+    id INT, AUTO_INCREMENT PRIMARY KEY, 
+    nome VARCHAR(150),
+    descricao TEXT, 
+    preco DECIMAL(10,2), estoque INT, 
+    categoria VARCHAR(80), 
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+    $pdo->exec($sql);
+
+
+
+"INSERT INTO usuarios(nome,email,senha,perfil) 
+VALUES ('Administrador','admin@exemplo.local','admin123','admin'),
+    ('Operador','operador@exemplo.local','123456','operador')";
+
+"INSERT INTO produtos(nome,descricao,preco,estoque,categoria) 
+VALUES ('Mouse USB','Mouse para escritório',35.90,12,'Periféricos'),
+('Teclado','Teclado básico',59.90,7,'Periféricos'),('Monitor','Monitor de laboratório',699.00,3,'Monitores')";
+
+
 // Objetivo: localizar, explicar e corrigir vulnerabilidades.
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 session_start();
@@ -8,6 +39,7 @@ $host = 'localhost';
 $banco = 'eduardoa755_db3';
 $usuario = 'eduardoa755';
 $senha = '755!@#';
+
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$banco;charset=utf8mb4", $usuario, $senha);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
