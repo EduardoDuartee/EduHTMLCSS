@@ -48,8 +48,8 @@ $senha = '755!@#';
         $estoque = filter_input(INPUT_POST, 'estoque', FILTER_VALIDATE_INT) ?? '';
         $categoria = trim($_POST['categoria']) ?? '';
 
-        if($nome == "" | $descricao == "" | $preco <= 0 | $estoque <= 0 | $categoria == ""){
-            echo ("Não é possivel atualizar com Campo em Branco Adicione As Informações Solicitadas");
+        if($nome == "" || $descricao == "" || $preco <= 0 || $estoque <= 0 || $categoria == ""){
+           $mensagem = "Nao é possivel  salvar com os campos em  Branco";
         }
         
         else{
