@@ -71,19 +71,24 @@ $senha = '755!@#';
         $preco = (FLOAT) $_POST['preco'] ?? '';
         $estoque = (INT) $_POST['estoque'] ?? '';
         $categoria = trim( $_POST['categoria']);
+
+        if($nome == "" || $descricao == "" || $preco == "" || $estoque == "" || $categoria == "") {
+            $mensagem = "Não é possivel Atualizar com campo em branco";
+        } else{
+            $nome = $pdo->quote($nome);
+            $sql = "UPDATE produtos SET nome = :nome, descricao = :descricao, preco = :preco, estoque = :estoque, categoria = :categoria WHERE id = :id";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([
+                ':nome' => $nome,
+                ':descricao' => $descricao,
+                ':preco' => $preco,
+                ':estoque' => $estoque,
+                ':categoria' => $categoria,
+                ':id' => $id
+            ]);
+            $mensagem = 'Produto atualizado.';
+         }
         
-        $nome = $pdo->quote($nome);
-        $sql = "UPDATE produtos SET nome = :nome, descricao = :descricao, preco = :preco, estoque = :estoque, categoria = :categoria WHERE id = :id";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([
-            ':nome' => $nome,
-            ':descricao' => $descricao,
-            ':preco' => $preco,
-            ':estoque' => $estoque,
-            ':categoria' => $categoria,
-            ':id' => $id
-        ]);
-        $mensagem = 'Produto atualizado.';
     }
 
     if ($acao === 'excluir') {
