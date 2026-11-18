@@ -85,6 +85,7 @@ select {
 
 textarea {
     height: 75px;
+    color: #000000;
 }
 
 button {
@@ -107,6 +108,7 @@ a {
 
 a:hover {
     text-decoration: underline;
+    color: #0601f8;
 }
 
 
