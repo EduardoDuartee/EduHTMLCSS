@@ -169,9 +169,9 @@ $senha = '755!@#';
                                 <td><?= $produto['id'] ?></td>
                                 <td><?= htmlspecialchars ($nome, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF8') ?></td>
                                 <td><?= htmlspecialchars ($descricao,  ENT_QUOTES | ENT_SUBSTITUTE, 'UTF8')?></td>
-                                <td><?= htmlspecialchars ($categoria, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF8') ?></td>
+                                <td><?= htmlspecialchars ($categoria, ENT_QUOTES | ENT_SUBSTITUTE) ?></td>
                                 <td>R$ <?= number_format($preco, 2, ',', '.')?></td>
-                                <td><?= htmlspecialchars ($estoque, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF8') ?></td>
+                                <td><?= htmlspecialchars ($estoque, ENT_QUOTES | ENT_SUBSTITUTE) ?></td>
                                 <td><a href="?editar=<?= $produto['id'] ?>">Editar</a> <a href="?acao=excluir&id=<?= $produto['id'] ?>">Excluir</a></td>
                             </tr>
                         <?php endforeach; ?>
