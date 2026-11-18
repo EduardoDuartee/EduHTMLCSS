@@ -62,16 +62,9 @@ $senha = '755!@#';
         $preco = $_POST['preco'] ?? '';
         $estoque = $_POST['estoque'] ?? '';
         $categoria = $_POST['categoria'] ?? '';
-
+        
         $sql = "UPDATE produtos SET nome = $nome, descricao = $descricao, preco = $preco, estoque = $estoque, categoria = $categoria WHERE id = $id";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([
-            ':nome' => $nome,
-            ':descricao' => $descricao,
-            ':preco' => $preco,
-            ':estoque' => $estoque,
-            ':categoria' => $categoria
-        ]);
+        $pdo->exec($sql);
         $mensagem = 'Produto atualizado.';
     }
     if ($acao === 'excluir') {
