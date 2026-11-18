@@ -141,12 +141,10 @@ td {
 
 th {
     background: #ddd;
-    color: #aaa;
+    color: #070707;
 }
 
-.tabela {
-    overflow: visible;
-}
+
 
 footer {
     padding: 20px;
