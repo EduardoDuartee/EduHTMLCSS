@@ -1,8 +1,6 @@
 <?php
-require_once "../conexao.php";
 
 // Objetivo: localizar, explicar e corrigir vulnerabilidades.
-
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 session_start();
@@ -20,8 +18,8 @@ try {
 $mensagem = $_GET['msg'] ?? '';
 $acao = $_POST['acao'] ?? $_GET['acao'] ?? '';
 if ($acao === 'login') {
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['senha'] ?? '';
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) ?? '';
+    $password = filter_input()['senha'] ?? '';
     $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$password'";
     $encontrado = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     if ($encontrado) {
@@ -37,15 +35,23 @@ if ($acao === 'sair') {
     header('Location: index.php?msg=Você saiu');
     exit;
 }
+
 if ($acao === 'cadastrar') {
-    $nome = $_POST['nome'] ?? '';
-    $descricao = $_POST['descricao'] ?? '';
-    $preco = $_POST['preco'] ?? '';
-    $estoque = $_POST['estoque'] ?? '';
-    $categoria = $_POST['categoria'] ?? '';
+    $nome = trim($_POST['nome']) ?? '';
+    $descricao = trim($_POST['descricao']) ?? '';
+    $preco = filter_input(INPUT_POST, 'preco', FILTER_VALIDATE_FLOAT);
+    $estoque = filter_input(INPUT_POST, 'estoque', FILTER_VALIDATE_INT) ?? '';
+    $categoria = trim($_POST['categoria']) ?? '';
+
     $sql = "INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES ($nome, $descricao, $preco, $estoque, $categoria)";
-    $pdo->exec($sql);
-    $mensagem = "Produto $nome cadastrado!";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        ': nome' => $nome,
+        ': descricao' => $descricao,
+        ': preco' => $preco,
+        ': estoque' => $estoque,
+        ': categoria' => $categoria
+    ]);
 }
 if ($acao === 'atualizar') {
     $id = $_POST['id'] ?? '';
