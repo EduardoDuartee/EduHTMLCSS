@@ -49,7 +49,7 @@ $senha = '755!@#';
         $categoria = trim($_POST['categoria']) ?? '';
 
         if($nome == "" || $descricao == "" || $preco == "" || $estoque == "" || $categoria == "") {
-           $mensagem = "Nao é possivel  salvar com os campos em  Branco";
+           echo( "Nao é possivel  salvar com os campos em  Branco");
         }
         
         else{
