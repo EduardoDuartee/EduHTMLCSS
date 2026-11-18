@@ -18,8 +18,8 @@ try {
 $mensagem = $_GET['msg'] ?? '';
 $acao = $_POST['acao'] ?? $_GET['acao'] ?? '';
 if ($acao === 'login') {
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) ?? '';
-    $password = filter_input()['senha'] ?? '';
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $password = $_POST['senha'] ?? '';
     $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$password'";
     $encontrado = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     if ($encontrado) {
@@ -43,7 +43,7 @@ if ($acao === 'cadastrar') {
     $estoque = filter_input(INPUT_POST, 'estoque', FILTER_VALIDATE_INT) ?? '';
     $categoria = trim($_POST['categoria']) ?? '';
 
-    $sql = "INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES ($nome, $descricao, $preco, $estoque, $categoria)";
+    $sql = "INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES (:nome, :descricao, :preco, :estoque, :categoria)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         ': nome' => $nome,
