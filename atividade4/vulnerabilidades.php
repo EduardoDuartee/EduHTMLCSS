@@ -67,14 +67,15 @@ $senha = '755!@#';
         $categoria = trim( $_POST['categoria']);
         
         $nome = $pdo->quote($nome);
-        $sql = "UPDATE produtos SET nome = :nome, descricao = :descricao, preco = :preco, estoque = :estoque, categoria = :categoria WHERE id = $id";
+        $sql = "UPDATE produtos SET nome = :nome, descricao = :descricao, preco = :preco, estoque = :estoque, categoria = :categoria WHERE id = :id";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
             ':nome' => $nome,
             ':descricao' => $descricao,
             ':preco' => $preco,
             ':estoque' => $estoque,
-            ':categoria' => $categoria
+            ':categoria' => $categoria,
+            ':id' => $id
         ]);
         $mensagem = 'Produto atualizado.';
     }
