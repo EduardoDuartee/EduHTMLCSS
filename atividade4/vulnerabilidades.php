@@ -15,7 +15,7 @@ $senha = '755!@#';
     } catch (PDOException $e) {
         die('Falha no banco: ' . $e->getMessage());
     }
-
+    
     $mensagem = $_GET['msg'] ?? '';
     $acao = $_POST['acao'] ?? $_GET['acao'] ?? '';
     if ($acao === 'login') {
@@ -62,8 +62,16 @@ $senha = '755!@#';
         $preco = $_POST['preco'] ?? '';
         $estoque = $_POST['estoque'] ?? '';
         $categoria = $_POST['categoria'] ?? '';
+
         $sql = "UPDATE produtos SET nome = $nome, descricao = $descricao, preco = $preco, estoque = $estoque, categoria = $categoria WHERE id = $id";
-        $pdo->exec($sql);
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            ':nome' => $nome,
+            ':descricao' => $descricao,
+            ':preco' => $preco,
+            ':estoque' => $estoque,
+            ':categoria' => $categoria
+        ]);
         $mensagem = 'Produto atualizado.';
     }
     if ($acao === 'excluir') {
@@ -78,7 +86,6 @@ $senha = '755!@#';
     if ($categoriaFiltro !== '') {
         $sqlLista .= " AND categoria = '$categoriaFiltro'";
     }
-    
     $sqlLista .= " ORDER BY $ordem";
     $produtos = $pdo->query($sqlLista)->fetchAll(PDO::FETCH_ASSOC);
     $editar = null;
