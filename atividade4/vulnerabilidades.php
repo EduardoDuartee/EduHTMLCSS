@@ -9,80 +9,84 @@ $banco = 'eduardoa755_db3';
 $usuario = 'eduardoa755';
 $senha = '755!@#';
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$banco;charset=utf8mb4", $usuario, $senha);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die('Falha no banco: ' . $e->getMessage());
-}
-$mensagem = $_GET['msg'] ?? '';
-$acao = $_POST['acao'] ?? $_GET['acao'] ?? '';
-if ($acao === 'login') {
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-    $password = $_POST['senha'] ?? '';
-    $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$password'";
-    $encontrado = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
-    if ($encontrado) {
-        $_SESSION['usuario'] = $encontrado['nome'];
-        $_SESSION['perfil'] = $encontrado['perfil'];
-        $mensagem = 'Bem-vindo, ' . $encontrado['nome'];
-    } else {
-        $mensagem = 'Login inválido para ' . $email;
+    try {
+        $pdo = new PDO("mysql:host=$host;dbname=$banco;charset=utf8mb4", $usuario, $senha);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        die('Falha no banco: ' . $e->getMessage());
     }
-}
-if ($acao === 'sair') {
-    session_destroy();
-    header('Location: index.php?msg=Você saiu');
-    exit;
-}
 
-if ($acao === 'cadastrar') {
-    $nome = trim($_POST['nome']) ?? '';
-    $descricao = trim($_POST['descricao']) ?? '';
-    $preco = filter_input(INPUT_POST, 'preco', FILTER_VALIDATE_FLOAT);
-    $estoque = filter_input(INPUT_POST, 'estoque', FILTER_VALIDATE_INT) ?? '';
-    $categoria = trim($_POST['categoria']) ?? '';
+    $mensagem = $_GET['msg'] ?? '';
+    $acao = $_POST['acao'] ?? $_GET['acao'] ?? '';
+    if ($acao === 'login') {
+        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+        $password = $_POST['senha'] ?? '';
+        $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$password'";
+        $encontrado = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
+        if ($encontrado) {
+            $_SESSION['usuario'] = $encontrado['nome'];
+            $_SESSION['perfil'] = $encontrado['perfil'];
+            $mensagem = 'Bem-vindo, ' . $encontrado['nome'];
+        } else {
+            $mensagem = 'Login inválido para ' . $email;
+        }
+    }
 
-    $sql = 'INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES (:nome, :descricao, :preco, :estoque, :categoria)';
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        ':nome' => $nome,
-        ':descricao' => $descricao,
-        ':preco' => $preco,
-        ':estoque' => $estoque,
-        ':categoria' => $categoria
-    ]);
-}
-if ($acao === 'atualizar') {
-    $id = $_POST['id'] ?? '';
-    $nome = $_POST['nome'] ?? '';
-    $descricao = $_POST['descricao'] ?? '';
-    $preco = $_POST['preco'] ?? '';
-    $estoque = $_POST['estoque'] ?? '';
-    $categoria = $_POST['categoria'] ?? '';
-    $sql = "UPDATE produtos SET nome = $nome, descricao = $descricao, preco = $preco, estoque = $estoque, categoria = $categoria WHERE id = $id";
-    $pdo->exec($sql);
-    $mensagem = 'Produto atualizado.';
-}
-if ($acao === 'excluir') {
-    $id = $_GET['id'] ?? '';
-    $pdo->exec("DELETE FROM produtos WHERE id = $id");
-    $mensagem = 'Produto excluído.';
-}
-$busca = $_GET['busca'] ?? '';
-$categoriaFiltro = $_GET['categoria'] ?? '';
-$ordem = $_GET['ordem'] ?? 'id';
-$sqlLista = "SELECT * FROM produtos WHERE (nome LIKE '%$busca%' OR descricao LIKE '%$busca%')";
-if ($categoriaFiltro !== '') {
-    $sqlLista .= " AND categoria = '$categoriaFiltro'";
-}
-$sqlLista .= " ORDER BY $ordem";
-$produtos = $pdo->query($sqlLista)->fetchAll(PDO::FETCH_ASSOC);
-$editar = null;
-if (isset($_GET['editar'])) {
-    $editar = $pdo->query('SELECT * FROM produtos WHERE id=' . $_GET['editar'])->fetch(PDO::FETCH_ASSOC);
-}
-$total = $pdo->query('SELECT COUNT(*) FROM produtos')->fetchColumn();
+    if ($acao === 'sair') {
+        session_destroy();
+        header('Location: index.php?msg=Você saiu');
+        exit;
+    }
+
+    if ($acao === 'cadastrar') {
+        $nome = trim($_POST['nome']) ?? '';
+        $descricao = trim($_POST['descricao']) ?? '';
+        $preco = filter_input(INPUT_POST, 'preco', FILTER_VALIDATE_FLOAT);
+        $estoque = filter_input(INPUT_POST, 'estoque', FILTER_VALIDATE_INT) ?? '';
+        $categoria = trim($_POST['categoria']) ?? '';
+
+        $sql = 'INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES (:nome, :descricao, :preco, :estoque, :categoria)';
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            ':nome' => $nome,
+            ':descricao' => $descricao,
+            ':preco' => $preco,
+            ':estoque' => $estoque,
+            ':categoria' => $categoria
+        ]);
+    }
+    if ($acao === 'atualizar') {
+        $id = $_POST['id'] ?? '';
+        $nome = $_POST['nome'] ?? '';
+        $descricao = $_POST['descricao'] ?? '';
+        $preco = $_POST['preco'] ?? '';
+        $estoque = $_POST['estoque'] ?? '';
+        $categoria = $_POST['categoria'] ?? '';
+        $sql = "UPDATE produtos SET nome = $nome, descricao = $descricao, preco = $preco, estoque = $estoque, categoria = $categoria WHERE id = $id";
+        $pdo->exec($sql);
+        $mensagem = 'Produto atualizado.';
+    }
+    if ($acao === 'excluir') {
+        $id = $_GET['id'] ?? '';
+        $pdo->exec("DELETE FROM produtos WHERE id = $id");
+        $mensagem = 'Produto excluído.';
+    }
+    $busca = $_GET['busca'] ?? '';
+    $categoriaFiltro = $_GET['categoria'] ?? '';
+    $ordem = $_GET['ordem'] ?? 'id';
+    $sqlLista = "SELECT * FROM produtos WHERE (nome LIKE '%$busca%' OR descricao LIKE '%$busca%')";
+    if ($categoriaFiltro !== '') {
+        $sqlLista .= " AND categoria = '$categoriaFiltro'";
+    }
+
+    $sqlLista .= " ORDER BY $ordem";
+    $produtos = $pdo->query($sqlLista)->fetchAll(PDO::FETCH_ASSOC);
+    $editar = null;
+    if (isset($_GET['editar'])) {
+        $editar = $pdo->query('SELECT * FROM produtos WHERE id=' . $_GET['editar'])->fetch(PDO::FETCH_ASSOC);
+    }
+
+    $total = $pdo->query('SELECT COUNT * FROM produtos')->fetchColumn();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
