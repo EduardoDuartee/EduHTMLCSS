@@ -48,7 +48,7 @@ $senha = '755!@#';
         $estoque = filter_input(INPUT_POST, 'estoque', FILTER_VALIDATE_INT) ?? '';
         $categoria = trim($_POST['categoria']) ?? '';
 
-        if($nome == "" || $descricao == "" || $preco <= 0 || $estoque <= 0 || $categoria == ""){
+        if($nome == "" || $descricao == "" || $preco == "" || $estoque == "" || $categoria == "") {
            $mensagem = "Nao é possivel  salvar com os campos em  Branco";
         }
         
