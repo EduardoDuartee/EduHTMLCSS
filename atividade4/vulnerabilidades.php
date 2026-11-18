@@ -86,7 +86,7 @@ $senha = '755!@#';
         $editar = $pdo->query('SELECT * FROM produtos WHERE id=' . $_GET['editar'])->fetch(PDO::FETCH_ASSOC);
     }
 
-    $total = $pdo->query('SELECT COUNT * FROM produtos')->fetchColumn();
+    $total = $pdo->query('SELECT COUNT (*) FROM produtos')->fetchColumn();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
