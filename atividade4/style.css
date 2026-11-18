@@ -59,7 +59,7 @@ h2 {
 .grade {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 7px;
 }
 
 .largura {
