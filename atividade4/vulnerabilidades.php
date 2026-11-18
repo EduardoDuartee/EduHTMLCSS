@@ -78,15 +78,15 @@ $senha = '755!@#';
     if ($categoriaFiltro !== '') {
         $sqlLista .= " AND categoria = '$categoriaFiltro'";
     }
-
+    
     $sqlLista .= " ORDER BY $ordem";
     $produtos = $pdo->query($sqlLista)->fetchAll(PDO::FETCH_ASSOC);
     $editar = null;
     if (isset($_GET['editar'])) {
         $editar = $pdo->query('SELECT * FROM produtos WHERE id=' . $_GET['editar'])->fetch(PDO::FETCH_ASSOC);
     }
-
-    $total = $pdo->query('SELECT COUNT (*) FROM produtos')->fetchColumn();
+    
+    $total = $pdo->query('SELECT COUNT(*) FROM produtos')->fetchColumn();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
