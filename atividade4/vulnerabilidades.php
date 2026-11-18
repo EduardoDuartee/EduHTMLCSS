@@ -1,6 +1,9 @@
 <?php
 
 // Objetivo: localizar, explicar e corrigir vulnerabilidades.
+
+use Dom\Text;
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 session_start();
@@ -56,13 +59,14 @@ $senha = '755!@#';
         ]);
     }
     if ($acao === 'atualizar') {
-        $id = $_POST['id'] ?? '';
-        $nome = $_POST['nome'] ?? '';
-        $descricao = $_POST['descricao'] ?? '';
-        $preco = $_POST['preco'] ?? '';
-        $estoque = $_POST['estoque'] ?? '';
-        $categoria = $_POST['categoria'] ?? '';
+        $id = (INT) $_POST['id'] ?? '';
+        $nome = trim($_POST['nome']);
+        $descricao = trim($_POST['descricao']);
+        $preco = (FLOAT) $_POST['preco'] ?? '';
+        $estoque = (INT) $_POST['estoque'] ?? '';
+        $categoria = trim( $_POST['categoria']);
         
+        $nome = $pdo->quote($nome);
         $sql = "UPDATE produtos SET nome = $nome, descricao = $descricao, preco = $preco, estoque = $estoque, categoria = $categoria WHERE id = $id";
         $pdo->exec($sql);
         $mensagem = 'Produto atualizado.';
