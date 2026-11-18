@@ -49,7 +49,7 @@ $senha = '755!@#';
         $categoria = trim($_POST['categoria']) ?? '';
 
         if($nome == "" | $descricao == "" | $preco <= 0 | $estoque <= 0 | $categoria == ""){
-            $mensagem = "Não é possivel atualizar com Campo em Branco Adicione As Informações Solicitadas";
+            echo ("Não é possivel atualizar com Campo em Branco Adicione As Informações Solicitadas");
         }
         
         else{
