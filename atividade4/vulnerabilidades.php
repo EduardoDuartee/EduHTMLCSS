@@ -67,15 +67,24 @@ $senha = '755!@#';
         $categoria = trim( $_POST['categoria']);
         
         $nome = $pdo->quote($nome);
-        $sql = "UPDATE produtos SET nome = $nome, descricao = $descricao, preco = $preco, estoque = $estoque, categoria = $categoria WHERE id = $id";
-        $pdo->exec($sql);
+        $sql = "UPDATE produtos SET nome = :nome, descricao = :descricao, preco = :preco, estoque = :estoque, categoria = :categoria WHERE id = $id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            ':nome' => $nome,
+            ':descricao' => $descricao,
+            ':preco' => $preco,
+            ':estoque' => $estoque,
+            ':categoria' => $categoria
+        ]);
         $mensagem = 'Produto atualizado.';
     }
+
     if ($acao === 'excluir') {
         $id = $_GET['id'] ?? '';
         $pdo->exec("DELETE FROM produtos WHERE id = $id");
         $mensagem = 'Produto excluído.';
     }
+
     $busca = $_GET['busca'] ?? '';
     $categoriaFiltro = $_GET['categoria'] ?? '';
     $ordem = $_GET['ordem'] ?? 'id';
