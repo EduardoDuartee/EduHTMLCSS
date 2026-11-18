@@ -85,7 +85,7 @@ $senha = '755!@#';
     if (isset($_GET['editar'])) {
         $editar = $pdo->query('SELECT * FROM produtos WHERE id=' . $_GET['editar'])->fetch(PDO::FETCH_ASSOC);
     }
-    
+
     $total = $pdo->query('SELECT COUNT(*) FROM produtos')->fetchColumn();
 ?>
 <!DOCTYPE html>
@@ -167,11 +167,11 @@ $senha = '755!@#';
                         <?php foreach ($produtos as $produto): ?>
                             <tr>
                                 <td><?= $produto['id'] ?></td>
-                                <td><?= htmlspecialchars ($produto['nome']) ?></td>
-                                <td><?= htmlspecialchars ($produto['descricao'])?></td>
-                                <td><?= htmlspecialchars ($produto['categoria']) ?></td>
-                                <td>R$ <?= $produto['preco'] ?></td>
-                                <td><?= $produto['estoque'] ?></td>
+                                <td><?= htmlspecialchars ($nome, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF8') ?></td>
+                                <td><?= htmlspecialchars ($descricao,  ENT_QUOTES | ENT_SUBSTITUTE, 'UTF8')?></td>
+                                <td><?= htmlspecialchars ($categoria, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF8') ?></td>
+                                <td>R$ <?= number_format($preco, 2, ',', '.')?></td>
+                                <td><?= htmlspecialchars ($estoque, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF8') ?></td>
                                 <td><a href="?editar=<?= $produto['id'] ?>">Editar</a> <a href="?acao=excluir&id=<?= $produto['id'] ?>">Excluir</a></td>
                             </tr>
                         <?php endforeach; ?>
