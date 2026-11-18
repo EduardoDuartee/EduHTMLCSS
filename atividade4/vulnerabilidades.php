@@ -48,7 +48,12 @@ $senha = '755!@#';
         $estoque = filter_input(INPUT_POST, 'estoque', FILTER_VALIDATE_INT) ?? '';
         $categoria = trim($_POST['categoria']) ?? '';
 
-        $sql = 'INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES (:nome, :descricao, :preco, :estoque, :categoria)';
+        if($nome == "" | $descricao == "" | $preco <= 0 | $estoque <= 0 | $categoria == ""){
+            $mensagem = "Não é possivel atualizar com Campo em Branco Adicione As Informações Solicitadas";
+        }
+        
+        else{
+            $sql = 'INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES (:nome, :descricao, :preco, :estoque, :categoria)';
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
             ':nome' => $nome,
@@ -57,6 +62,7 @@ $senha = '755!@#';
             ':estoque' => $estoque,
             ':categoria' => $categoria
         ]);
+        }
     }
     if ($acao === 'atualizar') {
         $id = (INT) $_POST['id'] ?? '';
