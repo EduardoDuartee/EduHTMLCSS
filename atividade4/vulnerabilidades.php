@@ -43,7 +43,7 @@ if ($acao === 'cadastrar') {
     $estoque = filter_input(INPUT_POST, 'estoque', FILTER_VALIDATE_INT) ?? '';
     $categoria = trim($_POST['categoria']) ?? '';
 
-    $sql = "INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES (:nome, :descricao, :preco, :estoque, :categoria)";
+    $sql = 'INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES (:nome, :descricao, :preco, :estoque, :categoria)';
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         ': nome' => $nome,
